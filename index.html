@@ -29,495 +29,1400 @@
 		<div class="slides">
 
 			<section>
-				<h2>Learning the Terminal and Git</h2>
-			</section>
+				<h2>CSS: Cascading Style Sheets</h2>
+			  </section>
 
-			<section>
-				<h2>What is a Shell?</h2>
-				<p>A text-based command interpreter</p>
-				<p>The most common shell (and default on OS X) is BASH</p>
-				<p>For OS X, use a shell via the “Terminal” app</p>
-			</section>
-
-			<section>
-				<h2>What is the Terminal?</h2>
-				<p>The terminal is an interface in which you can type and execute text based commands.</p>
-				<p class="fragment">This is how we access our Command Line Interface (CLI).</p>
-				<p class="fragment">aka: program like a hacker!</p>
-			</section>
-
-			<section>
-				<h2>What is the Terminal?</h2>
-				<img src="images/terminal.png" alt="">
-			</section>
-
-			<section>
-				<h2>Where to find the Terminal?</h2>
+			  <section>
+				<h2>But first! Directory Structure</h2>
+				<p>Page 81 - Textbook</p>
+			  </section>
+			  <!-- Folder Structure -->
+			  <section>
+				<h3>Get Started: Folder Structure</h3>
+				<p>All the files for your site should be stored within the same folder.</p>
+				<div class="halfblock">
+				<p class="left-align"><strong>This includes:</strong></p>
 				<ul>
-					<li>Finder</li>
-					<li>Applications</li>
-					<li>Utilities</li>
+				  <li>HTML Files</li>
+				  <li>CSS Files</li>
+				  <li>Images</li>
+				  <li>Script files</li>
+				  <li>Anything else that will appear on your site</li>
 				</ul>
-				<p>Click and drag the icon into your dock, then double click to open.</p>
-			</section>
-
+				<p class="left-align" style="margin-top: .5em;"><small>Note: File names should not include spaces or special characters. File names ARE case sensitive.</small></p>
+				</div>
+			  </section>
+		  
 			<section>
-				<h2>The Prompt</h2>
-				<p>Usually shows your username and computer name (hostname).</p>
-				<p>It indicates that the shell is ready for you to enter a command.</p>
-				<img src="images/prompt.png" alt="">
+			   <h2>CSS: What is it?</h2>
+			   <p class="fragment">CSS = Cascading Style Sheets</p>
+			   <p class="fragment">CSS is a "style sheet language" that lets you style the elements on your page. It adds color, boldness, and layout to an otherwise plain and boring world of HTML.  </p>
+			   <p class="fragment">CSS is embedded inside HTML, but it is not HTML itself.</p>
+			   <a class="fragment" href="http://www.acfjc.org/">Website with and without CSS</a>
 			</section>
-
+		  
 			<section>
-				<h2>The Current Directory</h2>
-				<p>pwd (Print Working Directory)</p>
-				<p>Type it whenever you want to see what directory (folder) you’re in.</p>
-				<p>TRY It!</p>
+			  <h2>CSS</h2>
+			  <p>CSS is designed primarily to enable the *separation* of document content from document presentation</p>
+			  <ul>
+				<li class="fragment">This means that the code you write that defines the content on the page will be different than the code you write to define the look of that code as it is rendered in the browser. </li>
+				<li class="fragment">Having CSS written separately from the HTML can provide more flexibility and control in defining the look of content. It can also enable multiple pages or elements to share the same formatting rules. </li>
+			  </ul>
 			</section>
-
+		   
 			<section>
-				<h2>Directories</h2>
-				<p>Containers for files or other directories.</p>
-				<p>Also referred to as "folders".</p>
-				<p>Nested files and directories can be referenced using paths.</p>
+			  <h2>CSS: What can it do?</h2>
+			   <p style="font-style: Courier; font-weight: bold; text-decoration:underline">text</p>
+			   <p style="color: red;  background-color: yellow">color</p>
+			   <p style="font-size: 85px">size</p>
+			   <p style="text-align:right">position</p>
 			</section>
-
+			  
+			  <section>
+				<h2>Anatomy of CSS</h2>
+			   <p>CSS consists of "style rules". Each style rule consists of a "selector" and "declarations" of property-value pairs:</p>
+<pre>
+<span style="color:yellow">selector</span> {
+ <span style="color:lightblue">property</span>: <span style="color:orange">value</span>;
+ <span style="color:lightblue">property</span>: <span style="color:orange">value</span>;
+}
+</pre>
+<pre><code class="css">
+body {
+ color: yellow;
+ background-color: black;
+}
+</code></pre>
+			  </section>
+			   
+			  <section>
+				<h2>What does 'Cascading' mean?</h2>
+				<p>Parent-child relationship in CSS</p>
+				<img src="images/dom.png" alt="DOM tree" width="700px" alt="DOM Tree">
+			  </section>
+			  
 			<section>
-				<h2>UNIX File System</h2>
-				<img src="images/unix.png" alt="">
-				<p>In OS X, /home/you becomes /Users/you</p>
+			  <h2>The Selector</h2>
+<pre><code class="css">
+selector {
+  property: value;
+}
+</code></pre>
+			  <p>The selector is used to select which elements in the HTML page will be given the styles inside the curly braces. </p>
+			  <aside class="notes">Display simple example in jsbin.com</aside>
+			</section>   
+		  
+			<section>
+			  <h2>Types of Selectors</h2>
+			  <ol>
+				<li>element</li>
+				<li>id </li>
+				<li>class </li>
+				<li>position in document </li>
+			  </ol>
+			  <aside class="notes">On the board write CSS rules and their hierarchy 1.tag 2.id 3.class and then demostrate the hierarchy using jsbin.com.</aside>
 			</section>
-
+		   
 			<section>
-				<h2>Server OS</h2>
-				<img src="images/unixtree.png" alt="">
-			</section>
+			  <h2>Types of Selectors: element</h2>
+<pre><code class="css">
+p {
+}
+</code></pre>
+		  
+		  <p>Selects all <code>p</code> elements in the entire document.</p>
+			  </section>  
+		   
+		  
+			  <section>
+				<h2>Types of Selectors: id</h2>
+<pre><code class="css">
+#header {
+}
+</code></pre>
+		  <p>
+		  Selects any element with the id “header", e.g.
+		  </p>
+<pre><code class="html">
+&lt;p id="header"&gt;&lt;/p&gt;
+</code></pre>
+		  
+			<p>Element ids are unique, so that should only be one element.</p>
+			<p>The "#" is how you tell CSS "this is an id."</p>
+			  </section>
+			  
+			  <section>
+				<h2>Types of Selectors: class</h2>
+<pre><code class="css">
+.warning {
+ color: red;
+}
+</code></pre>
+		  
+		  <p>Selects any element with the class name “warning”, e.g.</p>
+<pre><code class="html">
+&lt;p class="warning"&gt;&lt;/p&gt;
+</code></pre>
+		  
+		  <p>Multiple elements can have the same class name.</p>
+		  <p>The "." is how you tell CSS "this is a class name." </p>
+			  </section>
+			 
+			  
+			  <section>
+				<h2>Types of Selectors: class</h2>
+				<p>An element can have only 1 id but multiple classes, so you can take advantage of that for greater flexibility.</p>
+<pre><code class="css">
+.intro {
+ background-color: blue;
+}
+.description {
+ color: red;
+}
+</code></pre>
 
-			<section>
-				<h2>File System Structure</h2>
-				<p>Varies between systems, but some common folders:</p>
+<pre><code class="html">
+&lt;p class="description intro"&gt;hi&lt;/p&gt; -&gt; hi
+&lt;p class="description"&gt;hi&lt;/p&gt; -&gt; hi
+&lt;p class="intro"&gt;hi&lt;/p&gt; -&gt; hi
+</code></pre>
+			  </section>
+			 
+			 <section>
+			  <h2>Types of selectors: position in document</h2>
+<pre><code class="css">
+ul em {
+ color: yellow;
+}
+</code></pre>
+
+			<p>Selects any <code>em</code> element that's a descendant of a <code>ul</code> element.
+			<p>The " " (space) is how you say "find a descendant." </p>
+<pre><code class="html">
+&lt;body&gt;
+ &lt;ul&gt;
+  &lt;li&gt;&lt;em&gt;Hi&lt;/em&gt;&lt;/li&gt;
+ &lt;/ul&gt;
+ &lt;p&gt;&lt;em&gt;Bye&lt;/em&gt;&lt;/p&gt;
+&lt;/body&gt;
+</code></pre>
+			 </section>
+			 
+			   
+			 <section>
+				<h2>Types of selectors: id + position</h2>
+<pre><code class="css">
+#related-brands li {
+ color: gray;
+}
+</code></pre>
+		  <p> 
+		  Selects any &lt;li&gt; element that is a descendant of any element with an id that equals "related-brands."
+		  </p>
+<pre><code class="html">
+&lt;ul id="related-brands"&gt;
+ &lt;li&gt;Rice Krispies&lt;/li&gt;
+ &lt;li&gt;NutriGrain&lt;li&gt;
+&lt;/ul&gt;
+</code></pre>
+		  <p>Tip: Try it out in the <a href="http://tux.theopalgroup.com/cgi-bin/css3explainer/selectoracle.py">Selectoracle</a>.</p>
+			 </section>
+			 
+			  <section>
+				<h2>Types of selectors: element + class</h2>
+<pre><code class="css">
+li.special {
+ color: yellow;
+}
+</code></pre>
+		  <p>
+		  Selects any <code>li</code> element with a class attribute that 
+		  contains the word "special".
+		  </p>
+<pre><code class="html">
+&lt;ul&gt;
+ &lt;li&gt;Rice Krispies&lt;/li&gt;
+ &lt;li class="special"&gt;NutriGrain&lt;/li&gt;
+&lt;/ul&gt;
+</code></pre>
+			<p>Warning: If you place a space after the ".", it'll look for descendants of <code>li</code> with class of "special."</p>
+			  </section>
+			  
+			  <section>
+				<h2>Types of selectors: ALL!</h2>
+<pre><code class="css">
+#header div.content form p em.required {
+ color: white;
+}
+</code></pre>
+		  <p>
+		  Selects any <code>em</code> element with a class attribute that contains the word "required" that is a descendant of a <code>p</code> element that is a descendant of a <code>form</code> element that is a descendant of a <code>div</code> element with a class attribute that contains the word "content" that is a descendant of any element with an id attribute that equals "header".
+		  </p>
+		  
+			  </section>
+			  
+			  <section>
+				<h2>Types of selectors: pseudo classes</h2>
+				<p>A set of "pseudo classes" can style anchor elements depending on their state.</p>
+<pre><code class="css">
+a:link { /* unvisited link */
+ color: red;
+}
+a:visited { /* visited link */
+ color: blue;
+} 
+a:hover { /* moused over link */
+ color: green;
+}  
+a:active { /* current link */
+ color: purple;
+} 
+a:focus {  /* focused link */
+ color: purple;
+} 
+</code></pre>
+			  </section>
+			 
+			  <section>
+				<h2>Grouping selectors</h2>
+				<p>You can group selectors to apply the same style to all of the selectors  by separating them with commas:</p>
+<pre><code class="css">
+a:hover, a:active, a:focus {
+ background-color: yellow;
+}
+</code></pre>
+			  </section>
+			 
+			  <section>
+				<h2>The selector: Cascade rules</h2>
+				 <p>Generally:</p>
 				<ul>
-					<li>/bin: Basic commands</li>
-					<li>/etc: System config files</li>
-					<li>/tmp: Temporary files</li>
-					<li>/usr: Regular user tools</li>
-					<li>/usr/local: Installed user software</li>
-					<li>/var: Data used by system</li></li>
+					<li>id is more specific than a class, class is more specific than element.
+					<li>the longer the selector, the more specific it is
+					<li>If style rules are equally specific, the last one wins!
 				</ul>
-			</section>
+				<p>Example:</p>
+<pre><code class="css">
+#a #b h1 { color: red; } /* winner! */
+#a h1 { color: blue; }
+</code></pre>
+			  </section>
+			  
+			  <section>
+				<h2>Coding Conventions</h2>
+				 <p>It is possible to write CSS like this:
+<pre><code class="css">
+selector{property:values}selector{property:values}
+</code></pre>
+		  
+		  <p>But it's preferred to write it like this:</p>
+<pre><code class="css">
+selector {
+ property: values;
+}
 
-			<section>
-				<h2>Shortcuts</h2>
+selector {
+ property: values;
+}
+</code></pre>
+		  <p>Notice: space between "selector" and "{", 2 spaces before property-value pair, space after "property:", semi-colon after "values", line between rules.
+		  </p>
+			  </section>
+			  
+			  <section>
+				<h2>Naming Conventions</h2>
+				<p>Some rules to follow when making IDs and class names:</p>
 				<ul>
-					<li>Current Directory: (.)</li>
-					<li>Parent Directory: (..)</li>
-					<li>Home Directory: (~)</li>
-					<li>Root Directory: (/)</li>
+				  <li class="fragment">Describe the content, not the presentation ("warning", not "redbox").
+				  <li class="fragment">Use all lowercase, and hyphens when needed for readability ("header-info", not "headerInfo").
+				  <li class="fragment">Use hyphens to show that a class or ID is part of something else. (e.g. "footer", "footer-copyright", and "footer-logo").
 				</ul>
-			</section>
+			  </section>
+			 
+			  <section>
+				<h2>Comments</h2>
+				<p>Comments will be ignored by the browser and are useful for documenting your styles to other humans or commenting out rules.</p>
+		  
+<pre><code class="css">
+<strong>/* Comment here */</strong>
+p 
+{
+margin: 1em; <strong>/* Comment here */</strong>
+padding: 2em; 
+<strong>/* color: white; */</strong>
+background-color: blue;
+}
 
-			<section>
-				<h2>Create your project</h2>
-				<p>How to create a file system for your website in your terminal.</p>
+<strong>/*
+multi-line 
+comment here
+*/</strong>
+</code></pre>
+			  </section>
+
+			  <section>
+				  <h2>Test your selector skills</h2>
+				  <p>Click <a href="https://flukeout.github.io/">here</a></p>
+			  </section>
+
+			  <section>
+				  <h2>Advanced Selectors</h2>
+				  <p>Click <a href="http://estelle.github.io/selectors/#slide8">here</a></p>
+			  </section>
+			  
+			  <section>
+				<h2>Properties</h2>
+			  </section>
+			  
+			  <section>
+				<h2>Property Value Pairs</h2>
+				<p>Each property can have one or more values.</p>
+<pre><code class="css">
+font: italic 12px sans-serif;
+color: #333;
+background-color: red;
+font-family: Arial, sans-serif;
+</code></pre>
+		  <aside class="notes"> Demonstrate using jsbin.com. Explain the difference between font property 
+			and the more detailed font properties.
+			Also, mention the difference between a specific font like "Arial" and a category like sans-serif
+		  </aside>
+			  </section>
+			 
+			  <section>
+				<h2>Properties: color</h2>
+				<p>The "color" property changes the text color. Colors can be specified either by name, for the most common colors, or by hexadecimal value. </p>
+<pre><code class="css">
+color: red;
+color: #ff0000;
+color: rgb(255, 0, 0); 
+</code></pre>
+			  <p>This property is inherited, which means it'll also be applied to all descendant elements but can be overridden by more specific rules.</p>
+<pre><code class="css">
+body {
+ color: red;
+}
+</code></pre>
+			  </section>
+			 
+			  <section>
+				<h2>Properties: background-color</h2>
+				<p>The "background-color" property changes the background color. Besides the <code>BODY</code> element, all elements default to a transparent background.
+<pre><code class="css">
+background-color: black;
+background-color: #000000;
+background-color: rgb(0,0,0); 
+</code></pre>
+		  
+<pre><code class="css">
+body {
+ background-color: yellow;
+}
+
+table {
+ background-color: #FFCC00;
+}
+</code></pre>
+		  <aside class="notes">Important to show the hierarch of elements, classes and ids using jsbin.com</aside>
+			  </section>
+			  
+			  <section>
+				<h2>Finding colors</h2>
+				<p>To find colors or color schemes for your webpage, you can use:
 				<ul>
-					<li class="fragment">ls: List what's in here</li>
-					<li class="fragment">cd: Change directory</li>
-					<li class="fragment">mkdir: Make a new directory</li>
-					<li class="fragment">touch: create or update an existing file's timestamp.The touch command expects the name of your new file as an argument.</li>
-					<li class="fragment">mv: move a file from one place to another (important note!)</li>
+				  <li>Desktop graphics programs: Adobe Photoshop, <a href="http://mattpatenaude.com/">Mac Colors</a></li>
+				  <li>Online tools: <a href="http://www.coolors.co/">Coolors</a>, <a href="http://www.ideo.com/visualizer.html">Web Color Visualizer</a>, <a href="http://colorschemedesigner.com/">Color Scheme Designer</a>, <a href="http://www.colourlovers.com/">ColourLovers</a>, <a href="http://www.kuler.com/">Kuler</a></li>
+				  <li>Browser extensions: <a href="https://chrome.google.com/extensions/detail/hmdcmlfkchdmnmnmheododdhjedfccka?hl=en">Eye Dropper for Chrome</a>, <a href="https://addons.mozilla.org/en-US/firefox/addon/271/">ColorZilla for FireFox</a></li>
 				</ul>
-			</section>
-
-			<section>
-				<h2>Flags</h2>
-				<p>Some commands have additional options that you can specify by using flags.</p>
-				<p>Flags are preceded by a hyphen, and are often a single character.</p>
-				<img src="images/ls.png" alt="">
-				<p>ls -a = show hidden files</p>
-				<p>ls -l = use a “long list” format (shows more verbose output)</p>
-			</section>
-
-			<section> 
-				<h2>Terminal Commands</h2>
+			  </section>
+			 
+			  <section>
+				<h2>Property: font-family</h2>
+				<p>The "font-family" property specifies the font family (or "font face") of the text. You can specify either a specific font name  or a generic family name (serif, sans-serif, monospace, cursive).</p>
+<pre><code class="css">
+font-family: "Times New Roman";
+font-family: sans-serif;
+</code></pre>
+			  <p>A comma separated list of font families can be specified if you want the browser to prefer one but use the others as backup options.</p>
+<pre><code class="css">
+font-family: "Times New Roman", serif;
+font-family: "Arial", sans-serif;
+font-family: Courier, monospace;
+</code></pre>
+		  <aside class="notes">Look at description about difference of font categories on page 274-5 titled Tyepface Tecnology</aside>
+			  </section>
+			  
+			  <section>
+				<h2>Finding Fonts</h2>
+				<p>Several websites exist that help you pick fonts for your website and to customize it with non-default fonts (in addition to Google Fonts):</p>
 				<ul>
-					<li class="fragment">The left/right arrow keys let you edit within a command
-					<li class="fragment">The up/down arrow keys let you select previous commands
-					<li class="fragment">CTRL+a goes to beginning of command, CTRL+e to the end.
-					<li class="fragment">The tab auto-completes filenames! Best friend!
+				  <li><a href="http://www.typetester.org/">TypeTester</a>
+				  <li><a href="http://typekit.com/">TypeKit</a>
+				  <li><a href="http://fontfonter.com/">FontFonter</a>
+				  <li><a href="http://www.goodwebfonts.com/">Good Web Fonts</a>
+				  <li><a href="http://www.typotheque.com/fonts/">Typotheque</a>
 				</ul>
-     		</section>
+				<aside class="notes">http://caniuse.com shows what properties are supported in your browser. You can also google 'what css properties does my browser support?'
+				  Also, show the CSS MDN website to show what properties exist in CSS.
+				</aside>
+			  </section>
+			  
+			  <section>
+				<h2>Property: font-size</h2>
+				 <p>The "font-size" property specifies the size of a font. It can be specified as a fixed size in various units, a percentage, or as a predefined keyword.</p>
+		  
+<pre><code class="css">
+font-size: 1.5em;
+font-size: 12px;
+font-size: 100%;
+font-size: larger;
+</code></pre>
+			  </section>
+			 
+			  <section>
+				<h2>Property: font-size (em)</h2>
+				<p>The "em" unit lets you set the size of the text relative to the text around it. This makes the page resize nicely in proportion if the user changes their default font-size. The default size is "1em".</p>
+		  
+<pre><code class="css">
+p {
+	font-size: 0.9em; 
+}
+
+strong {
+	font-size: 1.5em; 
+}
+</code></pre>
+		  
+			  <p style="font-size: .9em;">Hello <strong style="font-size:1.5em">there</strong>!</p>
+			  </section>
+			  
+			  <section>
+				<h2>Property: font-size (px)</h2>
+			  <p>The "px" unit lets you size font in terms of pixels, which is the unit also used to size images and other elements. It is easier to understand than em, but doesn't work as well when printing or resizing.</p>
+<pre><code class="html">
+h2 {
+ font-size: 17px; 
+}
+</code></pre>
+		  
+		  <h2>Normal Headline</h2>
+		  <h2 style="font-size: 17px;">Resized Headline</h2>
+			  </section>
+			  
+			  <section>
+				<h2>Property: font-size (keywords)</h2>
+				 <p>There are various keywords that can be used if you're not as worried about the precise sizing: xx-small, x-small, small, medium, large, x-large, xx-large.</p>
+<pre><code class="css">
+p.footnote {
+ font-size: small;
+}
+</code></pre>
+			  <p>There are also two relative keywords, that act similar to em's in setting size relative: smaller, larger.</p>
+<pre><code class="css">
+p.intro {
+ font-size: larger;
+}
+</code></pre>
+			  </section>
+			  
+			  <section>
+				<h2>Property: font-size (%)</h2>
+				<p>The size can also be specified as a percentage, which works similar to "ems", and can be used in conjunction with other units.</p>
+<pre><code class="css">
+body { 
+ font-size: 12px; 
+}
+
+h1 { 
+ font-size: 200%; 
+}
+
+h1 a { 
+ font-size: 75%; 
+}
+</code></pre>
+		  
+		  <div style="font-size: 12px;">
+			<h1 style="font-size:200%">Header <a style="font-size:75%" href="#">Link</a></h1>
+			Text!
+		  </div>
+			  </section>
+			  
+			  <section>
+				<h2>Property: font-style</h2>
+				<p>The "font-style" property specifies the font style of the text, either "normal" by default or "italic".</p>
+		  
+<pre><code class="css">
+font-style: italic;
+</code></pre>
+		  
+			  <p style="font-style:italic">Italicized text.</p>
+			  </section>
+			  
+			  <section>
+				<h2>Property: font-weight</h2>
+				<p>The "font-weight" property specifies the thickness of the font. The default is "normal" and the typical override is "bold". You can also specify "bolder", "lighter", or a number from 100 to 900.</p>
+		  
+<pre><code class="css">
+font-weight: bold;
+</code></pre>
+		  
+			  <p style="font-weight: bold">Bold text!</p>
+			  </section>
+			 
+			 <section>
+			   <h2>&quot;Shorthand&quot; properties</h2>
+			   <p>A "shorthand" property in CSS lets you specify multiple properties in one property, for conciseness purposes. Instead of specifying each "font-" property separately, you can bundle them up in one "font" property.</p>
+<pre><code class="css">
+table.geeky {
+ font-weight: bold;
+ font-style: italic;
+ font-size: 10px;
+ font-family: sans-serif;
+}
+</code></pre>
+			<p>Those four rules can be written as:</p>
+<pre><code class="css">
+table {
+ font: italic bold 10px sans-serif;
+}
+</code></pre>
+			 </section>
+			  
+			  <section>
+				<h2>Other text properties</h2>
+<pre><code class="css">
+line-height: 10px;
+</code></pre>
+		  <p style="line-height: 10px;">
+		  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis aliquam convallis ligula ut suscipit. Phasellus hendrerit, enim scelerisque...
+		  </p>
+<pre><code class="css">
+text-align: center;
+</code></pre>
+		  <p style="text-align:center">
+		  Centered text.
+		  </p>
+<pre><code class="css">
+text-decoration: underline;
+</code></pre>
+		  <p style="text-decoration:underline">Underlined text</p>
+			  </section>
+			 
+			  <section>
+				<h2>CSS Location</h2>
+			  </section>
+			  
+			  <section>
+				<h2>CSS in HTML</h2>
+				<p>CSS can be embedded in HTML in several ways. One way is to include all CSS in a <code>style</code> tag, usually inside the <code>head</code> tag:</p>
+<pre><code class="html">
+&lt;html&gt;
+ &lt;head&gt;
+  &lt;style&gt;
+   body {
+	color: yellow;
+	background-color: black;
+   }
+ &lt;/style&gt;
+&lt;/head&gt;
+</code></pre>
+			  </section>
+
+			  <section>
+					<h2>Inline CSS</h2>
+					<p>CSS styles can be assigned to individual HTML elements via the <code>style</code> attribute:</p>
+			   
+<pre><code class="html">
+&lt;tag style="property1: value; property2: value;"&gt; &lt;/tag&gt;
+</code></pre>
+
+<pre><code class="html">
+&lt;h1 style="color:red; text-decoration: underline;"&gt;Hello&lt;/h1&gt;
+</code></pre>
+			   
+			   <p>Inline styles will have precedence over all other styles. Inline CSS should be avoided as it increases maintenance cost and blurs line between presentation and content.</p>
+				  </section>
+		  
+			 <section>
+			   <h2>CSS files</h2>
+			   <p>CSS can also be defined in a separate file, and imported using the <code>link</code> element. This is the best!
+		  <p>Linked stylesheet:</p>
+<pre><code class="html">
+&lt;head&gt;
+ &lt;link rel="stylesheet" type="text/css" href="main.css"&gt;
+&lt;/head&gt;
+</code></pre>
+		
+			 </section>
+			 
+			 <section>
+			   <h2>Tools</h2>
+			   <ul>
+				 <li><a href="http://jsbin.com">JSBin</a></li>
+				 <li><a href="http://codepen.io/">Codepen</a></li>
+			   </ul>
+			 </section>
+		  
+			 <section>
+			   <h2>Exercise Time!</h2>
+			   <ul>
+				 <li>Add the CSS to make your GDI site look like the following image.</li>
+				</ul>
+				<img src="images/gdicss.png" width="500px" height="450px" alt="GDI Website with CSS">
+				<aside class="notes">Give them 10 minutes and then do with them.  If they get bored, try https://flukeout.github.io.  For homework look at chapter 12</aside>
+			 </section>
+		  
+			 <section>
+				<h2>CSS: Layout</h2> 
+				<aside class="notes">Before you begin, review what has been covered. 1. How to add CSS to HTML? 2. How to select elements in HTML with CSS using selectors 3. Properties like color and font.  Start creating a website at jsbin.com to review using preferred coding practives. </aside>
+			 </section>
+			   
+			   <section>
+				 <h2>Overview: CSS Layout</h2>
+				 <p>All web layouts are accomplished with block elements. Designers use blocks, most often <code>div</code> elements, to create rectangular areas into which all content fits. </p>
+				 <img src="images/layout.png" alt="Website Layout">
+			   </section>
+
+			   <section>
+					<h2>Overview: CSS Layout</h2>
+					<ul>
+					  <li>Display</li>
+					  <li>Total area: The space an element occupies and affects</li>
+					  <li>Positioning</li>
+					</ul>
+				  </section>
+		  
+			 <section>
+			   <h2>Display: Block &amp; Inline Elements</h2>
+			   <p class="fragment">There are two main types of elements in the CSS world: "inline" and "block".</p>
+			   <p class="fragment">A browser generally renders a new line after any "block" elements in the HTML. "Inline" elements go form left to right.</p>
+			 </section>
+		  
+			 <section>
+			   <h2>Block &amp; Inline Elements</h2>
+			   <img src="images/block.png" alt="">
+			 </section>
+		   
+			  <section>
+				<h2>Grouping Elements</h2>
+				<p>A grouping element lets you style multiple elements as a whole.</p>
+				<p><code>SPAN</code> creates an inline element.</p>
+<pre><code class="html">&lt;span&gt; Hello &lt;a href="world.com"&gt;World &lt;/a&gt;! &lt;/span&gt;</code></pre>
+		  <p><code>DIV</code> creates a block element.</p>
+<pre><code class="html">&lt;div&gt; &lt;p&gt;Hello&lt;/p&gt; &lt;p&gt;World&lt;/p&gt; &lt;/div&gt; </code></pre>
+<pre><code class="html">&lt;div&gt; Hello &lt;a href="world.com"&gt;World &lt;/a&gt;! &lt;/div&gt; </code></pre>
+			  </section>
+
+			  <section>
+				  <h2>Display</h2>
+				  <p class="fragment">Examples:</p>
+					<ul>
+						<li class="fragment">inline: <code>INPUT, A, IMG, BR,</code> a few others...
+						<li class="fragment">block: <code>P, H1, UL, LI, TABLE,</code> almost everything else...
+					</ul>
+			  </section>
+
+			  <section>
+				  <h2>Display Practice in JSBin</h2>
+			  </section>
+			
+			  <section>
+				<h2>Box Model</h2>
+				<aside class="notes">Assign reading Chap. 13 of book for the box model.</aside>
+			  </section>
+			  
+			  <section>
+				<h2>The Box Model</h2>
+				<p>All elements are treated as boxes by the browser's rendering engine (either "inline" or "block" boxes).</p>
+				<p>A box consists of content, padding, border, and margin:</p>
+				<img src="images/boxmodel.gif">
+			  </section>
+		  
+			  <section>
+			   <h2>Things to know:</h2>
+			   <p class="fragment">In a document, each element is represented as a rectangular box. Determining the size, properties — like its color, background, borders aspect — and the position of these boxes is the goal of the rendering engine.</p>
+			 </section>
 
 			 <section>
-				 <h2>Making and Removing Directories</h2>
-				 <p>Use the mkdir command to create a new empty directory.</p>
-				 <p>Use the rmdir command to remove an empty directory.</p>
-				 <p>Use rm -r to remove a non-empty directory...be careful!</p>
-				 <p>All 3 commands expect the name of a directory as an argument.</p>
+				<h2>Things to know:</h2>
+				<p class="fragment">In CSS, each of these rectangular boxes is described using the <span style="color:yellow;">standard box model</span>. This model describes the content of the space taken by an element. Each box has four edges: the margin edge, border edge, padding edge, and content edge.</p>
+				<p class="fragment">CSS to define width on all browsers. See https://www.abeautifulsite.net/box-sizing-border-box-explained</p>
+<pre class="fragment"><code>   
+body{
+ box-sizing: border-box;
+}   
+</code></pre>
+				  </section>
+		  
+			 <section>
+			   <h2>Width</h2>
+			   <p class="fragment">Total width is how much horizontal space a block occupies. This includes the block’s content, border, and padding. Calculating width, padding and margin is often the biggest headache for designers, but it's easy to see how they work if you use the box model. </p>
+			   <p class= "fragment">The box model consists of the properties margin, border, and padding.</p>
 			 </section>
-    
+
 			<section>
-				<h2>Task I:</h2>
+				<h2>Measuring Width</h2>
+				<p class="fragment">You can measure width in the following ways:</p>
 				<ul>
-					<li>Create a "dev" folder in your main Documents folder</li>
-					<li>Move all of your current code folders from your Desktop to this file</li>
-					<li>Example: mv ~/Desktop/codingPractice ~/Documents/dev</li>
+					<li class="fragment">px</li>
+					<li class="fragment">%</li>
+					<li class="fragment">viewport width (vw)</li>
 				</ul>
 			</section>
 
 			<section>
-				<h2>Task II:</h2>
-				<p>Use the Terminal to make the folder system for your new Portfolio Project</p>
+				<h2>Height</h2>
+				<p class="fragment">Height can be set automatically given the content of the element. However, you can also select the height using:</p>
 				<ul>
-					<li>Create the root folder in your new dev folder</li>
-					<li>Make sure to add folders for your CSS and JS</li>
-					<li>Add a new index.html file</li>
+					<li class="fragment">px</li>
+					<li class="fragment">viewport height (vh)</li>
 				</ul>
+				<p class="fragment" style="color: lightblue;">Note: don't use %!</p>
 			</section>
+			  
+			  <section>
+				<h2>Margin</h2>
+				 <p>The margin is a transparent area around the box - the background of the box does not apply to it. It separates the box from other elements.</p>
+			  </section>
+
+			  <section>
+					<p>15 pixels on all sides:</p>
+<pre><code class="css">
+margin: 15px;
+</code></pre>
+					<p>10px on top, 5px right, 3px bottom, 20px left:<p>
+<pre><code class="css">
+margin: 10px 5px 3px 20px;
+</code></pre>
+					<p>10px on top:</p>
+<pre><code class="css">
+margin-top: 10px;
+</code></pre>
+			  </section>
+			  
+			  <section>
+				<h2>Auto Margin</h2>
+				<p>If the margin is set to "auto" on a box that has a width, it will take up as much space as possible.</p>
+		  <p>A centered box:</p>
+		  <pre><code class="html">
+		  &lt;div style="margin:auto; width:300px;"&gt;Hi&lt;/div&gt;
+		  </code></pre>
+		  <div style="margin:auto; width:300px; border:1px solid red;">Hi</div>
+		  <p>A flush-right box:</p>
+<pre><code class="html">
+&lt;div style="margin-left:auto; margin-right:5px;
+width:300px;"&gt; Hi&lt;/div&gt;
+</code></pre>
+		  <div style="margin-left:auto; margin-right:5px;  width:300px; border:1px solid red;">Hi</div>
+		  <aside class="notes">Show difference between text-align:center; versus margin:auto; for a div tag of width 300px.</aside>
+			  </section>
+		  
+			  <section>
+				<h2>Border</h2>
+				<p>The <code>border</code> property styles the edge around the box and is specified as "thickness style color".</p>
+		  <p>A solid red border:</p>
+<pre style="border:1px solid #ff0000; border-radius:0px;"><code class="css">
+border: 1px solid #ff0000;
+</code></pre>
+<p>A thick dotted black top border:</p>
+<pre style="border-top: 4px dotted #000000; border-radius:0px;"><code class="css">
+border-top: 4px dotted #000000;
+</code></pre>
+<p>2 different border styles:</p>
+<pre style="border-top: 4px dotted #000000; border-bottom: 1px solid #ff0000; border-radius:0px;"><code class="css">
+border-top: 4px dotted #000000;
+border-bottom: 1px solid #ff0000;
+</code></pre>
+			  </section>
+		  
+			  <section>
+				<h2>Border Thickness</h2>
+				<p>Border thickness can also be specified with <code>border-width</code> property and can be different on each side (like margin).
+		  <p>10px on all sides:</p>
+<pre style="border-width:10px; border-radius:0px; border-style:solid;"><code class="css">
+border-width: 10px;
+</code></pre>
+<p>10px on top, 5px right, 3px bottom, 20px left:<p>
+<pre style="border-width: 10px 5px 3px 20px; border-radius:0px; border-style:solid;"><code class="css">
+border-width: 10px 5px 3px 20px;
+</code></pre>
+			  </section>
+		  
+			  <section>
+				<h2>Border Style</h2>
+				<p>Border style can also be specified using the <code>border-style</code> property.</p>
+<pre style="border-style:dashed; border-radius:0px;"><code class="css">
+border-style:dashed;
+</code></pre>
+<pre style="border-style:double; border-radius:0px;"><code class="css">
+border-style:double;
+</code></pre>
+<pre style="border-style:groove; border-radius:0px;"><code class="css">
+border-style:groove;
+</code></pre>
+<pre style="border-style:outset; border-radius:0px;"><code class="css">
+border-style:outset;
+</code></pre>
+<pre style="border-style:inset; border-radius:0px;"><code class="css">
+border-style:inset;
+</code></pre>
+<pre style="border-style:ridge; border-radius:0px;"><code class="css">
+border-style:ridge;
+</code></pre>
+			  </section>
+			  
+			  <section>
+				<h2>Border Color</h2>
+				<p>Border color can also be specified with <code>border-color</code> property.</p>
+		  <p>Green on all sides:</p>
+		  <pre style="border-width:5px; border-style:solid; border-color: rgb(0, 240, 0); border-radius:0px;"><code class="css">
+		  border-color: rgb(0, 240, 0);
+		  </code></pre>
+		  <p>White on top, black right, red bottom, green left:</p>
+<pre style="border-width:5px; border-style:solid; border-color: #fff black #ff0000 #00ff00; border-radius:0px;"><code class="css">
+border-color: #fff black #ff0000 #00ff00;
+</code></pre>
+			  </section>
+			  
+			  <section>
+				<h2>Padding</h2>
+				 <p>The <code>padding</code> property specifies whitespace between the border and the content. </p>
+		  <p>15px on all sides:</p>
+<pre style="padding:15px; border:1px solid black;  border-radius:0px;"><code class="css">
+padding: 15px;
+</code></pre>
+<p>10px on top, 5px right, 3px bottom, 20px left:<p>
+<pre style="padding: 10px 5px 3px 20px; border:1px solid black;  border-radius:0px;"><code class="css">
+padding: 10px 5px 3px 20px;
+</code></pre>
+<p>10px on top:</p>
+<pre style="padding:0px; padding-top: 10px; border:1px solid black;  border-radius:0px;">padding-top: 10px;</pre>
+			  </section>
+		  
+			  <section>
+				<h2>Exercise Time</h2>
+				<p><a href="https://www.khanacademy.org/computing/computer-programming/html-css/css-layout-properties/p/challenge-the-boxer-model">Khan Academy Exercise</a></p>
+			  </section>
+		  
+			  <section>
+				<h2>Position</h2>
+			  </section>
+			
+			  <section>
+				<h2>Position: Static</h2>
+				 <p>The <code>position</code> property is used to specify a positioning scheme for an element. The default is "static" which puts the element in the "normal" flow.</p>
+			  </section>
+
+			  <section>
+					<h2>Position: Static</h2>
+					<p>In normal flow, inline boxes flow from left to right, wrapping to next line when needed.</p>
+<pre><code class="html">
+&lt;img src="logo.png"&gt;&lt;img src="logo.png"&gt;&lt;img src="logo.png"&gt;
+</code></pre>
+					<img src="http://www.accphotos.com/blog/wp-content/uploads/2008/01/1_google_logo-1.jpg"><img src="http://www.accphotos.com/blog/wp-content/uploads/2008/01/1_google_logo-1.jpg"><img src="http://www.accphotos.com/blog/wp-content/uploads/2008/01/1_google_logo-1.jpg">
+			  </section>
+		  
+			  <section>
+				<h2>Position: Static</h2>
+				<p>In normal flow, block boxes flow from top to bottom, making a new line after every box.</p>
+<pre><code class="html">
+&lt;h1 style="border:1px solid black"&gt;Greetings&lt;/h1&gt;
+&lt;p style="border:1px solid red"&gt;Hola, novato&lt;/p&gt;
+&lt;div style="border:1px solid black"&gt; Hey, dude&gt;!&lt;/div&gt;
+</code></pre>
+		  <h1 style="border:1px solid black">Greetings</h1>
+		  <p style="border:1px solid red">Hola, novato </p>
+		  <div style="border:1px solid black"> Hey, dude! </div>
+			  </section>
+			  
+			  <section>
+				<h2>Position: Relative</h2>
+				 <p>The "relative" value will still put the element in the normal flow, but then offset it according to top/left/right/bottom properties.</p>
+<pre><code class="html">
+&lt;div style="position: relative; left: 80px; top: 20px;
+height: 100px; background-color: yellow;"&gt;
+Hello, hi!
+&lt;/div&gt;
+</code></pre>
+		  <div style="position: relative; left: 80px; top: 20px; height: 100px; background-color: yellow;">Hello, hi!</div>
+			  </section>
+
+			  <section>
+				  <h2>Position: Relative</h2>
+				  <div style="float: left; width: 40%">
+					  <div style="background-color: green; width: 100px; height:100px; margin-bottom: 5px"></div>
+					  <div style="background-color: red; width: 100px; height:100px; margin-bottom: 5px"></div>
+					  <div style="background-color: blue; width: 100px; height:100px; margin-bottom: 5px"></div>
+					  <div style="background-color: yellow; width: 100px; height:100px; margin-bottom: 5px"></div>
+				  </div>
+<pre style="float: left; width: 50%"><code class="html">
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+</code></pre>
+			  </section>
+
+			  <section>
+					<h2>Position: Relative</h2>
+					<div style="float: left; width: 40%">
+						<div style="background-color: green; width: 100px; height:100px; margin-bottom: 5px"></div>
+						<div style="background-color: red; width: 100px; height:100px; margin-bottom: 5px"></div>
+						<div style="background-color: blue; width: 100px; height:100px; margin-bottom: 5px; position: relative; left: 30px;"></div>
+						<div style="background-color: yellow; width: 100px; height:100px; margin-bottom: 5px"></div>
+					</div>
+  <pre style="float: left; width: 50%"><code class="html">
+  <div></div>
+  <div></div>
+  <div style="position: relative; left: 30px;"></div>
+  <div></div>
+  </code></pre>
+				</section>
+		  
+			  <section>
+				<h2>Position: Absolute</h2>
+				<p>The "absolute" value will take the element out of the normal flow and position it in relation to the window (or the closest non-static element).</p>
+			  </section>
+
+			  <section>
+				  <h2>Position: Absolute</h2>
+<pre><code class="html">
+&lt;div style="position: absolute; top: 10px; right: 10px;
+	background-color: lightblue"&gt;
+	Up here
+&lt;/div&gt;
+</code></pre>
+<pre><code class="html">
+&lt;div style="position: absolute; bottom: 5px; left:60px;
+	background-color: green"&gt;
+	Down here
+&lt;/div&gt;
+</code></pre>
+						<div style="position: absolute; top: 10px; right: 10px; background-color: lightblue">Up here</div>
+						<div style="position: absolute; bottom: 5px; left:60px; 
+						  background-color: green">
+						 Down here
+						</div>
+			  </section>
+
+			  <section>
+					<h2>Position: Absolute</h2>
+					<div style="float: left; width: 40%">
+						<div style="background-color: green; width: 100px; height:100px; margin-bottom: 5px"></div>
+						<div style="background-color: red; width: 100px; height:100px; margin-bottom: 5px"></div>
+						<div style="background-color: blue; width: 100px; height:100px; margin-bottom: 5px"></div>
+						<div style="background-color: yellow; width: 100px; height:100px; margin-bottom: 5px"></div>
+					</div>
+  <pre style="float: left; width: 50%"><code class="html">
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+  </code></pre>
+				</section>
+  
+				<section>
+					  <h2>Position: Absolute</h2>
+					  <div style="float: left; width: 40%">
+						  <div style="background-color: green; width: 100px; height:100px; margin-bottom: 5px"></div>
+						  <div style="background-color: red; width: 100px; height:100px; margin-bottom: 5px"></div>
+						  <div style="background-color: blue; width: 100px; height:100px; margin-bottom: 5px; position: absolute; right: 30px;"></div>
+						  <div style="background-color: yellow; width: 100px; height:100px; margin-bottom: 5px"></div>
+					  </div>
+	<pre style="float: left; width: 50%"><code class="html">
+	<div></div>
+	<div></div>
+	<div style="position: absolute; right: 30px;"></div>
+	<div></div>
+	</code></pre>
+				  </section>
+		  
+			  <section>
+				<h2>z-index</h2>
+				<p>The <code>z-index</code> property specifies the stack order of positioned elements, in the case that they are overlapping. The element with highest z-index goes on top.</p>
+		  
+<pre><code class="html">
+&lt;div style="position: absolute; bottom: 0px; left:60px; 
+background-color: green"&gt; Bottom &lt;/div&gt;
+&lt;div style="position: absolute; bottom: 10px; left:60px; 
+background-color: green; z-index: 2;"&gt; Top &lt;/div&gt;
+</code></pre>
+		  
+		  <div style="position: absolute; bottom: 0px; left:60px; 
+			background-color: red"> Bottom </div>
+		  <div style="position: absolute; bottom: 10px; left:60px; 
+			background-color: green; z-index: 2;"> Top </div>
+			  </section>
+		  
+			  <section>
+				<h2>Float</h2>
+				<p>The <code>float</code> property is used to float boxes on the sides of other boxes, allowing other content to flow around it.</p>
+<pre><code class="html">
+&lt;div style="border:1px solid black"&gt; 
+&lt;img style="float:right" src="assk.jpg"&gt;
+	Aung San Suu Kyi is a....
+&lt;/div&gt;
+</code></pre>
+		  <div style="border:1px solid black">
+		  <img style="float:right" src="http://prof.chicanas.com/20/wp-content/uploads/2015/04/Aung-San-Suu-Kyi-visit-to-008.jpg">
+		  <p style="font-size:35px">Aung San Suu Kyi is a Burmese statesperson, politician, diplomat and author who serves as the First and incumbent State Counsellor and Leader of the National League for Democracy. </p>
+		  </div>
+			  </section>
+			  
+			  <section>
+				<h2>Float</h2>
+				<p>The <code>float</code> property can also be used to float non-IMG elements, but make sure to specify a width for the floated element.</p>
+		  
+<pre><code class="html">
+&lt;div&gt;
+&lt;div style="float:left; width:50px; background-color:red; "&gt;
+	H&lt;br&gt;O&lt;br&gt;M&lt;br&gt;E
+&lt;/div&gt;
+Hi, this is my personal website, where you'll find out everything about my inner desires, hopes, dreams, and incredibly exciting daily life.
+&lt;/div&gt;
+&lt;div&gt;Contact me for more info.&lt;/div&gt;
+</code></pre>
+		  
+		  <div>
+			<div style="float:left; width:50px; background-color:red; ">
+			  H<br>O<br>M<br>E
+			</div>
+			Hi, this is my personal website, where you'll find out everything about my inner desires, hopes, dreams, and incredibly exciting daily life.
+		  </div>
+		  <div>Contact me for more info.</div>
+			  </section>
+		  
+			  <section>
+				<h2>Clear</h2>
+				<p>The <code>clear</code> property can be used to specify that an element should *not* wrap around floated elements above it.</p>
+		  
+<pre><code class="html">
+&lt;div style="float:left; width:50px; background-color:yellow; "&gt;
+H&lt;br&gt;O&lt;br&gt;M&lt;br&gt;E
+&lt;/div&gt;
+&lt;div&gt;
+Hi, this is my personal website, where you'll find out everything about my inner desires, hopes, dreams, and incredibly exciting daily life.
+&lt;/div&gt;
+&lt;div style="clear:both"&gt;Contact me for more info.&lt;/div&gt;
+</code></pre>
+		  
+		  <div style="float:left; width:50px; background-color:yellow; ">
+			H<br>O<br>M<br>E
+		  </div>
+		  <div>
+			Hi, this is my personal website, where you'll find out everything about my inner desires, hopes, dreams, and incredibly exciting daily life.
+		  </div>
+		  <div style="clear:both">Contact me for more info.</div>
+		  <br>
+			  </section>
 
 			<section>
-				<h2>View a File</h2>
-				<p>cat, more, less</p>
-				<p>Use the cat command to output (catenate) the contents of a file to the console.</p>
-				<p>Use the more or less commands to read a file:</p>
+				<h2>CSS Layout Review</h2>
+				<p>Go through at your own pace</p>
+				<a href="http://learnlayout.com/">Click here for Learn Layout</a>
+			</section>
+			  
+			  <section>
+				<h2>More on CSS Positioning</h2>
+				<a href="http://learn.shayhowe.com/html-css/positioning-content/">Click here for Shay Howe's site</a>
+			  </section>
+			  
+			  <section>
+				<h2>Practice</h2>
+				<p>MySpace for Coach</p>
+				<a href="https://anniecannons.github.io/coach-myspace/">Click here</a>
+			  </section>    
+		  
+			  <section>
+				<h2>Exercise Time</h2>
+				<a href="https://docs.google.com/a/anniecannons.com/document/d/1DcGTRA_Rnp4H4A5W_M5XX3nChUI9Zd6GaG5d83Qb_a8/edit?usp=sharing">Click here for a Google Doc</a>
+			  </section>
+			  
+			  <section>
+				<h2>Cross-browser Compliance</h2>
+				<p class="fragment">Keep in mind that internet browsers have their own default styles. So, even if you didn't write any CSS, the default style of the browser will still be applied when the content is displayed on the page.</p>
+				<p class="fragment"> One thing to be aware of is that different browsers may apply a small subset of these rules differently. That is why, as a front-end developer, you have to be aware of <span style="color:yellow">'cross-browser compliance'</span> issues. These are issues that we may explore more fully in future lessons. But it is important to know about this from the outset.</p>
+			  </section>
+		  
+		  
+			   <section>
+				 <h2>CSS Review Questions</h2>
+				 <ol>
+				   <li class="fragment">What is the difference between HTML and CSS?</li>
+				   <li class="fragment">What are the different ways you can add CSS to your webpage?</li>
+				   <li class="fragment">What is the difference between a selector, property, and value in CSS?</li>
+				   <li class="fragment">What are the different types of selectors?</li>
+				   <li class="fragment">How do you write an id in your html for a p element? How do you write it in CSS?</li>
+			   </ol>
+			   </section>
+		  
+			   <section>
+				 <h2>Responsive Design</h2>
+			   </section>
+		  
+			   <section>
+				 <h2>Responsive Design</h2>
+				 <p style="color:yellow">What is responsive design?</p>
+				 <ul>
+				   <li class="fragment">Responsive web design is a collection of techniques for building websites that work at multiple screen sizes.</li>
+				   <li class="fragment">Previously, most web professionals would often create a mobile version of their site and a desktop version, which means they would have to maintain two separate websites, or worse, the site wouldn't work on mobile at all.</li>
+				 </ul>
+			   </section>
+		  
+			   <section>
+				 <h2>Responsive Design</h2>
+				 <p class="fragment">Prior to responsive web design, most web designers thought in terms of print design.The layout was precisely controlled in fixed pixel-based units, and the goal was to make websites look exactly the same in every browser.</p>
+				 <p class="fragment">So, instead of thinking about layout in terms of fixed values, we must think in terms of ratios or percentages.</p>
+			   </section>
+		  
+			   <section>
+				 <h2>Media Queries</h2>
+				 <p class="fragment">Media queries are CSS rules that help us include CSS code only when certain conditions are met. These conditions are called <span style="color:yellow">media features</span>. And in the case of responsive web design, the media feature most commonly used is width, or more specifically, min or minimum width.<p>
+			   </section>
+
+			   <section>
+					<h2>Media Queries</h2>
+					<p class="fragment">In responsive web design, you can think of a <span style="color:yellow">breakpoint</span> as a width where the current layout no longer works and the layout breaks. If the layout breaks, then it necessitates a media query that adjusts the layout.</p>
+					<a class="fragment" href="./responsive_design.html">Click here to see breakpoints in action</a>
+				  </section>
+		  
+			  <section>
+				 <h2>CSS Media Queries</h2>
+				 <p>A media query consists of a media type and an optional combination of media features. CSS rules inside the query will be applied only if the query is true.</p>
+<pre><code class="css">
+@media &lt;media types&gt; and &lt;media features&gt; {
+	/* media-specific rules */
+}
+</code></pre>
+			   </section>
+		  
+			   <section>
+				 <h2>Resolution Queries</h2>
+				 <p>Modern mobile browsers support media queries which depend on the <code>device-width</code> and/or <code>orientation</code>:</p>
+		  <p>Targeting iPads:</p>
+<pre><code class="css">
+@media only screen
+ and (min-device-width : 768px)
+ and (max-device-width : 1024px) {
+	img {
+	width: 100%;
+	}
+}
+</code></pre>
+		  <p>Read more: <a href="http://css-tricks.com/snippets/css/media-queries-for-standard-devices/">Media Queries for Standard Devices</a>
+			   </section>
+			  
+			  <section>
+				 <h2>Resolution Queries</h2>
+				<p>A more general approach is just to query on <code>min-width</code> and <code>max-width</code>, which are calculated based on window size, not device size.</p>
+<pre><code class="css">
+@media screen and (max-width: 640px) {
+ #sidebar {
+  display: none;
+}
+}
+</code></pre>
+<pre><code class="css">
+@media (min-width: 768px) and (max-width: 979px) {
+ #sidebar {
+	width: 200px;
+}
+}
+</code></pre>
+			   </section>
+		  
+			   <section>
+				 <h2>Media Query Attributes</h2>
+				 <img src="images/media.png" alt="Media Query Attributes">
+			   </section>
+		  
+			   <section>
+				 <h2>More on Media Queries</h2>
+				 <p>Check out these two links:</p>
+				 <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Media_Queries/Using_media_queries#width">MDN</a>
+				 <br>
+				 <a href="https://css-tricks.com/snippets/css/media-queries-for-standard-devices/">CSS Tricks</a>
+			   </section>
+		  
+			   <section>
+				 <h2>CSS Resets</h2>
+				 <ul>
+				  <li>Not all browsers start as the same blank slate - browsers define different default styles.</li>
+				  <li>CSS reset stylesheets are used to normalize the default CSS across browsers.</li>
+			   </ul>
+			  <p><a href="http://necolas.github.com/normalize.css/">Normalize.css</a> normalizes the default styles across browsers (and is the preferred approach).</p>
+			   </section>
+		  
+			   <section>
+				 <h2>Responsive Design Review</h2>
+				 <a href="https://www.sitepoint.com/premium/courses/introduction-to-responsive-web-design-2889/lesson/1/step/1">This video</a>
+			   </section>
+		  
+			   <section>
+				 <h2>How can I make all this stuff easier??</h2>
+				 <img src="images/easy.jpeg" alt="Easy Button">
+			   </section>
+		  
+			   <section>
+				 <h2>CSS Frameworks</h2>
+				 <p class="fragment" style="color:yellow">What is a framework?</p>
+				 <p class="fragment">CSS Frameworks are pre-prepared software code that are meant to allow for easier, more standards-compliant web design using the CSS language</p>
+				 <p class="fragment">Most languages have frameworks that make your job as the developer easier</p>
+			   </section>
+		  
+			   <section>
+				 <h2>CSS Frameworks</h2>
+				 <p class="fragment">What does a CSS framework consist of?</p>
+				 <p class="fragment">Usually include a reset, a grids system, styles for typography and forms. Some include support for mobile/print.</p>
+				 <p class="fragment">Bootstrap! This is a type of CSS framework that includes this grid system and makes other CSS styling techniques easy to use. Developers use this all the time!</p>
+			   </section>
+		  
+			   <section>
+				 <h2>Bootstrap</h2>
+				 <a href="http://getbootstrap.com/css/">Check it OUT!</a>
+				 <br>
+				 <img src="http://vignette2.wikia.nocookie.net/epicrapbattlesofhistory/images/0/0b/Matilda-miss-honey-glasses.gif/revision/latest?cb=20150404013936" alt="Miss Honey Looking Intrigued">
+			   </section>
+		  
+			   <section>
+				<h2>Bootstrap Grid System</h2>
+				<p>A grid system lets you layout pages according to fractions of a grid (usually 12, 16, or 24 columns).</p>
+				<p>Bootstrap includes a powerful mobile-first grid system for building layouts of all shapes and sizes. It’s based on a 12 column layout.</p>
+			   </section>
+		  
+			   <section>
+				  <h2>Bootstrap Grid System</h2>
+				 <ul>
+				   <li class="fragment">There are three major components—<span style="color:yellow">containers, rows, and columns</span>.</li>
+				   <li class="fragment">Containers—.container for fixed width or .container-fluid for full width—center your site’s contents and help align your grid content.</li>
+				   <li class="fragment">Rows are horizontal groups of columns that ensure your columns are lined up properly.</li>
+				   <li class="fragment">Content should be placed within columns.</li>
+				 </ul>
+			   </section>
+		  
+			   <section>
+				  <h2>Bootstrap Grid System</h2>
+				 <ul>
+				   <li class="fragment"> Column classes indicate the number of columns you’d like to use out of the possible 12 per row. So if you want three equal-width columns, you’d use .col-sm-4.</li>
+				   <li class="fragment">Column widths are set in percentages, so they’re always fluid and sized relative to their parent element.</li>
+				   <li class="fragment">Columns have horizontal padding to create the gutters between individual columns.</li>
+				   <li class="fragment">There are five grid tiers, one for each responsive breakpoint: extra small, small, medium, large, and extra large.</li>
+				 </ul>
+			   </section>
+		  
+			   <section>
+				  <h2>Bootstrap Grid System</h2>
+				  <img src="images/bootstrap.png" alt="Bootstrap Grid Code">
+			   </section>
+		  
+			   <section>
+				 <h2>Creating a Grid With Bootstrap</h2>
+				 <img src="images/exercise.png" alt="Class Exercise">
+			   </section>
+		  
+			   <section>
+				 <h2>More slides!</h2>
+				 <p>A lovely review thanks to GDI</p>
+				 <a href="http://www.teaching-materials.org/bootstrap-hosting-github/#/1">Click here</a>
+			   </section>
+			   
+		  
+			   <section>
+				 <h2>FreeCodeCamp</h2>
+				<a href="https://www.freecodecamp.com/challenges/use-responsive-design-with-bootstrap-fluid-containers">Click here for exercises on Responsive Design</a>
+			   </section>
+		  
+			   <section>
+				 <h2>Another bootstrap challenge</h2>
+				 <p><a href="https://docs.google.com/a/anniecannons.com/document/d/1acTeTRmLkGxlz-JdITgYqsfRiCOWCLM10iyidULpcZc/edit?usp=sharing">Click here</a></p>
+			   </section>
+
+			   <section>
+				   <h2>Flexbox</h2>
+			   </section>
+
+			   <section>
+				   <h2>Flexbox</h2>
+				   <p>Flexbox makes aligning element and centering them vertically and horizontally super easy! Keep you from feeling like this:</p>
+					<img src="images/cssstruggle.gif" alt="CSS Struggle">
+			   </section>
+		  
+			   <section>
+				 <h2>Flexbox!</h2>
+				 <a href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/">Flexbox Lecture</a>
+			   </section>
+
+			   <section>
+				   <h2>Flexbox Properties</h2>
+				   <p>For the parent:</p>
+				   <ul>
+					   <li>display: flex;</li>
+					   <li>Does the parent need a height?</li>
+					   <li>Flex-direction</li>
+					   <li>justify-content</li>
+					   <li>align-items</li>
+				   </ul>
+			   </section>
+
+			   <section>
+				   <h2>Flex-direction</h2>
 					<ul>
-						<li>more allows you to step through the contents of a file a screen at a time</li>
-						<li>less allows you to step backwards or forwards</li>
-						<li>Press q to exit out of this mode</li>
+						<li>The default is set to "row"</li>
+						<li>Changing to <code> flex-direction: column </code> on the parent will change the orientation of the children.</li>
+						<img src="images/flexdirection.png" alt="Flex Direction">
 					</ul>
-			</section>
+			   </section>
 
-			<section>
-				<h2>Try this!</h2>
-				<p>cat /var/log/wifi.log </p>
-			</section>
+			   <section>
+					<h2>justify-content</h2>
+					 <ul>
+						 <li>The default is set to "flex-start"</li>
+						 <li>This changes the position of the children along the main axis.</li>
+						 <ul>
+							 <li>flex-start</li>
+							 <li>flex-end</li>
+							 <li>center</li>
+							 <li>space-between</li>
+							 <li>space-around</li>
+						 </ul>
+					 </ul>
+				</section>
 
-			<section>
-				<h2>Edit a File</h2>
-				<p>You can use various editors built into bash:</p>
-				<ul>
-					<li>$ vi myfile.txt</li>
-					<li>$ emacs myfile.txt</li>
-					<li>$ pico myfile.txt</li>
-				</ul>
-				<p>Or on a Mac, you can open with any desktop app:</p>
-<pre><code>
-$ open -a TextEdit myfile.txt
-</code></pre>
-				<p>Or with the default editor:</p>
-<pre><code>
-$ open -t myfile.txt	
-</code></pre>
-			</section>
+				<section>
+						<h2>align-items</h2>
+						 <ul>
+							 <li>The default is set to "flex-start"</li>
+							 <li>This changes the position of the children along the cross axis.</li>
+							 <ul>
+									<li>flex-start</li>
+									<li>flex-end</li>
+									<li>center</li>
+								</ul>
+							</ul>
+					</section>
 
-			<section>
-				<h2>Fun tools</h2>
-				<ul>
-					<li>ping</li>
-					<li>traceroute</li>
-					<li></li>
-				</ul>
-			</section>
+			   <section>
+				   <h2>Flexbox Game</h2>
+				   <a href="http://flexboxfroggy.com/">Flexbox Froggy</a>
+			   </section>
+		  
+			   <section>
+				 <h2>CSS Advanced</h2>
+				 <p>For so much more......<a href="http://www.htmldog.com/guides/css/advanced/">Click here</a></p>
+			   </section> 
+		  
+			   <section>
+				 <h2>Your Yogurt Shop Assignment</h2>
+				 <p>Make a responsive site based on the designs and assets you are given.</p>
+				 <p>Make sure you use bootstrap and flexbox!</p>
+				 <a href="https://github.com/AnnieCannons/ac-intro-programming/blob/master/Exercises/frozenyogurtshop-ac-students.zip">click here!</a>
+			   </section>
 
-			<section>
-				<h2>Resources</h2>
-				<ul>
-					<li><a href="https://code.tutsplus.com/tutorials/how-to-customize-the-command-prompt--net-20586">How to Customize the Command Prompt</a></li>
-					<li><a href="https://learncodethehardway.org/unix/">Learn Bash</li>
-				</ul>
-			</section>
-
-			<section>
-				<h2>GIT</h2>
-			</section>
-
-			<section>
-				<h2>Version Control System</h2>
-				<p>What is it?</p>
-				<ul>
-					<li class="fragment">A system that keeps records of your changes.</li>
-					<li class="fragment">Allows for collaborative development</li>
-					<li class="fragment">Allows you to know who made what changes and when.</li>
-					<li class="fragment">Allows you to revert any changes and go back to a previous state.</li>
-				</ul>
-			</section>
-
-			<section>
-				<h2>Example Flow</h2>
-				<p>Alice creates this code and commits it as version 0:</p>
-<pre><code class="js" data-trim contenteditable>
-function addTwo(num){
-	return num + 2;
-}
-</code></pre>
-				<p class="fragment">Alice edits and commits as version 1:</p>
-<pre class="fragment"><code class="js" data-trim contenteditable>
-function addThree(num){
-	return num + 3;
-}
-</code></pre>
-			</section>
-
-			<section>
-				<h2>Example flow 2</h2>
-				<p>Bob pulls the code from version 0 and edits:</p>
-<pre><code class="js" data-trim contenteditable>
-function addTwo(num){
-	if (num === Infinity){
-		alert("Cannot add to infinity!");
-	}
-	return num + 2;
-}
-</code></pre>
-				<p class="fragment">Bob pulls Alice's changes and it merges them:</p>
-<pre class="fragment"><code class="js" data-trim contenteditable>
-function addThree(num){
-	if (num === Infinity){
-		alert("Cannot add to infinity!");
-	}
-	return num + 3;
-}
-</code></pre>
-			</section>
-
-			<section>
-				<h2>Version Control</h2>
-				<p>Version control systems are categorized as either "centralized" or "distributed"</p>
-				<p class="fragment"><span style="color: yellow">Centralized version control systems </span>are based on the idea that there is a single "central" copy of your project somewhere (probably on a server), and programmers will "commit" their changes to this central copy.</p>
-				<p class="fragment">In <span style="color: yellow">distributed systems</span>, every developers "clones" a copy of a repository and has the full history of the project on their own hard drive.</p>
-			</section>
-
-			<section>
-				<h2>Centralized vs distributed systems</h2>
-				<img src="images/versioncontrol" alt="">
-			</section>
-
-			<section>
-				<h2>What is Git?</h2>
-				<p class="fragment">Git is a popular version control system! There are others but this is considered by many to be the best.</p>
-				<p class="fragment">Git allows groups of people to work on the same documents (often code) at the same time, and without stepping on each other's toes. </p>
-			</section>
-
-			<section>
-				<h2>Goals of Git Design</h2>
-				<ul>
-					<li class="fragment">Fast--add to you team and code base quickly</li>
-					<li class="fragment">Each commit has a corresponding hash (it tracks the changes from everyone)</li>
-					<li class="fragment">Everyone has a local copy of the history of the source code</li>
-				</ul>
-			</section>
-
-			<section>
-				<h2>Install git	</h2>
-				<a href="http://git-scm.com/downloads">http://git-scm.com/downloads</a>
-			</section>
-
-			<section>
-				<h2>How does git work?</h2>
-				<p class="fragment">It can be complicated at first, but there are a few key concepts. Don't get too worried about the names -- you will get them over time!</p>
-				<p class="fragment">Important GIT terms in the following slides will be in <span style="color:yellow">yellow</span>.</p>
-				<img src="https://media.tenor.co/images/4d46caa0ab53ae04ce457eba29721f19/raw" alt="" class="fragment">
-			</section>
-
-			<section>
-				<h2>Key Concept:<span style="color:yellow">Snapshots</span></h2>
-				<ul>
-					<li class="fragment">The way git keeps track of your code history</li>
-					<li class="fragment">Essentially records what all your files look like as a given point in time</li>
-					<li class="fragment">You decide when to take a snapshot and of what files</li>
-					<li class="fragment">You can do back and visit any snapshot</li>
-				</ul>
-			</section>
-
-			<section>
-				<h2>Key Concept:<span style="color:yellow">Commit</span></h2>
-				<ul>
-					<li class="fragment">The act of creating a snapshot</li>
-					<li class="fragment">Can be a noun or a verb ("I committed code" or "I just made a new commit"</li>
-					<li class="fragment">Essentially, a project is made up of a bunch of commits</li>
-				</ul>
-			</section>
-
-			<section>
-				<h2>Key Concept:<span style="color:yellow">Commit</span></h2>
-				<p>Commits contain three pieces of information.</p>
-				<ol>
-					<li class="fragment">Information about how the files changed from previously</li>
-					<li class="fragment">A reference to the commit that came before it (this is called the parent commit)</li>
-					<li class="fragment">A hashcode name (this will look something like: fb2dec48987dfgdf8798dfg7dfg87dfg79sdsfsdf7sdf78h9n</li>
-				</ol>
-			</section>
-
-			<section>
-				<h2>Key Concept:<span style="color:yellow">Repository</span></h2>
-				<ul>
-					<li class="fragment">Often called a 'repo'</li>
-					<li class="fragment">A collection of all the files and the history of all those files</li>
-					<li class="fragment">Consists of all of your commits</li>
-					<li class="fragment">Place where all you hard work is stored!</li>
-				</ul>
-			</section>
-
-			<section>
-				<h2>Key Concept:<span style="color:yellow">Repository</span></h2>
-				<ul>
-					<li class="fragment">Can live on a local machine (aka your computer) or on a remote server (like Github!)</li>
-					<li class="fragment">The act of copying a repository from a remote server is called <span style="color:yellow">cloning</span></li>
-					<li class="fragment">Cloning from a remote server allows teams to work together.</li>
-				</ul>
-			</section>
-
-			<section>
-				<h2>Key Concept:<span style="color:yellow">Repository</span></h2>
-				<ul>
-					<li class="fragment">The process of downloading commits that don't exist on your machine from a remote repository is called <span style="color:yellow">pulling</span> changes.</li>
-					<li class="fragment">The process of adding your local changes to the remote repository is called <span style="color:yellow">pushing</span> changes</li>
-					<p class="fragment"><iframe width="560" height="315" src="https://www.youtube.com/embed/vCadcBR95oU" frameborder="0" allowfullscreen></iframe>	</p>			</ul>
-			</section>
-
-			<section>
-				<h2>Key Concept:<span style="color:yellow">Branches</span></h2>
-				<ul>
-					<li class="fragment">All commits in git live on a branch</li>
-					<li class="fragment">But there can be many many branches</li>
-					<li class="fragment">The main branch in a project is called the <span style="color:yellow">master </span> branch.</li>
-				</ul>
-			</section>
-
-			<section>
-				<h2>Getting Started</h2>
-				<p class="fragment">You can create repositories that are version controlled on your own computer. These are called local repositories.</p>
-				<p class="fragment">The cool thing about distributed systems is that this repo acts the same way as if it were a remote repo.</p>
-			</section>
-
-			<section>
-				<h2>Creating a local repository</h2>
-				<p class="fragment">When creating a new project on your local machine using git, you will first create a new repository.</p>
-				<p class="fragment">To use git, we will use the terminal.</p>
-				<p class="fragment">To begin, open the Terminal, and move to where you want to place your project on your local machine using the 'cd' (change directory) command. </p>
-<pre class="fragment"><code class="js" data-trim contenteditable>
-Lauras-MacBook-Pro:~ laurahackney$ cd Documents
-Lauras-MacBook-Pro:~ laurahackney$ cd dev
-Lauras-MacBook-Pro:~ laurahackney$ mkdir newProject
-Lauras-MacBook-Pro:~ laurahackney$ cd newProject
-</code></pre>	
-			</section>
-
-			<section>
-				<h2>Creating a local repository</h2>
-				<p>To initialize a git repository in the root of the folder, run the git init command.</p>
-<pre><code class="js" data-trim contenteditable>
-Lauras-MacBook-Pro:newProject laurahackney$ git init
-
-Initialized empty Git repository in /Users/laurahackney/Documents/dev/newProject
-</code></pre>
-			</section>
-
-			<section>
-				<h2>Add a new File to the Repo</h2>
-				<p>Go ahead and add a new file to the project by running a touch command.</p>
-<pre><code class="js" data-trim contenteditable>
-Lauras-MacBook-Pro:newProject laurahackney$ touch index.html
-Lauras-MacBook-Pro:newProject laurahackney$ ls
-</code></pre>
-				<p class="fragment">Once you have added or modified files in a folder containing a git repo, git will notice that changes have been made inside the repo. But, git won't officially keep track of the file (that is, put it in a commit), unless you tell it to.</p>
-				<p class="fragment">Visual studio code!</p>
-			</section>
-
-			<section>
-				<h2>Git status check</h2>
-				<p>After creating the new file, you can use the git status command to see which files git knows exist.</p>
-<pre><code class="js" data-trim contenteditable>
-Lauras-MacBook-Pro:newProject laurahackney$ git status
-On branch master
-Initial commit
-Untracked files: 
-</code></pre>
-			<p class="fragment">What is this is saying is, "Hey, we noticed you created a new file, but we aren't going to do anything with it until you tell us to add it."</p>
-			</section>
-
-			<section>
-				<h2>Running a commit</h2>
-				<p>To add a file to a comit, you first need to add it to the <span style="color:yellow">staging environment</span>. To go this, you can use the git add command</p>
-<pre><code class="js" data-trim contenteditable>
-Lauras-MacBook-Pro:newProject laurahackney$ git add index.html 
-</code></pre>
-				<p class="fragment">Once you've used the git add command to add all the files you want to the staging environment, you can then tell git to package them into a commit using the git commit command</p>
-<pre class="fragment"><code class="js" data-trim contenteditable>
-Lauras-MacBook-Pro:newProject laurahackney$ git commit -m "Initial commit!"
-</code></pre>	
-				<p class="fragment">Check your work with git log</p>
-			</section>
-
-			<section>
-				<h2>Review</h2>
-				<ul>
-					<li>git init</li>
-					<li>git add</li>
-					<li>git status</li>
-					<li>git commit -m "text"</li>
-					<li>git log</li>
-				</ul>
-			</section>
-
-			<section>
-				<h2>Exercises</h2>
-				<p>Look over this one: <a href="https://www.atlassian.com/git/tutorials/setting-up-a-repository">Setting up a Repo</a></p>
-				<p>We will do this one together. Do the first nine exercises. <a href="https://try.github.io/levels/1/challenges/1">Exercises</a></p>
-				<p>For you to look at later <a href="http://women2.com/2016/02/09/git-101-for-beginners/?hvid=3PXmn9&utm_source=Women+2.0+Mailing+List&utm_campaign=b06f62550e-08-24-15_Weekly_Newsletter&utm_medium=email&utm_term=0_8e8e6a075d-b06f62550e-310404969">Git 101</a></p>
-			</section>
-
-			<section>
-				<h2>Let's make this easier</h2>
-				<img src="images/easy.jpeg" alt="">
-			</section>
-
-			<section>
-				<h2>Sourcetree</h2>
-				<p>Go to sourcetreeapp.com</p>
-				<p>Visual tour and logging in with a Github account</p>
-			</section>
-
-			<section>
-				<h2>Github!</h2>
-				<img src="images/codercat.jpg" width= "500px" alt="">
-			</section>
-
-			<section>
-				<h2>What is Github?</h2>
-				<p>www.github.com</p>
-				<ul>
-					<li class="fragment">It is the largest web-based git repository hosting service</li>
-					<li class="fragment">Allows for code collaboration with anyone online</li>
-					<li class="fragment">Adds a bunch of features like bug tracking!</li>
-					<li class="fragment">Check out our AnnieCannons github Repo</li>
-				</ul>
-			</section>
-
-			<section>
-				<h2>Using Remote Repos</h2>
-				<p class="fragment">To synchronize with a remote repository, first tell Git about it</p>
-<pre class="fragment"><code class="js" data-trim contenteditable>
-Lauras-MacBook-Pro:newProject laurahackney$ git remote add origin git://github.com/username/repo
-</code></pre>
-				<p class="fragment">To push changes, use git push</p>
-<pre class="fragment"><code class="js" data-trim contenteditable>
-Lauras-MacBook-Pro:newProject laurahackney$ git push origin master
-</code></pre>
-				<p class="fragment">To pull changes, use git pull</p>
-<pre class="fragment"><code class="js" data-trim contenteditable>
-Lauras-MacBook-Pro:newProject laurahackney$ git pull origin master
-</code></pre>
-				<p class="fragment">OR! Use sourcetree!!</p>
-			</section>
-
-			<section>
-				<h2>Fork a Repo!</h2>
-			</section>
-
-			<section>
-				<h2>AC Algorithms</h2>
-				<p>Your first pull!</p>
-			</section>
+			   <section>
+				   <h2>CSS Roundup</h2>
+				   <p>Click <a href="">here</a></p>
+			   </section>
 
 		<!-- Last Slide -->
 		<section style="text-align: left;">
