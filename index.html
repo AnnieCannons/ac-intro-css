@@ -29,13 +29,15 @@
 		<div class="slides">
 
 			<section>
-				<h2>CSS: Cascading Style Sheets</h2>
+				<h1>CSS: Cascading Style Sheets</h1>
 			  </section>
 
 			  <section>
-				<h2>But first! Directory Structure</h2>
-				<p>Page 81 - Textbook</p>
-			  </section>
+					<h2>But first! Directory Structure</h2>
+					<p>Page 81 - Textbook</p>
+					<img src="images/HTMLBook.jpg" alt="HTML/CSS Book">
+				</section>
+				
 			  <!-- Folder Structure -->
 			  <section>
 				<h3>Get Started: Folder Structure</h3>
@@ -99,7 +101,13 @@ body {
 				<h2>What does 'Cascading' mean?</h2>
 				<p>Parent-child relationship in CSS</p>
 				<img src="images/dom.png" alt="DOM tree" width="700px" alt="DOM Tree">
-			  </section>
+				</section>
+				
+				<section>
+					<h2>CSS Introduction</h2>
+					<p>Chapter 10 in the Textbook</p>
+					<img src="images/HTMLBook.jpg" alt="HTML/CSS Book">
+				</section>
 			  
 			<section>
 			  <h2>The Selector</h2>
@@ -362,7 +370,8 @@ comment here
 
 			  <section>
 				  <h2>Test your selector skills</h2>
-				  <p>Click <a href="https://flukeout.github.io/">here</a></p>
+					<p>Click <a href="https://flukeout.github.io/">here</a></p>
+					<img src="images/exercise.gif" alt="Exercise Gif">
 			  </section>
 
 			  <section>
@@ -430,8 +439,8 @@ table {
 				<h2>Finding colors</h2>
 				<p>To find colors or color schemes for your webpage, you can use:
 				<ul>
-				  <li>Desktop graphics programs: Adobe Photoshop, <a href="http://mattpatenaude.com/">Mac Colors</a></li>
-				  <li>Online tools: <a href="http://www.coolors.co/">Coolors</a>, <a href="http://www.ideo.com/visualizer.html">Web Color Visualizer</a>, <a href="http://colorschemedesigner.com/">Color Scheme Designer</a>, <a href="http://www.colourlovers.com/">ColourLovers</a>, <a href="http://www.kuler.com/">Kuler</a></li>
+				  <li>Desktop graphics programs: Adobe Photoshop</li>
+				  <li>Online tools: <a href="http://www.coolors.co/">Coolors</a>, <a href="http://colorschemedesigner.com/">Color Scheme Designer</a></li>
 				  <li>Browser extensions: <a href="https://chrome.google.com/extensions/detail/hmdcmlfkchdmnmnmheododdhjedfccka?hl=en">Eye Dropper for Chrome</a>, <a href="https://addons.mozilla.org/en-US/firefox/addon/271/">ColorZilla for FireFox</a></li>
 				</ul>
 			  </section>
@@ -476,6 +485,7 @@ font-size: 1.5em;
 font-size: 12px;
 font-size: 100%;
 font-size: larger;
+font-size: 100vw
 </code></pre>
 			  </section>
 			 
@@ -546,7 +556,17 @@ h1 a {
 			<h1 style="font-size:200%">Header <a style="font-size:75%" href="#">Link</a></h1>
 			Text!
 		  </div>
-			  </section>
+				</section>
+				
+				<section>
+					<h2>Property: font-size (vw)</h2>
+					<p>vw or vh stands for viewport width or viewport height. This allows you to dynamically set the size of your font depending on the size of the screen. This is especially helpful in responsive design.</p>
+<pre><code class="css">
+h1 { 
+	font-size: 3vw; 
+}
+</code></pre>
+				</section>
 			  
 			  <section>
 				<h2>Property: font-style</h2>
@@ -607,7 +627,13 @@ text-align: center;
 text-decoration: underline;
 </code></pre>
 		  <p style="text-decoration:underline">Underlined text</p>
-			  </section>
+				</section>
+				
+				<section>
+					<h2>CSS Color and Fonts</h2>
+					<p>Chapter 11 and 12 in the Textbook</p>
+					<img src="images/HTMLBook.jpg" alt="HTML/CSS Book">
+				</section>
 			 
 			  <section>
 				<h2>CSS Location</h2>
@@ -901,7 +927,7 @@ padding: 10px 5px 3px 20px;
 			  </section>
 		  
 			  <section>
-				<h2>Exercise Time</h2>
+				<h2>Practice</h2>
 				<p><a href="https://www.khanacademy.org/computing/computer-programming/html-css/css-layout-properties/p/challenge-the-boxer-model">Khan Academy Exercise</a></p>
 			  </section>
 		  
@@ -918,9 +944,9 @@ padding: 10px 5px 3px 20px;
 					<h2>Position: Static</h2>
 					<p>In normal flow, inline boxes flow from left to right, wrapping to next line when needed.</p>
 <pre><code class="html">
-&lt;img src="logo.png"&gt;&lt;img src="logo.png"&gt;&lt;img src="logo.png"&gt;
+&lt;img src="panda.png"&gt;&lt;img src="panda.png"&gt;&lt;img src="panda.png"&gt;
 </code></pre>
-					<img src="http://www.accphotos.com/blog/wp-content/uploads/2008/01/1_google_logo-1.jpg"><img src="http://www.accphotos.com/blog/wp-content/uploads/2008/01/1_google_logo-1.jpg"><img src="http://www.accphotos.com/blog/wp-content/uploads/2008/01/1_google_logo-1.jpg">
+					<img src="images/panda.gif" width="200px"><img src="images/panda.gif" width="200px"><img src="images/panda.gif" width="200px">
 			  </section>
 		  
 			  <section>
@@ -945,7 +971,7 @@ height: 100px; background-color: yellow;"&gt;
 Hello, hi!
 &lt;/div&gt;
 </code></pre>
-		  <div style="position: relative; left: 80px; top: 20px; height: 100px; background-color: yellow;">Hello, hi!</div>
+		  <div style="position: relative; left: 80px; top: 20px; height: 100px; background-color: blue;">Hello, hi!</div>
 			  </section>
 
 			  <section>
@@ -1044,7 +1070,7 @@ Hello, hi!
 		  
 <pre><code class="html">
 &lt;div style="position: absolute; bottom: 0px; left:60px; 
-background-color: green"&gt; Bottom &lt;/div&gt;
+background-color: red"&gt; Bottom &lt;/div&gt;
 &lt;div style="position: absolute; bottom: 10px; left:60px; 
 background-color: green; z-index: 2;"&gt; Top &lt;/div&gt;
 </code></pre>
@@ -1060,13 +1086,13 @@ background-color: green; z-index: 2;"&gt; Top &lt;/div&gt;
 				<p>The <code>float</code> property is used to float boxes on the sides of other boxes, allowing other content to flow around it.</p>
 <pre><code class="html">
 &lt;div style="border:1px solid black"&gt; 
-&lt;img style="float:right" src="assk.jpg"&gt;
-	Aung San Suu Kyi is a....
+&lt;img style="float:right" src="images/panda.gif"&gt;
+	A panda is one of the best....
 &lt;/div&gt;
 </code></pre>
 		  <div style="border:1px solid black">
-		  <img style="float:right" src="http://prof.chicanas.com/20/wp-content/uploads/2015/04/Aung-San-Suu-Kyi-visit-to-008.jpg">
-		  <p style="font-size:35px">Aung San Suu Kyi is a Burmese statesperson, politician, diplomat and author who serves as the First and incumbent State Counsellor and Leader of the National League for Democracy. </p>
+		  <img style="float:right" src="images/panda.gif">
+		  <p style="font-size:35px">A panda is one of the best animals on the planet. They are extremely clumsy and they love to play. They mostly eat bamboo and have a good time crawling around the forest floor.</p>
 		  </div>
 			  </section>
 			  
@@ -1122,30 +1148,27 @@ Hi, this is my personal website, where you'll find out everything about my inner
 				<p>Go through at your own pace</p>
 				<a href="http://learnlayout.com/">Click here for Learn Layout</a>
 			</section>
-			  
-			  <section>
-				<h2>More on CSS Positioning</h2>
-				<a href="http://learn.shayhowe.com/html-css/positioning-content/">Click here for Shay Howe's site</a>
-			  </section>
+		
+				
+			<section>
+					<h2>Exercise Time</h2>
+					<a href="https://docs.google.com/a/anniecannons.com/document/d/1DcGTRA_Rnp4H4A5W_M5XX3nChUI9Zd6GaG5d83Qb_a8/edit?usp=sharing">Click here for a Google Doc</a><br/>
+					<img src="images/exercise.gif" alt="Exercise Gif">
+			</section>
 			  
 			  <section>
 				<h2>Practice</h2>
 				<p>MySpace for Coach</p>
-				<a href="https://anniecannons.github.io/coach-myspace/">Click here</a>
+				<a href="https://anniecannons.github.io/coach-myspace/">Click here</a><br/>
+				<img src="images/exercise.gif" alt="Exercise Gif">
 			  </section>    
 		  
-			  <section>
-				<h2>Exercise Time</h2>
-				<a href="https://docs.google.com/a/anniecannons.com/document/d/1DcGTRA_Rnp4H4A5W_M5XX3nChUI9Zd6GaG5d83Qb_a8/edit?usp=sharing">Click here for a Google Doc</a>
-			  </section>
-			  
 			  <section>
 				<h2>Cross-browser Compliance</h2>
 				<p class="fragment">Keep in mind that internet browsers have their own default styles. So, even if you didn't write any CSS, the default style of the browser will still be applied when the content is displayed on the page.</p>
 				<p class="fragment"> One thing to be aware of is that different browsers may apply a small subset of these rules differently. That is why, as a front-end developer, you have to be aware of <span style="color:yellow">'cross-browser compliance'</span> issues. These are issues that we may explore more fully in future lessons. But it is important to know about this from the outset.</p>
 			  </section>
-		  
-		  
+		
 			   <section>
 				 <h2>CSS Review Questions</h2>
 				 <ol>
@@ -1155,7 +1178,13 @@ Hi, this is my personal website, where you'll find out everything about my inner
 				   <li class="fragment">What are the different types of selectors?</li>
 				   <li class="fragment">How do you write an id in your html for a p element? How do you write it in CSS?</li>
 			   </ol>
-			   </section>
+				 </section>
+				 
+				 <section>
+					<h2>CSS Position and Layout</h2>
+					<p>Chapter 13 and 15 in the Textbook</p>
+					<img src="images/HTMLBook.jpg" alt="HTML/CSS Book">
+				</section>
 		  
 			   <section>
 				 <h2>Responsive Design</h2>
@@ -1245,19 +1274,17 @@ Hi, this is my personal website, where you'll find out everything about my inner
 				 <a href="https://css-tricks.com/snippets/css/media-queries-for-standard-devices/">CSS Tricks</a>
 			   </section>
 		  
-			   <section>
-				 <h2>CSS Resets</h2>
-				 <ul>
-				  <li>Not all browsers start as the same blank slate - browsers define different default styles.</li>
-				  <li>CSS reset stylesheets are used to normalize the default CSS across browsers.</li>
-			   </ul>
-			  <p><a href="http://necolas.github.com/normalize.css/">Normalize.css</a> normalizes the default styles across browsers (and is the preferred approach).</p>
-			   </section>
 		  
 			   <section>
 				 <h2>Responsive Design Review</h2>
-				 <a href="https://www.sitepoint.com/premium/courses/introduction-to-responsive-web-design-2889/lesson/1/step/1">This video</a>
-			   </section>
+				 <a href="https://www.youtube.com/watch?v=5xzaGSYd7jM">This video</a>
+				 </section>
+				 
+				<section>
+					<h2>Responsive Design Exercises</h2>
+					<p>Click on <a href="http://web.simmons.edu/~grovesd/comm328/demo/media-query-exercises/media-query-example1-done.html">this link</a>. We will provide the image files.</p>
+					<img src="images/exercise.gif" alt="Exercise Gif">
+				</section>
 		  
 			   <section>
 				 <h2>How can I make all this stuff easier??</h2>
@@ -1280,7 +1307,7 @@ Hi, this is my personal website, where you'll find out everything about my inner
 		  
 			   <section>
 				 <h2>Bootstrap</h2>
-				 <a href="http://getbootstrap.com/css/">Check it OUT!</a>
+				 <a href="https://getbootstrap.com/">Check it OUT!</a>
 				 <br>
 				 <img src="http://vignette2.wikia.nocookie.net/epicrapbattlesofhistory/images/0/0b/Matilda-miss-honey-glasses.gif/revision/latest?cb=20150404013936" alt="Miss Honey Looking Intrigued">
 			   </section>
@@ -1326,16 +1353,17 @@ Hi, this is my personal website, where you'll find out everything about my inner
 				 <p>A lovely review thanks to GDI</p>
 				 <a href="http://www.teaching-materials.org/bootstrap-hosting-github/#/1">Click here</a>
 			   </section>
-			   
 		  
 			   <section>
 				 <h2>FreeCodeCamp</h2>
 				<a href="https://www.freecodecamp.com/challenges/use-responsive-design-with-bootstrap-fluid-containers">Click here for exercises on Responsive Design</a>
+				<img src="images/exercise.gif" alt="Exercise Gif">
 			   </section>
 		  
 			   <section>
 				 <h2>Another bootstrap challenge</h2>
 				 <p><a href="https://docs.google.com/a/anniecannons.com/document/d/1acTeTRmLkGxlz-JdITgYqsfRiCOWCLM10iyidULpcZc/edit?usp=sharing">Click here</a></p>
+				 <img src="images/exercise.gif" alt="Exercise Gif">
 			   </section>
 
 			   <section>
@@ -1404,7 +1432,8 @@ Hi, this is my personal website, where you'll find out everything about my inner
 
 			   <section>
 				   <h2>Flexbox Game</h2>
-				   <a href="http://flexboxfroggy.com/">Flexbox Froggy</a>
+					 <a href="http://flexboxfroggy.com/">Flexbox Froggy</a>
+					 <img src="images/exercise.gif" alt="Exercise Gif">
 			   </section>
 		  
 			   <section>
@@ -1421,7 +1450,7 @@ Hi, this is my personal website, where you'll find out everything about my inner
 
 			   <section>
 				   <h2>CSS Roundup</h2>
-				   <p>Click <a href="">here</a></p>
+				   <p>Click <a href="https://drive.google.com/open?id=1K6Kp_M1RajCthbUMzm5UIwAjAJuBqoaU7qMSO3_SCis">here</a></p>
 			   </section>
 
 		<!-- Last Slide -->
