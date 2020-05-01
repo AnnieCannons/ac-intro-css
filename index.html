@@ -41,7 +41,7 @@
 			  <!-- Folder Structure -->
 			  <section>
 				<h3>Get Started: Folder Structure</h3>
-				<p>All the files for your site should be stored within the same folder.</p>
+				<p>All the files for your site will be stored within the main project folder.</p>
 				<div class="halfblock">
 				<p class="left-align"><strong>This includes:</strong></p>
 				<ul>
@@ -54,13 +54,22 @@
 				<p class="left-align" style="margin-top: .5em;"><small>Note: File names should not include spaces or special characters. File names ARE case sensitive.</small></p>
 				</div>
 			  </section>
+
+			  <section>
+				<h3>Get Started: Folder Structure</h3>
+				<p>In your dev folder, you will have folders for each project.</p>
+				<div class="halfblock">
+				<p class="left-align"><strong>All assets for each project will be in the main folder.</strong></p>
+				
+				</div>
+			  </section>
 		  
 			<section>
 			   <h2>CSS: What is it?</h2>
 			   <p class="fragment">CSS = Cascading Style Sheets</p>
 			   <p class="fragment">CSS is a "style sheet language" that lets you style the elements on your page. It adds color, boldness, and layout to an otherwise plain and boring world of HTML.  </p>
-			   <p class="fragment">CSS is embedded inside HTML, but it is not HTML itself.</p>
-			   <a class="fragment" href="http://www.acfjc.org/">Website with and without CSS</a>
+			   <p class="fragment">CSS is embedded inside HTML, but it is not HTML itself. Your CSS file will be separate from your HTML file.</p>
+			   <a class="fragment" href="http://www.acfjc.org/" target="_blank">Website with and without CSS</a>
 			</section>
 		  
 			<section>
@@ -96,12 +105,68 @@ body {
 }
 </code></pre>
 			  </section>
+
+			  <section>
+				<h2>Anatomy of CSS</h2>
+				<ul>
+					<li class="fragment">We will use 'selectors' to tell the program what we want to style.</li>
+					<li class="fragment">Once you have the proper selector, you can write all of the style rules you want, using 'property-value' pairs.</li>
+					
+			   </ul>
+			</section>
+
+			   <section>
+				<h2>Anatomy of CSS: Properties</h2>
+				<ul>
+					<li class="fragment">background-color</li>
+					<li class="fragment">width or height</li>
+					<li class="fragment">font-family or font-size</li>
+					<li class="fragment">border</li>
+					<li class="fragment">And many, many more!</li>
+			   </section>
+
+			   <section>
+				<h2>Anatomy of CSS: Values</h2>
+				<ul>
+					<li class="fragment">background-color: <span style="color: turquoise">blue;</span></li>
+					<li class="fragment">width or height: <span style="color: turquoise">200px;</span></li>
+					<li class="fragment">font-family: <span style="color: turquoise">"Helvetica";</span> or font-size: <span style="color: turquoise">16px;</span></li>
+					<li class="fragment">border: <span style="color: turquoise">2px, solid, black;</span> </li>
+					<li class="fragment">And many, many more!</li>
+			   </section>
+				
+			  </section>
 			   
 			  <section>
 				<h2>What does 'Cascading' mean?</h2>
 				<p>Parent-child relationship in CSS</p>
 				<img src="images/dom.png" alt="DOM tree" width="700px" alt="DOM Tree">
 				</section>
+
+				<section>
+					<h2>How does 'Cascading' work?</h2>
+<pre><code class="css">
+body {
+color: yellow;
+background-color: green;
+}
+
+h1 {
+color: blue;
+background-color: black;
+	}
+
+p {
+color: red;
+background-color: orange;
+}
+
+p.class {
+color: turquoise;
+background-color: biege; 
+}
+</code></pre>
+				</section>	
 				
 				<section>
 					<h2>CSS Introduction</h2>
@@ -139,7 +204,7 @@ p {
 }
 </code></pre>
 		  
-		  <p>Selects all <code>p</code> elements in the entire document.</p>
+		  <p class="fragment">Selects all <code style="color: turquoise">p</code> elements in the entire document.</p>
 			  </section>  
 		   
 		  
@@ -159,8 +224,8 @@ p {
 &lt;p id="header"&gt;&lt;/p&gt;
 </code></pre>
 		  
-			<p>Element ids are unique, so that should only be one element.</p>
-			<p>The "#" is how you tell CSS "this is an id."</p>
+			<p class="fragment">Element ids are unique, and can only be used once in your HTML.</p>
+			<p class="fragment">The "#" is how you tell CSS "this is an id."</p>
 			  </section>
 			  
 			  <section>
@@ -178,8 +243,9 @@ p {
 &lt;p class="warning"&gt;&lt;/p&gt;
 </code></pre>
 		  
-		  <p>Multiple elements can have the same class name.</p>
-		  <p>The "." is how you tell CSS "this is a class name." </p>
+		  <p class="fragment">Multiple elements can have the same class name.</p>
+		  <p class="fragment">The "." is how you tell CSS "this is a class name." </p>
+		  
 			  </section>
 			 
 			  
@@ -202,19 +268,18 @@ p {
 &lt;p class="description"&gt;This is my paragraph.&lt;/p&gt; 
 &lt;p class="intro"&gt;Hi&lt;/p&gt; 
 </code></pre>
+				<p class="fragment">Practice <a href="https://jsbin.com/fufohop/edit?html,css,output" target="_blank">here</a>! </p>
+				<p class="fragment">What colors are these three lines of HTML going to be?</p>
+			  </section>
+			  <section>
+				<h2>Types of Selectors: class</h2>
+				<p>Once you have set style rules for one part or element of your site, you can simply add the same class to other places in your HTML if you want the same style rules to apply there.</p>
+				
 			  </section>
 			 
 			 <section>
 			  <h2>Types of selectors: position in document</h2>
-<pre><code class="css">
-/* CSS FILE */
-ul em {
- color: yellow;
-}
-</code></pre>
 
-			<p>Selects any <code>em</code> element that's a descendant of a <code>ul</code> element.
-			<p>The " " (space) is how you say "find a descendant." </p>
 <pre><code class="html">
 <!-- HTML FILE-->
 &lt;body&gt;
@@ -224,21 +289,31 @@ ul em {
   &lt;p&gt;&lt;em&gt;Bye&lt;/em&gt;&lt;/p&gt;
 &lt;/body&gt;
 </code></pre>
+<pre class="fragment"><code class="css">
+	/* CSS FILE */
+	ul em {
+	 color: yellow;
+	}
+	</code></pre>
+	
+				<p class="fragment">Selects any <code style="color: turquoise">em</code> element that's a descendant of a <code style="color: turquoise">ul</code> element.
+				<p class="fragment" >The " " (space) is how you say "find a descendant." </p>
+				<p class="fragment">Practice <a href="https://jsbin.com/qumivol/edit?html,css,output" target="_blank">here!</a></p>
 			 </section>
 			 
 			   
 			 <section>
 				<h2>Types of selectors: id + position</h2>
-<pre><code class="css">
+<pre class="fragment"><code class="css">
 /* CSS FILE */
 #related-brands li {
  color: gray;
 }
 </code></pre>
-		  <p> 
-		  Selects any &lt;li&gt; element that is a descendant of any element with an id that equals "related-brands."
+		  <p class="fragment"> 
+		  Selects any <code style="color: turquoise">li</code> element that is a descendant of any element with an id that equals "related-brands."
 		  </p>
-<pre><code class="html">
+<pre class="fragment"><code class="html">
 <!-- HTML FILE-->
 &lt;ul id="related-brands"&gt;
  &lt;li&gt;Rice Krispies&lt;/li&gt;
@@ -249,24 +324,23 @@ ul em {
 			 
 			  <section>
 				<h2>Types of selectors: element + class</h2>
-<pre><code class="css">
+<pre class="fragment"><code class="css">
 /* CSS FILE */
 li.special {
  color: yellow;
 }
 </code></pre>
-		  <p>
-		  Selects any <code>li</code> element with a class attribute that 
-		  contains the word "special".
+		  <p class="fragment">
+		  Selects any <code style="color: turquoise">li</code> element with a class that equals "special".
 		  </p>
-<pre><code class="html">
+<pre class="fragment"><code class="html">
 <!-- HTML FILE-->
 &lt;ul&gt;
  &lt;li&gt;Rice Krispies&lt;/li&gt;
  &lt;li class="special"&gt;NutriGrain&lt;/li&gt;
 &lt;/ul&gt;
 </code></pre>
-			<p>Warning: If you place a space after the ".", it'll look for descendants of <code>li</code> with class of "special."</p>
+			<p class="fragment">Warning: If you place a space after the ".", it'll look for <strong>descendants</strong> of <code style="color: turquoise">li</code> with class of "special."</p>
 			  </section>
 			  
 			  <section>
@@ -276,8 +350,9 @@ li.special {
  color: white;
 }
 </code></pre>
-		  <p>
-		  Selects any <code>em</code> element with a class attribute that contains the word "required" that is a descendant of a <code>p</code> element that is a descendant of a <code>form</code> element that is a descendant of a <code>div</code> element with a class attribute that contains the word "content" that is a descendant of any element with an id attribute that equals "header".
+		  <p>Let's take a few moments to explore this selector!</p>
+		  <p class="fragment">
+		  Selects any <code style="color: turquoise">em</code> element with a class attribute that equals "required", that is a descendant of a <code style="color: turquoise">p</code> element, that is a descendant of a <code style="color: turquoise">form</code> element, that is a descendant of a <code style="color: turquoise">div</code> element, with a class attribute that equals "content", that is a descendant of any element with an id attribute that equals "header".
 		  </p>
 		  
 			  </section>
@@ -302,7 +377,15 @@ a:focus {  /* focused link */
  color: purple;
 } 
 </code></pre>
+				<p class="fragment">Practice <a href="https://jsbin.com/fubiwuf/edit?html,css,output" target="_blank">here</a>! </p>
 			  </section>
+
+			  <section>
+				<h2>Types of selectors: pseudo classes</h2>
+				<p>A set of "pseudo classes" can style anchor elements depending on their state.</p>
+				<a href="https://www.google.com/" onMouseOver="this.style.color='red'" onMouseOut="this.style.color='turquoise'">a:hover</a>
+				<a href="https://www.google.com/" id="visited-link-example">a:hover</a>
+			  </section>	
 			 
 			  <section>
 				<h2>Grouping selectors</h2>
@@ -318,27 +401,34 @@ a:hover, a:active, a:focus {
 				<h2>The selector: Cascade rules</h2>
 				 <p>Generally:</p>
 				<ul>
-					<li>id is more specific than a class, class is more specific than element.
-					<li>the longer the selector, the more specific it is
-					<li>If style rules are equally specific, the last one wins!
+					<li class="fragment">id is more specific than a class, class is more specific than element.
+					<li class="fragment">the longer the selector, the more specific it is
+					<li class="fragment">If style rules are equally specific, the last one wins!
 				</ul>
-				<p>Example:</p>
-<pre><code class="css">
+				<p class="fragment">Example:</p>
+<pre class="fragment"><code class="css">
 #a #b h1 { color: red; } 
 #a h1 { color: blue; }
 </code></pre>
- <p>What is the different between these two selectors?</p>
+ <p class="fragment">What is the different between these two selectors?</p>
+			  </section>
+
+			  <section>
+				  <h2>Selectors Cheatsheet</h2>
+				  <p><a href="https://medium.com/design-code-repository/css-selectors-cheatsheet-details-9593bc204e3f" target="_blank">Here</a> is a gret article to refresh your skills.</p>
+				  <p>Click <a href="https://www.dropbox.com/s/h2hni9o1m1di989/CSS%20selectors%20cheatsheet.pdf?dl=0" target="_blank">here</a> for a cheatsheet</p>
+				  <p>Check out <a href="https://frontend30.com/css-selectors-cheatsheet/" target="_blank">this</a> game to practice your skills!</p>
 			  </section>
 			  
 			  <section>
 				<h2>Coding Conventions</h2>
-				 <p>It is possible to write CSS like this:
-<pre><code class="css">
+				 <p class="fragment">It is possible to write CSS like this:
+<pre class="fragment"><code class="css">
 selector{property:values}selector{property:values}
 </code></pre>
 		  
-		  <p>But it's preferred to write it like this:</p>
-<pre><code class="css">
+		  <p class="fragment">But this is how we will write CSS at AnnieCannons:</p>
+<pre class="fragment"><code class="css">
 selector {
  property: values;
 }
@@ -347,7 +437,7 @@ selector {
  property: values;
 }
 </code></pre>
-		  <p>Notice: space between "selector" and "{", 2 spaces before property-value pair, space after "property:", semi-colon after "values", line between rules.
+		  <p class="fragment">Notice: space between "selector" and "{", 2 spaces before property-value pair, space after "property:", semi-colon after "values", line between rules.
 		  </p>
 			  </section>
 			  
@@ -384,13 +474,13 @@ comment here
 
 			  <section>
 				  <h2>Test your selector skills</h2>
-					<p>Click <a href="https://flukeout.github.io/">here</a></p>
+					<p>Click <a href="https://flukeout.github.io/" target="_blank">here</a></p>
 					<img src="images/exercise.gif" alt="Exercise Gif">
 			  </section>
 
 			  <section>
 				  <h2>Advanced Selectors</h2>
-				  <p>Click <a href="http://estelle.github.io/selectors/#slide8">here</a></p>
+				  <p>Click <a href="http://estelle.github.io/selectors/#slide8" target="_blank">here</a></p>
 			  </section>
 			  
 			  <section>
@@ -400,12 +490,14 @@ comment here
 			  <section>
 				<h2>Property Value Pairs</h2>
 				<p>Each property can have one or more values.</p>
-<pre><code class="css">
+<pre class="fragment"><code class="css">
 font: italic 12px sans-serif;
 color: #333;
 background-color: red;
 font-family: Arial, sans-serif;
 </code></pre>
+				<p class="fragment">What is the difference between font & font-family?</p>
+				<p class="fragment">Note: sans-serif is a category, while 'Arial' is the name of the font</p>
 		  <aside class="notes"> Demonstrate using jsbin.com. Explain the difference between font property 
 			and the more detailed font properties.
 			Also, mention the difference between a specific font like "Arial" and a category like sans-serif
@@ -414,23 +506,24 @@ font-family: Arial, sans-serif;
 			 
 			  <section>
 				<h2>Properties: color</h2>
-				<p>The "color" property changes the text color. Colors can be specified either by name, for the most common colors, or by hexadecimal value. </p>
-<pre><code class="css">
+				<p class="fragment">The <code style="color: turquoise">color</code> property changes the text color. Colors can be specified either by name, for the most common colors, or by hexadecimal value. </p>
+<pre class="fragment"><code class="css">
 color: red;
 color: #ff0000;
 color: rgb(255, 0, 0); 
 </code></pre>
-			  <p>This property is inherited, which means it'll also be applied to all descendant elements but can be overridden by more specific rules.</p>
-<pre><code class="css">
+			  <p class="fragment">This property is inherited, which means it'll also be applied to all descendant elements but can be overridden by more specific rules.</p>
+<pre class="fragment"><code class="css">
 body {
  color: red;
 }
 </code></pre>
+				<p class="fragment">Practice <a href="https://jsbin.com/gotowem/edit?html,css,output" target="_blank">here</a>! </p>
 			  </section>
 			 
 			  <section>
 				<h2>Properties: background-color</h2>
-				<p>The "background-color" property changes the background color. Besides the <code>BODY</code> element, all elements default to a transparent background.
+				<p>The "background-color" property changes the background color. Besides the <code style="color: turquoise">body</code> element, all elements default to a transparent background.
 <pre><code class="css">
 background-color: black;
 background-color: #000000;
@@ -454,37 +547,37 @@ table {
 				<p>To find colors or color schemes for your webpage, you can use:
 				<ul>
 				  <li>Desktop graphics programs: Adobe Photoshop</li>
-				  <li>Online tools: <a href="http://www.coolors.co/">Coolors</a>, <a href="http://colorschemedesigner.com/">Color Scheme Designer</a></li>
-				  <li>Browser extensions: <a href="https://chrome.google.com/extensions/detail/hmdcmlfkchdmnmnmheododdhjedfccka?hl=en">Eye Dropper for Chrome</a>, <a href="https://addons.mozilla.org/en-US/firefox/addon/271/">ColorZilla for FireFox</a></li>
+				  <li>Online tools: <a href="http://www.coolors.co/" target="_blank">Coolors</a>, <a href="http://colorschemedesigner.com/" target="_blank">Color Scheme Designer</a></li>
+				  <li>Browser extensions: <a href="https://chrome.google.com/extensions/detail/hmdcmlfkchdmnmnmheododdhjedfccka?hl=en" target="_blank">Eye Dropper for Chrome</a>, <a href="https://addons.mozilla.org/en-US/firefox/addon/271/" target="_blank">ColorZilla for FireFox</a></li>
 				</ul>
 			  </section>
 			 
 			  <section>
 				<h2>Property: font-family</h2>
-				<p>The "font-family" property specifies the font family (or "font face") of the text. You can specify either a specific font name  or a generic family name (serif, sans-serif, monospace, cursive).</p>
-<pre><code class="css">
+				<p class="fragment">The "font-family" property specifies the font family (or "font face") of the text. You can specify either a specific font name  or a generic family name (serif, sans-serif, monospace, cursive).</p>
+<pre class="fragment"><code class="css">
 font-family: "Times New Roman";
 font-family: sans-serif;
 </code></pre>
-			  <p>A comma separated list of font families can be specified if you want the browser to prefer one but use the others as backup options.</p>
-<pre><code class="css">
+			  <p class="fragment">A comma separated list of font families can be specified if you want the browser to prefer one but use the others as backup options.</p>
+<pre class="fragment"><code class="css">
 font-family: "Times New Roman", serif;
 font-family: "Arial", sans-serif;
 font-family: Courier, monospace;
 </code></pre>
-		  <aside class="notes">Look at description about difference of font categories on page 274-5 titled Tyepface Tecnology</aside>
+		  <aside class="notes">Look at description about difference of font categories on page 274-5 titled Tyepface Technology</aside>
 			  </section>
 			  
 			  <section>
 				<h2>Finding Fonts</h2>
 				<p>Several websites exist that help you pick fonts for your website and to customize it with non-default fonts (in addition to Google Fonts):</p>
 				<ul>
-				  <li><a href="http://www.typetester.org/">TypeTester</a>
-				  <li><a href="http://typekit.com/">TypeKit</a>
-				  <li><a href="http://fontfonter.com/">FontFonter</a>
-				  <li><a href="http://www.goodwebfonts.com/">Good Web Fonts</a>
-				  <li><a href="http://www.typotheque.com/fonts/">Typotheque</a>
+				  <li><a href="http://www.typetester.org/" target="_blank">TypeTester</a>
+				  <li><a href="http://typekit.com/" target="_blank">TypeKit</a>
+				  <li><a href="http://fontfonter.com/" target="_blank">FontFonter</a>
+				  <li><a href="http://www.typotheque.com/fonts/" target="_blank">Typotheque</a>
 				</ul>
+				<p class="fragment"><a href="https://caniuse.com/" target="_blank"  >caniuse.com</a> is a website where you can see which css properties your browser supports.</p>
 				<aside class="notes">http://caniuse.com shows what properties are supported in your browser. You can also google 'what css properties does my browser support?'
 				  Also, show the CSS MDN website to show what properties exist in CSS.
 				</aside>
@@ -518,6 +611,7 @@ strong {
 </code></pre>
 		  
 			  <p style="font-size: .9em;">Hello <strong style="font-size:1.5em">there</strong>!</p>
+			  <p>Watch <a href="https://www.youtube.com/watch?v=OQXZb3W6sgE" target="_blank">this!</a></p>
 			  </section>
 			  
 			  <section>
@@ -536,13 +630,13 @@ h2 {
 			  <section>
 				<h2>Property: font-size (keywords)</h2>
 				 <p>There are various keywords that can be used if you're not as worried about the precise sizing: xx-small, x-small, small, medium, large, x-large, xx-large.</p>
-<pre><code class="css">
+<pre class="fragment"><code class="css">
 p.footnote {
  font-size: small;
 }
 </code></pre>
-			  <p>There are also two relative keywords, that act similar to em's in setting size relative: smaller, larger.</p>
-<pre><code class="css">
+			  <p class="fragment">There are also two relative keywords, that act similar to em's in setting size relative: smaller, larger.</p>
+<pre class="fragment"><code class="css">
 p.intro {
  font-size: larger;
 }
@@ -551,36 +645,43 @@ p.intro {
 			  
 			  <section>
 				<h2>Property: font-size (%)</h2>
-				<p>The size can also be specified as a percentage, which works similar to "ems", and can be used in conjunction with other units.</p>
+				<p>The size can also be specified as a percentage, which works similar to <code style="color:turquoise">em</code>, and can be used in conjunction with other units.</p>
 <pre><code class="css">
 body { 
  font-size: 12px; 
 }
 
 h1 { 
- font-size: 200%; 
+ font-size: 400%; 
 }
 
 h1 a { 
- font-size: 75%; 
+ font-size: 50%; 
 }
 </code></pre>
 		  
 		  <div style="font-size: 12px;">
-			<h1 style="font-size:200%">Header <a style="font-size:75%" href="#">Link</a></h1>
-			Text!
+			<h1 style="font-size:48px">Header <a style="font-size:50%" href="#">Link</a></h1>
+			
 		  </div>
 				</section>
 				
 				<section>
 					<h2>Property: font-size (vw)</h2>
-					<p>vw or vh stands for viewport width or viewport height. This allows you to dynamically set the size of your font depending on the size of the screen. This is especially helpful in responsive design.</p>
+					<p><code style="color:turquoise">vw</code> or <code style="color:turquoise">vh</code> stands for viewport width or viewport height. This allows you to dynamically set the size of your font depending on the size of the screen. This is especially helpful in responsive design.</p>
 <pre><code class="css">
 h1 { 
  font-size: 3vw; 
 }
 </code></pre>
 				</section>
+			</section>
+				
+			<section>
+				<h2>More on Viewport</h2>
+				<a href="https://www.youtube.com/watch?v=du6gnsImsLU" target="_blank">Watch here!</a>
+
+			</section>
 			  
 			  <section>
 				<h2>Property: font-style</h2>
@@ -606,8 +707,8 @@ font-weight: bold;
 			 
 			 <section>
 			   <h2>&quot;Shorthand&quot; properties</h2>
-			   <p>A "shorthand" property in CSS lets you specify multiple properties in one property, for conciseness purposes. Instead of specifying each "font-" property separately, you can bundle them up in one "font" property.</p>
-<pre><code class="css">
+			   <p>A "shorthand" property in CSS lets you specify multiple properties in one property, for conciseness. Instead of specifying each "font-" property separately, you can bundle them up in one "font" property.</p>
+<pre class="fragment"><code class="css">
 table.geeky {
  font-weight: bold;
  font-style: italic;
@@ -615,9 +716,9 @@ table.geeky {
  font-family: sans-serif;
 }
 </code></pre>
-			<p>Those four rules can be written as:</p>
-<pre><code class="css">
-table {
+			<p class="fragment">Those four rules can be written as:</p>
+<pre class="fragment"><code class="css">
+table.geeky {
  font: italic bold 10px sans-serif;
 }
 </code></pre>
@@ -629,18 +730,18 @@ table {
 line-height: 10px;
 </code></pre>
 		  <p style="line-height: 10px;">
-		  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis aliquam convallis ligula ut suscipit. Phasellus hendrerit, enim scelerisque...
-		  </p>
-<pre><code class="css">
+		  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis aliquam convallis </p>
+		  <p class="fragment">Click <a href="https://jsbin.com/wepamir/edit?html,css,output" target="_blank">here</a> for an example</p>
+<pre class="fragment"><code class="css">
 text-align: center;
 </code></pre>
-		  <p style="text-align:center">
+		  <p class="fragment"style="text-align:center">
 		  Centered text.
 		  </p>
-<pre><code class="css">
+<pre class="fragment"><code class="css">
 text-decoration: underline;
 </code></pre>
-		  <p style="text-decoration:underline">Underlined text</p>
+		  <p style="text-decoration:underline" class="fragment">Underlined text</p>
 				</section>
 				
 				<section>
@@ -651,11 +752,26 @@ text-decoration: underline;
 			 
 			  <section>
 				<h2>CSS Location</h2>
+				<p class="fragment">Where to I write and store my CSS?</p>
+				<p class="fragment">How will my CSS connect to my HTML?</p>
+			  </section>
+
+			  <section>
+				<h2>CSS files</h2>
+				<p>Our CSS will be defined in a separate file, and imported using the <code style="color: turquoise">link</code> element. This is the best!
+		   <p>Linked stylesheet:</p>
+ <pre><code class="html">
+ &lt;head&gt;
+  &lt;link rel="stylesheet" type="text/css" href="main.css"&gt;
+ &lt;/head&gt;
+ </code></pre>
+		 
 			  </section>
 			  
 			  <section>
-				<h2>CSS in HTML</h2>
-				<p>CSS can be embedded in HTML in several ways. One way is to include all CSS in a <code>style</code> tag, usually inside the <code>head</code> tag:</p>
+				<h2>Other ways to write CSS...</h2>
+				<p>CSS in the HTML file</p>
+				<p>CSS can be embedded in the HTML file itself. One way is to include all CSS in a <code style="color: turquoise">style</code> tag, usually inside the <code style="color: turquoise">head</code> tag:</p>
 <pre><code class="html">
 &lt;html&gt;
  &lt;head&gt;
@@ -671,7 +787,7 @@ text-decoration: underline;
 
 			  <section>
 					<h2>Inline CSS</h2>
-					<p>CSS styles can be assigned to individual HTML elements via the <code>style</code> attribute:</p>
+					<p>CSS styles can be assigned to individual HTML elements via the <code style="color: turquoise">style</code> attribute:</p>
 			   
 <pre><code class="html">
 &lt;tag style="property1: value; property2: value;"&gt; &lt;/tag&gt;
@@ -681,35 +797,27 @@ text-decoration: underline;
 &lt;h1 style="color:red; text-decoration: underline;"&gt;Hello&lt;/h1&gt;
 </code></pre>
 			   
-			   <p>Inline styles will have precedence over all other styles. Inline CSS should be avoided as it increases maintenance cost and blurs line between presentation and content.</p>
+			   <p class="fragment">Inline styles will have precedence over all other styles. Inline CSS should be avoided as it increases maintenance cost and blurs line between presentation and content.</p>
 				  </section>
 		  
-			 <section>
-			   <h2>CSS files</h2>
-			   <p>CSS can also be defined in a separate file, and imported using the <code>link</code> element. This is the best!
-		  <p>Linked stylesheet:</p>
-<pre><code class="html">
-&lt;head&gt;
- &lt;link rel="stylesheet" type="text/css" href="main.css"&gt;
-&lt;/head&gt;
-</code></pre>
-		
-			 </section>
+			
 			 
 			 <section>
 			   <h2>Tools</h2>
 			   <ul>
-				 <li><a href="http://jsbin.com">JSBin</a></li>
-				 <li><a href="http://codepen.io/">Codepen</a></li>
+				 <li><a href="http://jsbin.com" target="_blank">JSBin</a></li>
+				 <li><a href="http://codepen.io/" target="_blank">Codepen</a></li>
 			   </ul>
 			 </section>
 		  
 			 <section>
 			   <h2>Exercise Time!</h2>
 			   <ul>
-				 <li>Add the CSS to make your GDI site look like the following image.</li>
+				 <li>Add the CSS to make your GDI site look like the following image: Link <a href="https://docs.google.com/document/d/1riKhrT6lwZzjOAVM2768kdEn5rjmL5nWGC1wDkCgfEQ/edit?usp=sharing" target="_blank">here</a>.</li>
 				</ul>
 				<img src="images/gdicss.png" width="500px" height="450px" alt="GDI Website with CSS">
+				<img src="images/exercise.gif" alt="Exercise Gif" width="200px" height="200px">
+				<img src="images/trello-logo-blue.png" alt="Trello Logo" width="200px" height="100px">
 				<aside class="notes">Give them 10 minutes and then do with them.  If they get bored, try https://flukeout.github.io.  For homework look at chapter 12</aside>
 			 </section>
 		  
@@ -720,9 +828,16 @@ text-decoration: underline;
 			   
 			   <section>
 				 <h2>Overview: CSS Layout</h2>
-				 <p>All web layouts are accomplished with block elements. Designers use blocks, most often <code>div</code> elements, to create rectangular areas into which all content fits. </p>
+				 <p>All web layouts are accomplished with block elements. Designers use blocks, most often <code style="color: turquoise">div</code> elements, to create rectangular areas into which all content fits. </p>
 				 <img src="images/layout.png" alt="Website Layout">
 			   </section>
+
+			   <section>
+				<h2>More on the <code style="color: turquoise;">div</code></h2>
+				<p class="fragment">Watch <a href="https://www.youtube.com/watch?v=-XQlr727A8w" target="_blank">here</a>.</p>
+				<p class="fragment">Examples <a href="https://jsbin.com/tobavec/edit?html,css,output" target="_blank">here</a>.</p> 
+
+			  </section>
 
 			   <section>
 					<h2>Overview: CSS Layout</h2>
@@ -747,9 +862,9 @@ text-decoration: underline;
 			  <section>
 				<h2>Grouping Elements</h2>
 				<p>A grouping element lets you style multiple elements as a whole.</p>
-				<p><code>SPAN</code> creates an inline element.</p>
+				<p><code style="color: turquoise">SPAN</code> creates an inline element.</p>
 <pre><code class="html">&lt;span&gt; Hello &lt;a href="world.com"&gt;World &lt;/a&gt;! &lt;/span&gt;</code></pre>
-		  <p><code>DIV</code> creates a block element.</p>
+		  <p><code style="color: turquoise">DIV</code> creates a block element.</p>
 <pre><code class="html">&lt;div&gt; &lt;p&gt;Hello&lt;/p&gt; &lt;p&gt;World&lt;/p&gt; &lt;/div&gt; </code></pre>
 <pre><code class="html">&lt;div&gt; Hello &lt;a href="world.com"&gt;World &lt;/a&gt;! &lt;/div&gt; </code></pre>
 			  </section>
@@ -758,17 +873,20 @@ text-decoration: underline;
 				  <h2>Display</h2>
 				  <p class="fragment">Examples:</p>
 					<ul>
-						<li class="fragment">inline: <code>INPUT, A, IMG, BR,</code> a few others...
-						<li class="fragment">block: <code>P, H1, UL, LI, TABLE,</code> almost everything else...
+						<li class="fragment">inline: <code style="color: turquoise">input, a, img, br,</code> a few others...
+						<li class="fragment">block: <code style="color: turquoise">p, h1, ul, li, table,</code> almost everything else...
 					</ul>
 			  </section>
 
 			  <section>
 				  <h2>Display Practice in JSBin</h2>
+				  <p>Check it out <a href="https://jsbin.com/quvedog/edit?html,css,output" target="_blank">here</a>!</p>
+				  
 			  </section>
 			
 			  <section>
 				<h2>Box Model</h2>
+				<p>Watch <a href="https://www.youtube.com/watch?v=rIO5326FgPE" target="_blank">here</a></p>
 				<aside class="notes">Assign reading Chap. 13 of book for the box model.</aside>
 			  </section>
 			  
@@ -776,7 +894,7 @@ text-decoration: underline;
 				<h2>The Box Model</h2>
 				<p>All elements are treated as boxes by the browser's rendering engine (either "inline" or "block" boxes).</p>
 				<p>A box consists of content, padding, border, and margin:</p>
-				<img src="images/boxmodel.gif">
+				<img src="images/boxmodel.gif"/>
 			  </section>
 		  
 			  <section>
@@ -787,7 +905,7 @@ text-decoration: underline;
 			 <section>
 				<h2>Things to know:</h2>
 				<p class="fragment">In CSS, each of these rectangular boxes is described using the <span style="color:yellow;">standard box model</span>. This model describes the content of the space taken by an element. Each box has four edges: the margin edge, border edge, padding edge, and content edge.</p>
-				<p class="fragment">CSS to define width on all browsers. See <a href=" https://www.abeautifulsite.net/box-sizing-border-box-explained"></a></p>
+				<p class="fragment">CSS to define width on all browsers. See <a href=" https://www.abeautifulsite.net/box-sizing-border-box-explained" target="_blank"></a></p>
 <pre class="fragment"><code>   
 body{
  box-sizing: border-box;
@@ -805,9 +923,9 @@ body{
 				<h2>Measuring Width</h2>
 				<p class="fragment">You can measure width in the following ways:</p>
 				<ul>
-					<li class="fragment">px</li>
-					<li class="fragment">%</li>
 					<li class="fragment">viewport width (vw)</li>
+					<li class="fragment">px</li>
+					<li class="fragment">%</li>	
 				</ul>
 			</section>
 
@@ -815,8 +933,8 @@ body{
 				<h2>Height</h2>
 				<p class="fragment">Height can be set automatically given the content of the element. However, you can also select the height using:</p>
 				<ul>
-					<li class="fragment">px</li>
 					<li class="fragment">viewport height (vh)</li>
+					<li class="fragment">px</li>
 				</ul>
 				<p class="fragment" style="color: lightblue;">Note: don't use %!</p>
 			</section>
@@ -832,6 +950,7 @@ body{
 margin: 15px;
 </code></pre>
 					<p>10px on top, 5px right, 3px bottom, 20px left:<p>
+					<p>Note: when using this method, think of a clock; start at the top, and go clockwise.<p>
 <pre><code class="css">
 margin: 10px 5px 3px 20px;
 </code></pre>
@@ -878,11 +997,13 @@ div {
 </code></pre>
 					<div style="margin-left:auto; margin-right:5px;  width:300px; border:1px solid red;">Hi</div>
 					<aside class="notes">Show difference between text-align:center; versus margin:auto; for a div tag of width 300px.</aside>
+					<p>Try it <a href="https://jsbin.com/losuwiq/edit?html,css,output" target="_blank">here!</a></p>
 						</section>
+					
 		  
 			  <section>
 				<h2>Border</h2>
-				<p>The <code>border</code> property styles the edge around the box and is specified as "thickness style color".</p>
+				<p>The <code style="color: turquoise">border</code> property styles the edge around the box and is specified as "thickness style color".</p>
 		  <p>A solid red border:</p>
 <pre style="border:1px solid #ff0000; border-radius:0px;"><code class="css">
 border: 1px solid #ff0000;
@@ -900,12 +1021,13 @@ border-bottom: 1px solid #ff0000;
 		  
 			  <section>
 				<h2>Border Thickness</h2>
-				<p>Border thickness can also be specified with <code>border-width</code> property and can be different on each side (like margin).
+				<p>Border thickness can also be specified with <code style="color: turquoise">border-width</code> property and can be different on each side (like margin).
 		  <p>10px on all sides:</p>
 <pre style="border-width:10px; border-radius:0px; border-style:solid;"><code class="css">
 border-width: 10px;
 </code></pre>
 <p>10px on top, 5px right, 3px bottom, 20px left:<p>
+
 <pre style="border-width: 10px 5px 3px 20px; border-radius:0px; border-style:solid;"><code class="css">
 border-width: 10px 5px 3px 20px;
 </code></pre>
@@ -913,7 +1035,7 @@ border-width: 10px 5px 3px 20px;
 		  
 			  <section>
 				<h2>Border Style</h2>
-				<p>Border style can also be specified using the <code>border-style</code> property.</p>
+				<p>Border style can also be specified using the <code style="color: turquoise">border-style</code> property.</p>
 <pre style="border-style:dashed; border-radius:0px;"><code class="css">
 border-style:dashed;
 </code></pre>
@@ -936,7 +1058,7 @@ border-style:ridge;
 			  
 			  <section>
 				<h2>Border Color</h2>
-				<p>Border color can also be specified with <code>border-color</code> property.</p>
+				<p>Border color can also be specified with <code style="color: turquoise">border-color</code> property.</p>
 		  <p>Green on all sides:</p>
 		  <pre style="border-width:5px; border-style:solid; border-color: rgb(0, 240, 0); border-radius:0px;"><code class="css">
 		  border-color: rgb(0, 240, 0);
@@ -945,11 +1067,12 @@ border-style:ridge;
 <pre style="border-width:5px; border-style:solid; border-color: #fff black #ff0000 #00ff00; border-radius:0px;"><code class="css">
 border-color: #fff black #ff0000 #00ff00;
 </code></pre>
+				<p>Try it <a href="https://jsbin.com/fopavun/edit?html,css,output" target="_blank">here!</a></p>	
 			  </section>
 			  
 			  <section>
 				<h2>Padding</h2>
-				 <p>The <code>padding</code> property specifies whitespace between the border and the content. </p>
+				 <p>The <code style="color: turquoise">padding</code> property specifies whitespace between the border and the content. </p>
 		  <p>15px on all sides:</p>
 <pre style="padding:15px; border:1px solid black;  border-radius:0px;"><code class="css">
 padding: 15px;
@@ -964,7 +1087,7 @@ padding: 10px 5px 3px 20px;
 		  
 			  <section>
 				<h2>Practice</h2>
-				<p><a href="https://www.khanacademy.org/computing/computer-programming/html-css/css-layout-properties/p/challenge-the-boxer-model">Khan Academy Exercise</a></p>
+				<p><a href="https://www.khanacademy.org/computing/computer-programming/html-css/css-layout-properties/p/challenge-the-boxer-model" target="_blank">Khan Academy Exercise</a></p>
 			  </section>
 		  
 			  <section>
@@ -973,14 +1096,16 @@ padding: 10px 5px 3px 20px;
 			
 			  <section>
 				<h2>Position: Static</h2>
-				 <p>The <code>position</code> property is used to specify a positioning scheme for an element. The default is "static" which puts the element in the "normal" flow.</p>
+				 <p>The <code style="color: turquoise">position</code> property is used to specify a positioning scheme for an element. The default is "static" which puts the element in the "normal" flow.</p>
 			  </section>
 
 			  <section>
 					<h2>Position: Static</h2>
 					<p>In normal flow, inline boxes flow from left to right, wrapping to next line when needed.</p>
 <pre><code class="html">
-&lt;img src="panda.png"&gt;&lt;img src="panda.png"&gt;&lt;img src="panda.png"&gt;
+&lt;img src="panda.png"&gt;
+&lt;img src="panda.png"&gt;
+&lt;img src="panda.png"&gt;
 </code></pre>
 					<img src="images/panda.gif" width="200px"><img src="images/panda.gif" width="200px"><img src="images/panda.gif" width="200px">
 			  </section>
@@ -1002,7 +1127,9 @@ padding: 10px 5px 3px 20px;
 				<h2>Position: Relative</h2>
 				 <p>The "relative" value will still put the element in the normal flow, but then offset it according to top/left/right/bottom properties.</p>
 <pre><code class="html">
-&lt;div&gt;&lt;p&gt;Hello, hi!&lt;/p&gt;&lt;/div&gt;
+&lt;div&gt;
+  &lt;p&gt;Hello, hi!&lt;/p&gt;
+&lt;/div&gt;
 </code></pre>
 <pre><code class="css">
 div {
@@ -1010,7 +1137,7 @@ div {
   left: 80px; 
   top: 20px;
   height: 100px; 
-  background-color: yellow;
+  background-color: blue;
 }
 </code></pre>
 		  <div style="position: relative; left: 80px; top: 20px; height: 100px; background-color: blue;">Hello, hi!</div>
@@ -1090,6 +1217,11 @@ div {
 </code></pre>
 				</section>
 		  
+				<section>
+					<h2>Position: Relative</h2>
+					<p>Practice <a href="https://jsbin.com/yofonu/edit?html,css,output" target="_blank">here!</a></p>
+				  </section>
+
 			  <section>
 				<h2>Position: Absolute</h2>
 				<p>The "absolute" value will take the element out of the normal flow and position it in relation to the window (or the closest non-static element).</p>
@@ -1174,10 +1306,14 @@ div {
 }
 </code></pre>
 				  </section>
+				  <section>
+					  <h2>Postion: Absolute</h2>
+					  <p>Practice <a href="https://jsbin.com/riputuy/edit?html,css,output" target="_blank">here!</a></p>
+				  </section>
 		  
 			  <section>
 				<h2>z-index</h2>
-				<p>The <code>z-index</code> property specifies the stack order of positioned elements, in the case that they are overlapping. The element with highest z-index goes on top.</p>
+				<p>The <code style="color: turquoise">z-index</code> property specifies the stack order of positioned elements, in the case that they are overlapping. The element with highest z-index goes on top.</p>
 		  
 <pre><code class="html">&lt;div class="higher-index"&gt; Bottom &lt;/div&gt;
 &lt;div class="lower-index"&gt; Top &lt;/div&gt;
@@ -1202,10 +1338,14 @@ div {
 		  <div style="position: absolute; bottom: 10px; left:60px; 
 			background-color: green; z-index: 2;"> Top </div>
 			  </section>
+			  <section>
+				<h2>Z-Index</h2>
+				<p>Practice <a href="https://jsbin.com/fixopuq/edit?html,css,output" target="_blank">here!</a></p>
+			</section>
 		  
 			  <section>
 				<h2>Float</h2>
-				<p>The <code>float</code> property is used to float boxes on the sides of other boxes, allowing other content to flow around it.</p>
+				<p>The <code style="color: turquoise">float</code> property is used to float boxes on the sides of other boxes, allowing other content to flow around it.</p>
 <pre style="float:left; width: 500px; margin-right: 30px;"><code class="html">&lt;div&gt; 
   &lt;img src="images/panda.gif"&gt;
   &lt;p&gt;A panda is one of the best....&lt;p&gt;
@@ -1226,7 +1366,7 @@ img {
 			  
 			  <section>
 				<h2>Float</h2>
-				<p>The <code>float</code> property can also be used to float non-IMG elements, but make sure to specify a width for the floated element.</p>
+				<p>The <code style="color: turquoise">float</code> property can also be used to float non-IMG elements, but make sure to specify a width for the floated element.</p>
 <pre style="float:left; width: 600px; margin-right: 30px;"><code class="html">&lt;div&gt;
   &lt;p&gt;H&lt;br&gt;O&lt;br&gt;M&lt;br&gt;E&lt;/p&gt;
 &lt;/div&gt;
@@ -1250,10 +1390,15 @@ img {
 		  </div>
 		  <div>Contact me for more info.</div>
 			  </section>
+
+			  <section>
+				<h2>Float</h2>
+				<p>Practice <a href="https://jsbin.com/huqopuh/edit?html,css,output" target="_blank">here!</a></p>
+			</section>
 		  
 			  <section>
 				<h2>Clear</h2>
-				<p>The <code>clear</code> property can be used to specify that an element should *not* wrap around floated elements above it.</p>
+				<p>The <code style="color: turquoise">clear</code> property can be used to specify that an element should *not* wrap around floated elements above it.</p>
 		  
 <pre style="float:left; width: 600px; margin-right: 30px;"><code class="html">&lt;div&gt;
   &lt;p&gt;H&lt;br&gt;O&lt;br&gt;M&lt;br&gt;E&lt;/p&gt;
@@ -1285,21 +1430,24 @@ img {
 			<section>
 				<h2>CSS Layout Review</h2>
 				<p>Go through at your own pace</p>
-				<a href="http://learnlayout.com/">Click here for Learn Layout</a>
+				<a href="http://learnlayout.com/" target="_blank">Click here for Learn Layout</a>
 			</section>
 		
 				
 			<section>
 					<h2>Exercise Time</h2>
-					<a href="https://docs.google.com/a/anniecannons.com/document/d/1DcGTRA_Rnp4H4A5W_M5XX3nChUI9Zd6GaG5d83Qb_a8/edit?usp=sharing">Click here for a Google Doc</a><br/>
-					<img src="images/exercise.gif" alt="Exercise Gif">
+					<a href="https://docs.google.com/a/anniecannons.com/document/d/1DcGTRA_Rnp4H4A5W_M5XX3nChUI9Zd6GaG5d83Qb_a8/edit?usp=sharing" target="_blank">Click here for a Google Doc</a><br/>
+					<img src="images/exercise.gif" alt="Exercise Gif"> <br>
+					<img src="images/trello-logo-blue.png" alt="Trello Logo" width="200px" height="100px">
 			</section>
 			  
 			  <section>
 				<h2>Practice</h2>
 				<p>MySpace for Coach</p>
-				<a href="https://anniecannons.github.io/coach-myspace/">Click here</a><br/>
+				<a href="https://anniecannons.github.io/coach-myspace/" target="_blank">Click here</a><br/>
 				<img src="images/exercise.gif" alt="Exercise Gif">
+				<br>
+					<img src="images/trello-logo-blue.png" alt="Trello Logo" width="200px" height="100px">
 			  </section>    
 		  
 			  <section>
@@ -1341,7 +1489,7 @@ img {
 			   <section>
 				 <h2>Responsive Design</h2>
 				 <p class="fragment">Prior to responsive web design, most web designers thought in terms of print design.The layout was precisely controlled in fixed pixel-based units, and the goal was to make websites look exactly the same in every browser.</p>
-				 <p class="fragment">So, instead of thinking about layout in terms of fixed values, we must think in terms of ratios or percentages.</p>
+				 <p class="fragment">So, instead of thinking about layout in terms of fixed values, we must think in terms of ratios or percentages. <br>Think: <code><span style="color: turquoise">em</span></code>!</p>
 			   </section>
 		  
 			   <section>
@@ -1352,12 +1500,13 @@ img {
 			   <section>
 					<h2>Media Queries</h2>
 					<p class="fragment">In responsive web design, you can think of a <span style="color:yellow">breakpoint</span> as a width where the current layout no longer works and the layout breaks. If the layout breaks, then it necessitates a media query that adjusts the layout.</p>
-					<a class="fragment" href="./responsive_design.html">Click here to see breakpoints in action</a>
+					<a class="fragment" href="./responsive_design.html" target="_blank">Click here to see breakpoints in action</a>
 				  </section>
 		  
 			  <section>
 				 <h2>CSS Media Queries</h2>
 				 <p>A media query consists of a media type and an optional combination of media features. CSS rules inside the query will be applied only if the query is true.</p>
+				 <p>You can always Google 'media query syntax'</p>
 <pre><code class="css">
 @media &lt;media types&gt; and &lt;media features&gt; {
 	/* media-specific rules */
@@ -1367,7 +1516,7 @@ img {
 		  
 			   <section>
 				 <h2>Resolution Queries</h2>
-				 <p>Modern mobile browsers support media queries which depend on the <code>device-width</code> and/or <code>orientation</code>:</p>
+				 <p>Modern mobile browsers support media queries which depend on the <code style="color: turquoise">device-width</code> and/or <code>orientation</code>:</p>
 		  <p>Targeting iPads:</p>
 <pre><code class="css">
 @media only screen
@@ -1378,12 +1527,12 @@ img {
 	}
 }
 </code></pre>
-		  <p>Read more: <a href="http://css-tricks.com/snippets/css/media-queries-for-standard-devices/">Media Queries for Standard Devices</a>
+		  <p>Read more: <a href="http://css-tricks.com/snippets/css/media-queries-for-standard-devices/" target="_blank">Media Queries for Standard Devices</a>
 			   </section>
 			  
 			  <section>
 				 <h2>Resolution Queries</h2>
-				<p>A more general approach is just to query on <code>min-width</code> and <code>max-width</code>, which are calculated based on window size, not device size.</p>
+				<p>A more general approach is just to query on <code style="color: turquoise">min-width</code> and <code style="color: turquoise">max-width</code>, which are calculated based on window size, not device size.</p>
 <pre><code class="css">
 @media screen and (max-width: 640px) {
  #sidebar {
@@ -1408,25 +1557,25 @@ img {
 			   <section>
 				 <h2>More on Media Queries</h2>
 				 <p>Check out these two links:</p>
-				 <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Media_Queries/Using_media_queries#width">MDN</a>
+				 <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Media_Queries/Using_media_queries#width" target="_blank">MDN</a>
 				 <br>
-				 <a href="https://css-tricks.com/snippets/css/media-queries-for-standard-devices/">CSS Tricks</a>
+				 <a href="https://css-tricks.com/snippets/css/media-queries-for-standard-devices/" target="_blank">CSS Tricks</a>
 			   </section>
 		  
 		  
 			   <section>
 				 <h2>Responsive Design Review</h2>
-				 <a href="https://www.youtube.com/watch?v=5xzaGSYd7jM">This video</a>
+				 <a href="https://www.youtube.com/watch?v=5xzaGSYd7jM" target="_blank">This video</a>
 				 </section>
 				 
 				<section>
 					<h2>Responsive Design Exercises</h2>
-					<p>Click on <a href="http://web.simmons.edu/~grovesd/comm328/demo/media-query-exercises/media-query-example1-done.html">this link</a>. We will provide the image files.</p>
-					<img src="images/exercise.gif" alt="Exercise Gif">
+					<p>Click on <a href="http://web.simmons.edu/~grovesd/comm328/demo/media-query-exercises/media-query-example1-done.html" target="_blank">this link</a>. We will provide the image files.</p>
+					<img src="images/exercise.gif" alt="Exercise Gif"> <br> <img src="images/trello-logo-blue.png" alt="Trello Logo" width="200px" height="100px">
 				</section>
 		  
 			   <section>
-				 <h2>How can I make all this stuff easier??</h2>
+				 <h2>Now that you have intermediate coding knowlege, let's have some fun with a framework!</h2>
 				 <img src="images/easy.jpeg" alt="Easy Button">
 			   </section>
 		  
@@ -1435,12 +1584,13 @@ img {
 				 <p class="fragment" style="color:yellow">What is a framework?</p>
 				 <p class="fragment">CSS Frameworks are pre-prepared software code that are meant to allow for easier, more standards-compliant web design using the CSS language</p>
 				 <p class="fragment">Most languages have frameworks that make your job as the developer easier</p>
+				 <p class="fragment">The style rules are already written, all you have to do is add proper classes to you HTML!</p>
 			   </section>
 
 			   <section>
 				<h2>A review and intro</h2>
 				<p>A lovely review thanks to GDI</p>
-				<a href="http://www.teaching-materials.org/bootstrap-hosting-github/#/1">Click here</a>
+				<a href="http://www.teaching-materials.org/bootstrap-hosting-github/#/1" target="_blank">Click here</a>
 			  </section>
 		  
 			   <section>
@@ -1452,7 +1602,7 @@ img {
 		  
 			   <section>
 				 <h2>Bootstrap</h2>
-				 <a href="https://getbootstrap.com/">Check it OUT!</a>
+				 <a href="https://getbootstrap.com/" target="_blank">Check it OUT!</a>
 				 <br>
 				 <img src="http://vignette2.wikia.nocookie.net/epicrapbattlesofhistory/images/0/0b/Matilda-miss-honey-glasses.gif/revision/latest?cb=20150404013936" alt="Miss Honey Looking Intrigued">
 			   </section>
@@ -1461,13 +1611,14 @@ img {
 				<h2>Bootstrap Grid System</h2>
 				<p>A grid system lets you layout pages according to fractions of a grid (usually 12, 16, or 24 columns).</p>
 				<p>Bootstrap includes a powerful mobile-first grid system for building layouts of all shapes and sizes. It’s based on a 12 column layout.</p>
+				<a href="https://www.youtube.com/watch?v=XFrbkhWP0rM" target="_blank">Watch here!</a>
 			   </section>
 		  
 			   <section>
 				  <h2>Bootstrap Grid System</h2>
 				 <ul>
 				   <li class="fragment">There are three major components—<span style="color:yellow">containers, rows, and columns</span>.</li>
-				   <li class="fragment">Containers—.container for fixed width or .container-fluid for full width—center your site’s contents and help align your grid content.</li>
+				   <li class="fragment">Containers—<code style="color: turquoise"> class="container" </code> for fixed width or <code style="color: turquoise"> class="container-fluid" </code> for full width—center your site’s contents and help align your grid content.</li>
 				   <li class="fragment">Rows are horizontal groups of columns that ensure your columns are lined up properly.</li>
 				   <li class="fragment">Content should be placed within columns.</li>
 				 </ul>
@@ -1486,23 +1637,30 @@ img {
 			   <section>
 				  <h2>Bootstrap Grid System</h2>
 				  <img src="images/bootstrap.png" alt="Bootstrap Grid Code">
+				  <p><a href="https://www.youtube.com/watch?v=XFrbkhWP0rM" target="_blank">See it live here</a></p>
+
+				  
 			   </section>
 		  
 			   <section>
 				 <h2>Creating a Grid With Bootstrap</h2>
 				 <img src="images/exercise.png" alt="Class Exercise">
+				 <img src="images/exercise.gif" alt="Exercise Gif" width="200px" height="200px">
+				  <img src="images/trello-logo-blue.png" alt="Trello Logo" width="200px" height="100px">
 			   </section>
 		  
 			   <section>
 				 <h2>FreeCodeCamp</h2>
-				<a href="https://www.freecodecamp.com/challenges/use-responsive-design-with-bootstrap-fluid-containers">Click here for exercises on Responsive Design</a>
-				<img src="images/exercise.gif" alt="Exercise Gif">
+				<a href="https://www.freecodecamp.com/challenges/use-responsive-design-with-bootstrap-fluid-containers" target="_blank" target="_blank">Click here for exercises on Responsive Design</a>
+				<img src="images/exercise.gif" alt="Exercise Gif"><br>
+				<img src="images/trello-logo-blue.png" alt="Trello Logo" width="200px" height="100px">
 			   </section>
 		  
 			   <section>
 				 <h2>Another bootstrap challenge</h2>
-				 <p><a href="https://docs.google.com/a/anniecannons.com/document/d/1acTeTRmLkGxlz-JdITgYqsfRiCOWCLM10iyidULpcZc/edit?usp=sharing">Click here</a></p>
-				 <img src="images/exercise.gif" alt="Exercise Gif">
+				 <p><a href="https://docs.google.com/a/anniecannons.com/document/d/1acTeTRmLkGxlz-JdITgYqsfRiCOWCLM10iyidULpcZc/edit?usp=sharing" target="_blank">Click here</a></p>
+				 <img src="images/exercise.gif" alt="Exercise Gif"><br>
+				 <img src="images/trello-logo-blue.png" alt="Trello Logo" width="200px" height="100px">
 			   </section>
 
 			   <section>
@@ -1511,13 +1669,13 @@ img {
 
 			   <section>
 				   <h2>Flexbox</h2>
-				   <p>Flexbox makes aligning element and centering them vertically and horizontally super easy! Keep you from feeling like this:</p>
+				   <p>Flexbox makes aligning elements and centering them vertically and horizontally super easy! Keeps you from feeling like this:</p>
 					<img src="images/cssstruggle.gif" alt="CSS Struggle">
 			   </section>
 		  
 			   <section>
 				 <h2>Flexbox!</h2>
-				 <a href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/">Flexbox Lecture</a>
+				 <a href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/" target="_blank">Flexbox Lecture</a>
 			   </section>
 
 			   <section>
@@ -1530,13 +1688,14 @@ img {
 					   <li>justify-content</li>
 					   <li>align-items</li>
 				   </ul>
+				   <p> <a href="https://jsbin.com/likedin/edit?html,css,output">Practice Here!</a></p>
 			   </section>
 
 			   <section>
 				   <h2>Flex-direction</h2>
 					<ul>
 						<li>The default is set to "row"</li>
-						<li>Changing to <code> flex-direction: column </code> on the parent will change the orientation of the children.</li>
+						<li>Changing to <code style="color: turquoise"> flex-direction: column </code> on the parent will change the orientation of the children.</li>
 						<img src="images/flexdirection.png" alt="Flex Direction">
 					</ul>
 			   </section>
@@ -1571,25 +1730,30 @@ img {
 
 			   <section>
 				   <h2>Flexbox Game</h2>
-					 <a href="http://flexboxfroggy.com/">Flexbox Froggy</a>
-					 <img src="images/exercise.gif" alt="Exercise Gif">
+				   <p><a href="http://flexboxfroggy.com/" target="_blank">Flexbox Froggy</a></p>
+				   <img src="images/exercise.gif" alt="Exercise Gif"><br>
+				   <img src="images/trello-logo-blue.png" alt="Trello Logo" width="200px" height="100px">
+					 
+					 
 			   </section>
 		  
 			   <section>
 				 <h2>CSS Advanced</h2>
-				 <p>For so much more......<a href="http://www.htmldog.com/guides/css/advanced/">Click here</a></p>
+				 <p>For so much more......<a href="http://www.htmldog.com/guides/css/advanced/" target="_blank">Click here</a></p>
 			   </section> 
 		  
 			   <section>
 				 <h2>Your Yogurt Shop Assignment</h2>
 				 <p>Make a responsive site based on the designs and assets you are given.</p>
 				 <p>Make sure you use bootstrap and flexbox!</p>
-				 <a href="https://github.com/AnnieCannons/ac-intro-programming/blob/master/Exercises/frozenyogurtshop-ac-students.zip">click here!</a>
+				 <p><a href="https://github.com/AnnieCannons/ac-intro-programming/blob/master/Exercises/frozenyogurtshop-ac-students.zip" target="_blank">click here!</a></p>
+				 <img src="images/exercise.gif" alt="Exercise Gif">
+				   <img src="images/trello-logo-blue.png" alt="Trello Logo" width="200px" height="100px">
 			   </section>
 
 			   <section>
 				   <h2>CSS Roundup</h2>
-				   <p>Click <a href="https://drive.google.com/open?id=1K6Kp_M1RajCthbUMzm5UIwAjAJuBqoaU7qMSO3_SCis">here</a></p>
+				   <p>Click <a href="https://drive.google.com/open?id=1K6Kp_M1RajCthbUMzm5UIwAjAJuBqoaU7qMSO3_SCis" target="_blank">here</a></p>
 			   </section>
 
 		<!-- Last Slide -->
