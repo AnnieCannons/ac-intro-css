@@ -41,9 +41,9 @@
 			  <!-- Folder Structure -->
 			  <section>
 				<h3>Get Started: Folder Structure</h3>
-				<p>All the files for your site will be stored within the main project folder.</p>
+				<p>All files for a site are stored within the main project folder, a "root" folder.</p>
 				<div class="halfblock">
-				<p class="left-align"><strong>This includes:</strong></p>
+				<p class="left-align"><b>This includes:</b></p>
 				<ul>
 				  <li>HTML Files</li>
 				  <li>CSS Files</li>
@@ -57,27 +57,26 @@
 
 			  <section>
 				<h3>Get Started: Folder Structure</h3>
-				<p>In your dev folder, you will have folders for each project.</p>
+				<p>In your Dev folder, you will have folders for each project. This Dev folder will therefore have multiple root folders.</p>
 				<div class="halfblock">
-				<p class="left-align"><strong>All assets for each project will be in the main folder.</strong></p>
-				
+				<p class="left-align"><b>All assets for each project will be in the main folder, their respective root folder.</b></p>
 				</div>
 			  </section>
 		  
 			<section>
 			   <h2>CSS: What is it?</h2>
-			   <p class="fragment">CSS = Cascading Style Sheets</p>
-			   <p class="fragment">CSS is a "style sheet language" that lets you style the elements on your page. It adds color, boldness, and layout to an otherwise plain and boring world of HTML.  </p>
+			   <p class="fragment"><span style="color: yellow;">CSS</span> = <span style="color: yellow;">C</span>ascading <span style="color: yellow;">S</span>tyle <span style="color: yellow;">S</span>heets</p>
+			   <p class="fragment">CSS is a "style sheet language" that lets you style the elements on your page. It adds <span style="color: greenyellow;">color</span>, <span style="font-weight: bold;">boldness</span>, and <span style="display: block;">layout</span> to an otherwise plain and boring world of HTML.  </p>
 			   <p class="fragment">CSS is embedded inside HTML, but it is not HTML itself. Your CSS file will be separate from your HTML file.</p>
 			   <a class="fragment" href="http://www.acfjc.org/" target="_blank">Website with and without CSS</a>
 			</section>
 		  
 			<section>
 			  <h2>CSS</h2>
-			  <p>CSS is designed primarily to enable the *separation* of document content from document presentation</p>
+			  <p>CSS is designed primarily to enable the *separation* of <span style="color:orange">document content</span> from <span style="color:yellow">document presentation</span></p>
 			  <ul>
-				<li class="fragment">This means that the code you write that defines the content on the page will be different than the code you write to define the look of that code as it is rendered in the browser. </li>
-				<li class="fragment">Having CSS written separately from the HTML can provide more flexibility and control in defining the look of content. It can also enable multiple pages or elements to share the same formatting rules. </li>
+				<li class="fragment">So the <span style="color:orange">code you write that defines the content</span> on the page will be different from the <span style="color:yellow">code you write to define the look of that code</span> as it is rendered in the browser.</li>
+				<li class="fragment">Having <span style="color:yellow">CSS</span> written separately from the <span style="color:orange">HTML</span> can provide more flexibility and control in defining the look of content. It can also enable multiple pages or elements to share the same formatting rules. </li>
 			  </ul>
 			</section>
 		   
@@ -91,7 +90,7 @@
 			  
 			  <section>
 				<h2>Anatomy of CSS</h2>
-			   <p>CSS consists of "style rules". Each style rule consists of a "selector" and "declarations" of property-value pairs:</p>
+			   <p>CSS consists of "style rules". Each style rule consists of a "selector" and "declarations" of <strong>property-value pairs</strong>:</p>
 <pre>
 <span style="color:yellow">selector</span> {
  <span style="color:lightblue">property</span>: <span style="color:orange">value</span>;
@@ -147,23 +146,23 @@ body {
 					<h2>How does 'Cascading' work?</h2>
 <pre><code class="css" data-trim contenteditable>
 body {
-color: yellow;
-background-color: green;
+  color: yellow;
+  background-color: green;
 }
 
 h1 {
-color: blue;
-background-color: black;
-	}
+  color: blue;
+  background-color: black;
+}
 
 p {
-color: red;
-background-color: orange;
+  color: red;
+  background-color: orange;
 }
 
 p.class {
-color: turquoise;
-background-color: biege; 
+  color: turquoise;
+  background-color: biege; 
 }
 </code></pre>
 				</section>	
@@ -200,7 +199,7 @@ selector {
 			  <h2>Types of Selectors: element</h2>
 <pre><code class="css" data-trim contenteditable>
 p {
- color: blue;
+  color: blue;
 }
 </code></pre>
 		  
@@ -213,19 +212,19 @@ p {
 <pre><code class="css">
 /* CSS FILE */
 #header {
- color: blue;
+  color: blue;
 }
 </code></pre>
 		  <p>
-		  Selects any element with the id “header", e.g.
+		  Selects any element with the id of “header", e.g.
 		  </p>
 <pre><code class="html" data-trim contenteditable>
 <!-- HTML FILE-->
 &lt;p id="header"&gt;&lt;/p&gt;
 </code></pre>
 		  
-			<p class="fragment">Element ids are unique, and can only be used once in your HTML.</p>
-			<p class="fragment">The "#" is how you tell CSS "this is an id."</p>
+			<p class="fragment">An element's id is unique and can only be used once in your HTML.</p>
+			<p class="fragment">Use "#" in CSS to select the HTML element by its "id" attribute value.</p>
 			  </section>
 			  
 			  <section>
@@ -233,7 +232,7 @@ p {
 <pre><code class="css" data-trim contenteditable>
 /* CSS FILE */
 .warning {
- color: red;
+  color: red;
 }
 </code></pre>
 		  
@@ -244,7 +243,7 @@ p {
 </code></pre>
 		  
 		  <p class="fragment">Multiple elements can have the same class name.</p>
-		  <p class="fragment">The "." is how you tell CSS "this is a class name." </p>
+		  <p class="fragment">Use "." in CSS to select the HTML element by its "class" attribute value. </p>
 		  
 			  </section>
 			 
@@ -255,10 +254,10 @@ p {
 <pre><code class="css" data-trim contenteditable>
 /* CSS FILE */
 .intro {
- background-color: blue;
+  background-color: blue;
 }
 .description {
- color: red;
+  color: red;
 }
 </code></pre>
 
@@ -273,7 +272,7 @@ p {
 			  </section>
 			  <section>
 				<h2>Types of Selectors: class</h2>
-				<p>Once you have set style rules for one part or element of your site, you can simply add the same class to other places in your HTML if you want the same style rules to apply there.</p>
+				<p>Style rules for elements of the same class apply to the elements no matter where they are on your site (e.g., buttons, branded link colors, list item bullets).</p>
 				
 			  </section>
 			 
@@ -291,10 +290,10 @@ p {
 </code></pre>
 <pre class="fragment"><code class="css" data-trim contenteditable>
 	/* CSS FILE */
-	ul em {
-	 color: yellow;
-	}
-	</code></pre>
+ul em {
+  color: yellow;
+}
+</code></pre>
 	
 				<p class="fragment">Selects any <code style="color: turquoise">em</code> element that's a descendant of a <code style="color: turquoise">ul</code> element.
 				<p class="fragment" >The " " (space) is how you say "find a descendant." </p>
@@ -307,7 +306,7 @@ p {
 <pre class="fragment"><code class="css" data-trim contenteditable>
 /* CSS FILE */
 #related-brands li {
- color: gray;
+  color: gray;
 }
 </code></pre>
 		  <p class="fragment"> 
@@ -327,7 +326,7 @@ p {
 <pre class="fragment"><code class="css" data-trim contenteditable>
 /* CSS FILE */
 li.special {
- color: yellow;
+  color: yellow;
 }
 </code></pre>
 		  <p class="fragment">
@@ -336,8 +335,8 @@ li.special {
 <pre class="fragment"><code class="html" data-trim contenteditable>
 <!-- HTML FILE-->
 &lt;ul&gt;
- &lt;li&gt;Rice Krispies&lt;/li&gt;
- &lt;li class="special"&gt;NutriGrain&lt;/li&gt;
+  &lt;li&gt;Rice Krispies&lt;/li&gt;
+  &lt;li class="special"&gt;NutriGrain&lt;/li&gt;
 &lt;/ul&gt;
 </code></pre>
 			<p class="fragment">Warning: If you place a space after the ".", it'll look for <strong>descendants</strong> of <code style="color: turquoise">li</code> with class of "special."</p>
@@ -347,12 +346,12 @@ li.special {
 				<h2>Types of selectors: ALL!</h2>
 <pre><code class="css" data-trim contenteditable>
 #header div.content form p em.required {
- color: white;
+  color: white;
 }
 </code></pre>
 		  <p>Let's take a few moments to explore this selector!</p>
 		  <p class="fragment">
-		  Selects any <code style="color: turquoise">em</code> element with a class attribute that equals "required", that is a descendant of a <code style="color: turquoise">p</code> element, that is a descendant of a <code style="color: turquoise">form</code> element, that is a descendant of a <code style="color: turquoise">div</code> element, with a class attribute that equals "content", that is a descendant of any element with an id attribute that equals "header".
+		  Selects any <code style="color: turquoise">em</code> element with a class attribute value of "required", <span class="fragment">that is a descendant of a <code style="color: turquoise">p</code> element,</span> <span class="fragment">that is a descendant of a <code style="color: turquoise">form</code> element,</span> <span class="fragment">that is a descendant of a <code style="color: turquoise">div</code> element</span> <span class="fragment">with a class attribute value of "content",</span> <span class="fragment">that is a descendant of an element with an id attribute value of "header".</span>
 		  </p>
 		  
 			  </section>
@@ -362,19 +361,19 @@ li.special {
 				<p>A set of "pseudo classes" can style anchor elements depending on their state.</p>
 <pre><code class="css" data-trim contenteditable>
 a:link { /* unvisited link */
- color: red;
+  color: red;
 }
 a:visited { /* visited link */
- color: blue;
+  color: blue;
 } 
 a:hover { /* moused over link */
- color: green;
+  color: green;
 }  
 a:active { /* current link */
- color: purple;
+  color: purple;
 } 
 a:focus {  /* focused link */
- color: purple;
+  color: purple;
 } 
 </code></pre>
 				<p class="fragment">Practice <a href="https://jsbin.com/fubiwuf/edit?html,css,output" target="_blank">here</a>! </p>
@@ -389,10 +388,10 @@ a:focus {  /* focused link */
 			 
 			  <section>
 				<h2>Grouping selectors</h2>
-				<p>You can group selectors to apply the same style to all of the selectors  by separating them with commas:</p>
+				<p>You can group selectors to apply the same style to all of the selectors by separating them with commas:</p>
 <pre><code class="css" data-trim contenteditable>
 a:hover, a:active, a:focus {
- background-color: yellow;
+  background-color: yellow;
 }
 </code></pre>
 			  </section>
@@ -401,22 +400,23 @@ a:hover, a:active, a:focus {
 				<h2>The selector: Cascade rules</h2>
 				 <p>Generally:</p>
 				<ul>
-					<li class="fragment">id is more specific than a class, class is more specific than element.
-					<li class="fragment">the longer the selector, the more specific it is
-					<li class="fragment">If style rules are equally specific, the last one wins!
+					<li class="fragment">id is more specific than class.</li>
+						<li class="fragment">class is more specific than element.</li>
+					<li class="fragment">The longer the selector, the more specific it is.</li>
+					<li class="fragment">If style rules are equally specific, the last one wins!</li>
 				</ul>
 				<p class="fragment">Example:</p>
 <pre class="fragment"><code class="css" data-trim contenteditable>
 #a #b h1 { color: red; } 
 #a h1 { color: blue; }
 </code></pre>
- <p class="fragment">What is the different between these two selectors?</p>
+ <p class="fragment">What is the difference between these two selectors?</p>
 			  </section>
 
 			  <section>
 				  <h2>Selectors Cheatsheet</h2>
-				  <p><a href="https://medium.com/design-code-repository/css-selectors-cheatsheet-details-9593bc204e3f" target="_blank">Here</a> is a gret article to refresh your skills.</p>
-				  <p>Click <a href="https://www.dropbox.com/s/h2hni9o1m1di989/CSS%20selectors%20cheatsheet.pdf?dl=0" target="_blank">here</a> for a cheatsheet</p>
+				  <p><a href="https://medium.com/design-code-repository/css-selectors-cheatsheet-details-9593bc204e3f" target="_blank">Here</a> is a great article to refresh your skills.</p>
+				  <p>Click <a href="https://www.dropbox.com/s/h2hni9o1m1di989/CSS%20selectors%20cheatsheet.pdf?dl=0" target="_blank">here</a> for a cheatsheet.</p>
 				  <p>Check out <a href="https://frontend30.com/css-selectors-cheatsheet/" target="_blank">this</a> game to practice your skills!</p>
 			  </section>
 			  
@@ -430,44 +430,43 @@ selector{property:values}selector{property:values}
 		  <p class="fragment">But this is how we will write CSS at AnnieCannons:</p>
 <pre class="fragment"><code class="css" data-trim contenteditable>
 selector {
- property: values;
+  property: values;
 }
 
 selector {
- property: values;
+  property: values;
 }
 </code></pre>
-		  <p class="fragment">Notice: space between "selector" and "{", 2 spaces before property-value pair, space after "property:", semi-colon after "values", line between rules.
+		  <p class="fragment">Notice: space between "selector" and "{", <span class="fragment">2 spaces before property-value pair,</span> <span class="fragment">space after "property:",</span> <span class="fragment">semi-colon after "values",</span> <span class="fragment">line between rules.</span>
 		  </p>
 			  </section>
 			  
 			  <section>
 				<h2>Naming Conventions</h2>
-				<p>Some rules to follow when making IDs and class names:</p>
+				<p>Some rules to follow when making id and class names:</p>
 				<ul>
-				  <li class="fragment">Describe the content, not the presentation ("warning", not "redbox").
-				  <li class="fragment">Use all lowercase, and hyphens when needed for readability ("header-info", not "headerInfo").
-				  <li class="fragment">Use hyphens to show that a class or ID is part of something else. (e.g. "footer", "footer-copyright", and "footer-logo").
+				  <li class="fragment">Describe the content, not the presentation ("warning", not "redbox").</li>
+				  <li class="fragment">Use all lowercase, and hyphens when needed for readability ("header-info", not "headerInfo").</li>
+				  <li class="fragment">Use hyphens to show that a class or id is part of something else. (e.g. "footer", "footer-copyright", and "footer-logo").</li>
 				</ul>
 			  </section>
 			 
 			  <section>
 				<h2>Comments</h2>
-				<p>Comments will be ignored by the browser and are useful for documenting your styles to other humans or commenting out rules.</p>
+				<p>Comments are ignored by the browser and are useful for documenting styles for readability or commenting out rules.</p>
 		  
 <pre><code class="css" data-trim contenteditable>
 <strong>/* Comment here */</strong>
-p 
-{
-margin: 1em; <strong>/* Comment here */</strong>
-padding: 2em; 
-<strong>/* color: white; */</strong>
-background-color: blue;
+p {
+  margin: 1em; <strong>/* Comment here */</strong>
+  padding: 2em; 
+  <strong>/* color: white; */</strong>
+  background-color: blue;
 }
 
 <strong>/*
-multi-line 
-comment here
+  multi-line 
+  comment here
 */</strong>
 </code></pre>
 			  </section>
@@ -475,6 +474,9 @@ comment here
 			  <section>
 				  <h2>Test your selector skills</h2>
 					<p>Click <a href="https://flukeout.github.io/" target="_blank">here</a></p>
+					<a href="https://trello.com/b/4ESfvtdM/template-student-journey-phase-22-css" target="_blank">
+					<img src="images/trello-logo-blue.png" alt="Trello Logo" width="200px" ></a>
+					<br>
 					<img src="images/exercise.gif" alt="Exercise Gif">
 			  </section>
 
@@ -506,16 +508,21 @@ font-family: Arial, sans-serif;
 			 
 			  <section>
 				<h2>Properties: color</h2>
-				<p class="fragment">The <code style="color: turquoise">color</code> property changes the text color. Colors can be specified either by name, for the most common colors, or by hexadecimal value. </p>
+				<p class="fragment">The <code style="color: turquoise">color</code> property changes text color:</p>
+				<ul>
+					<li class="fragment">by name, for the most common colors (e.g., blue)</li>
+					<li class="fragment">by hexadecimal value (e.g., #ff0000)</li>
+					<li class="fragment">by RGB value (e.g., rgb(255, 0, 0))</li>
+				</ul>
 <pre class="fragment"><code class="css" data-trim contenteditable>
-color: red;
-color: #ff0000;
-color: rgb(255, 0, 0); 
+color: red; /* by name */
+color: #ff0000; /* by hexadecimal color code value */
+color: rgb(255, 0, 0); /* by rgb color code value */
 </code></pre>
-			  <p class="fragment">This property is inherited, which means it'll also be applied to all descendant elements but can be overridden by more specific rules.</p>
+			  <p class="fragment">This property is inherited, which means it will be applied to all descendant elements but can be overridden.</p>
 <pre class="fragment"><code class="css" data-trim contenteditable>
 body {
- color: red;
+  color: red;
 }
 </code></pre>
 				<p class="fragment">Practice <a href="https://jsbin.com/gotowem/edit?html,css,output" target="_blank">here</a>! </p>
@@ -559,7 +566,7 @@ table {
 font-family: "Times New Roman";
 font-family: sans-serif;
 </code></pre>
-			  <p class="fragment">A comma separated list of font families can be specified if you want the browser to prefer one but use the others as backup options.</p>
+			  <p class="fragment">A comma-separated list of font family values can be specified if you want the browser to prefer one but use the others as backup options.</p>
 <pre class="fragment"><code class="css" data-trim contenteditable>
 font-family: "Times New Roman", serif;
 font-family: "Arial", sans-serif;
@@ -570,7 +577,7 @@ font-family: Courier, monospace;
 			  
 			  <section>
 				<h2>Finding Fonts</h2>
-				<p>Several websites exist that help you pick fonts for your website and to customize it with non-default fonts (in addition to Google Fonts):</p>
+				<p>In addition to <a href="https://fonts.google.com">Google Fonts</a>, you can browse for custom fonts for your webpages:</p>
 				<ul>
 				  <li><a href="http://www.typetester.org/" target="_blank">TypeTester</a>
 				  <li><a href="http://typekit.com/" target="_blank">TypeKit</a>
@@ -602,11 +609,11 @@ font-size: 100vw
 		  
 <pre><code class="css" data-trim contenteditable>
 p {
- font-size: 0.9em; 
+  font-size: 0.9em; 
 }
 
 strong {
- font-size: 1.5em; 
+  font-size: 1.5em; 
 }
 </code></pre>
 		  
@@ -616,10 +623,10 @@ strong {
 			  
 			  <section>
 				<h2>Property: font-size (px)</h2>
-			  <p>The "px" unit lets you size font in terms of pixels, which is the unit also used to size images and other elements. It is easier to understand than em, but doesn't work as well when printing or resizing.</p>
+			  <p>The "px" stands for pixels, which is also often used to size images and other elements.</p><p>Because pixels are finite or fixed, this unit of measurement does not work as well when printing or resizing.</p>
 <pre><code class="css" data-trim contenteditable>
 h2 {
- font-size: 17px; 
+  font-size: 17px; 
 }
 </code></pre>
 		  
@@ -629,16 +636,16 @@ h2 {
 			  
 			  <section>
 				<h2>Property: font-size (keywords)</h2>
-				 <p>There are various keywords that can be used if you're not as worried about the precise sizing: xx-small, x-small, small, medium, large, x-large, xx-large.</p>
+				 <p>These keywords can be used for imprecise sizing:<br>xx-small, x-small, small, medium, large, x-large, xx-large.</p>
 <pre class="fragment"><code class="css" data-trim contenteditable>
 p.footnote {
- font-size: small;
+  font-size: small;
 }
 </code></pre>
-			  <p class="fragment">There are also two relative keywords, that act similar to em's in setting size relative: smaller, larger.</p>
+			  <p class="fragment">Two other keywords act similar to em's in setting relative size: smaller, larger.</p>
 <pre class="fragment"><code class="css" data-trim contenteditable>
 p.intro {
- font-size: larger;
+  font-size: larger;
 }
 </code></pre>
 			  </section>
@@ -648,15 +655,15 @@ p.intro {
 				<p>The size can also be specified as a percentage, which works similar to <code style="color:turquoise">em</code>, and can be used in conjunction with other units.</p>
 <pre><code class="css" data-trim contenteditable>
 body { 
- font-size: 12px; 
+  font-size: 12px; 
 }
 
 h1 { 
- font-size: 400%; 
+  font-size: 400%; 
 }
 
 h1 a { 
- font-size: 50%; 
+  font-size: 50%; 
 }
 </code></pre>
 		  
@@ -668,10 +675,12 @@ h1 a {
 				
 				<section>
 					<h2>Property: font-size (vw)</h2>
-					<p><code style="color:turquoise">vw</code> or <code style="color:turquoise">vh</code> stands for viewport width or viewport height. This allows you to dynamically set the size of your font depending on the size of the screen. This is especially helpful in responsive design.</p>
+					<p><code style="color:turquoise">vw</code> stands for viewport width. <code style="color:turquoise">vh</code> stands for viewport height.</p>
+					<p>vw and vh allow you to dynamically set font size depending on screen size, the viewport.</p>
+					<p>Dynamic font sizing is especially helpful in responsive design.</p>
 <pre><code class="css" data-trim contenteditable>
 h1 { 
- font-size: 3vw; 
+  font-size: 3vw; 
 }
 </code></pre>
 				</section>
@@ -817,7 +826,9 @@ text-decoration: underline;
 				</ul>
 				<img src="images/gdicss.png" width="500px" height="450px" alt="GDI Website with CSS">
 				<img src="images/exercise.gif" alt="Exercise Gif" width="200px" height="200px">
-				<img src="images/trello-logo-blue.png" alt="Trello Logo" width="200px" height="100px">
+				<br>
+				<a href="https://trello.com/b/4ESfvtdM/template-student-journey-phase-22-css" target="_blank">
+					<img src="images/trello-logo-blue.png" alt="Trello Logo" width="200px" ></a>
 				<aside class="notes">Give them 10 minutes and then do with them.  If they get bored, try https://flukeout.github.io.  For homework look at chapter 12</aside>
 			 </section>
 		  
@@ -1438,7 +1449,8 @@ img {
 					<h2>Exercise Time</h2>
 					<a href="https://docs.google.com/a/anniecannons.com/document/d/1DcGTRA_Rnp4H4A5W_M5XX3nChUI9Zd6GaG5d83Qb_a8/edit?usp=sharing" target="_blank">Click here for a Google Doc</a><br/>
 					<img src="images/exercise.gif" alt="Exercise Gif"> <br>
-					<img src="images/trello-logo-blue.png" alt="Trello Logo" width="200px" height="100px">
+					<a href="https://trello.com/b/4ESfvtdM/template-student-journey-phase-22-css" target="_blank">
+						<img src="images/trello-logo-blue.png" alt="Trello Logo" width="200px" ></a>
 			</section>
 			  
 			  <section>
@@ -1447,7 +1459,8 @@ img {
 				<a href="https://anniecannons.github.io/coach-myspace/" target="_blank">Click here</a><br/>
 				<img src="images/exercise.gif" alt="Exercise Gif">
 				<br>
-					<img src="images/trello-logo-blue.png" alt="Trello Logo" width="200px" height="100px">
+				<a href="https://trello.com/b/4ESfvtdM/template-student-journey-phase-22-css" target="_blank">
+					<img src="images/trello-logo-blue.png" alt="Trello Logo" width="200px" ></a>
 			  </section>    
 		  
 			  <section>
@@ -1571,7 +1584,8 @@ img {
 				<section>
 					<h2>Responsive Design Exercises</h2>
 					<p>Click on <a href="http://web.simmons.edu/~grovesd/comm328/demo/media-query-exercises/media-query-example1-done.html" target="_blank">this link</a>. We will provide the image files.</p>
-					<img src="images/exercise.gif" alt="Exercise Gif"> <br> <img src="images/trello-logo-blue.png" alt="Trello Logo" width="200px" height="100px">
+					<img src="images/exercise.gif" alt="Exercise Gif"> <br> <a href="https://trello.com/b/4ESfvtdM/template-student-journey-phase-22-css" target="_blank">
+						<img src="images/trello-logo-blue.png" alt="Trello Logo" width="200px" ></a>
 				</section>
 		  
 			   <section>
@@ -1646,21 +1660,25 @@ img {
 				 <h2>Creating a Grid With Bootstrap</h2>
 				 <img src="images/exercise.png" alt="Class Exercise">
 				 <img src="images/exercise.gif" alt="Exercise Gif" width="200px" height="200px">
-				  <img src="images/trello-logo-blue.png" alt="Trello Logo" width="200px" height="100px">
+				 <br>
+				 <a href="https://trello.com/b/4ESfvtdM/template-student-journey-phase-22-css" target="_blank">
+					<img src="images/trello-logo-blue.png" alt="Trello Logo" width="200px" ></a>
 			   </section>
 		  
 			   <section>
 				 <h2>FreeCodeCamp</h2>
 				<a href="https://www.freecodecamp.com/challenges/use-responsive-design-with-bootstrap-fluid-containers" target="_blank" target="_blank">Click here for exercises on Responsive Design</a>
 				<img src="images/exercise.gif" alt="Exercise Gif"><br>
-				<img src="images/trello-logo-blue.png" alt="Trello Logo" width="200px" height="100px">
+				<a href="https://trello.com/b/4ESfvtdM/template-student-journey-phase-22-css" target="_blank">
+					<img src="images/trello-logo-blue.png" alt="Trello Logo" width="200px" ></a>
 			   </section>
 		  
 			   <section>
 				 <h2>Another bootstrap challenge</h2>
 				 <p><a href="https://docs.google.com/a/anniecannons.com/document/d/1acTeTRmLkGxlz-JdITgYqsfRiCOWCLM10iyidULpcZc/edit?usp=sharing" target="_blank">Click here</a></p>
 				 <img src="images/exercise.gif" alt="Exercise Gif"><br>
-				 <img src="images/trello-logo-blue.png" alt="Trello Logo" width="200px" height="100px">
+				 <a href="https://trello.com/b/4ESfvtdM/template-student-journey-phase-22-css" target="_blank">
+					<img src="images/trello-logo-blue.png" alt="Trello Logo" width="200px" ></a>
 			   </section>
 
 			   <section>
@@ -1732,7 +1750,8 @@ img {
 				   <h2>Flexbox Game</h2>
 				   <p><a href="http://flexboxfroggy.com/" target="_blank">Flexbox Froggy</a></p>
 				   <img src="images/exercise.gif" alt="Exercise Gif"><br>
-				   <img src="images/trello-logo-blue.png" alt="Trello Logo" width="200px" height="100px">
+				   <a href="https://trello.com/b/4ESfvtdM/template-student-journey-phase-22-css" target="_blank">
+					<img src="images/trello-logo-blue.png" alt="Trello Logo" width="200px" ></a>
 					 
 					 
 			   </section>
@@ -1748,7 +1767,8 @@ img {
 				 <p>Make sure you use bootstrap and flexbox!</p>
 				 <p><a href="https://github.com/AnnieCannons/ac-intro-programming/blob/master/Exercises/frozenyogurtshop-ac-students.zip" target="_blank">click here!</a></p>
 				 <img src="images/exercise.gif" alt="Exercise Gif">
-				   <img src="images/trello-logo-blue.png" alt="Trello Logo" width="200px" height="100px">
+				 <br><a href="https://trello.com/b/4ESfvtdM/template-student-journey-phase-22-css" target="_blank">
+					<img src="images/trello-logo-blue.png" alt="Trello Logo" width="200px" ></a>
 			   </section>
 
 			   <section>
