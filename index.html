@@ -81,6 +81,14 @@
 			</section>
 		   
 			<section>
+				<h1>CSS Exercise</h1>
+				<p>Login to your account at
+				<a target="_blank" href="https://www.codecademy.com/learn/learn-css">Codecademy</a>. Complete the Introduction to CSS course by the end of this unit.</p>
+				<a href="https://trello.com/b/4ESfvtdM/template-student-journey-phase-22-css" target="_blank"><img height="50px" src="images/trello-logo-blue.png" alt="Trello logo"></a><br>
+				<img src="images/exercise.gif" alt="Exercise time">
+			  </section>
+
+			<section>
 			  <h2>CSS: What can it do?</h2>
 			   <p style="font-style: Courier; font-weight: bold; text-decoration:underline">text</p>
 			   <p style="color: red;  background-color: yellow">color</p>
@@ -705,30 +713,44 @@ font-style: italic;
 			  
 			  <section>
 				<h2>Property: font-weight</h2>
-				<p>The "font-weight" property specifies the thickness of the font. The default is "normal" and the typical override is "bold". You can also specify "bolder", "lighter", or a number from 100 to 900.</p>
-		  
+				<p>The "font-weight" property specifies font thickness.</p>
+				<ul>
+					<li>The default is: "normal"</li>
+					<li>Typical override is: "bold"</li>
+					<li>You can also specify:</li>
+					<ul>
+						<li>"bolder"</li>
+						<li>"lighter"</li>
+						<li>number from 100 to 900</li>
+					</ul>
+				</ul>
+
 <pre><code class="css" data-trim contenteditable>
 font-weight: bold;
+font-weight: lighter;
+font-weight: 800;
 </code></pre>
-		  
-			  <p style="font-weight: bold">Bold text!</p>
+
+			  <p><span style="font-weight: bold">Bold text!</span>
+			  <span style="font-weight: lighter">Lighter text!</span>
+			  <span style="font-weight: 800">Numbered font-weighted text!</span></p>
 			  </section>
 			 
 			 <section>
 			   <h2>&quot;Shorthand&quot; properties</h2>
-			   <p>A "shorthand" property in CSS lets you specify multiple properties in one property, for conciseness. Instead of specifying each "font-" property separately, you can bundle them up in one "font" property.</p>
+			   <p>A "shorthand" property in CSS lets you specify<br>multiple properties in one property, for conciseness.</p><p>Instead of specifying each "font-" property separately,<br>you can bundle them up in one "font" property.</p>
 <pre class="fragment"><code class="css" data-trim contenteditable>
 table.geeky {
- font-weight: bold;
- font-style: italic;
- font-size: 10px;
- font-family: sans-serif;
+  font-weight: bold;
+  font-style: italic;
+  font-size: 10px;
+  font-family: sans-serif;
 }
 </code></pre>
 			<p class="fragment">Those four rules can be written as:</p>
 <pre class="fragment"><code class="css" data-trim contenteditable>
 table.geeky {
- font: italic bold 10px sans-serif;
+  font: italic bold 10px sans-serif;
 }
 </code></pre>
 			 </section>
@@ -761,7 +783,7 @@ text-decoration: underline;
 			 
 			  <section>
 				<h2>CSS Location</h2>
-				<p class="fragment">Where to I write and store my CSS?</p>
+				<p class="fragment">Where do I write and store my CSS?</p>
 				<p class="fragment">How will my CSS connect to my HTML?</p>
 			  </section>
 
@@ -769,18 +791,18 @@ text-decoration: underline;
 				<h2>CSS files</h2>
 				<p>Our CSS will be defined in a separate file, and imported using the <code style="color: turquoise">link</code> element. This is the best!
 		   <p>Linked stylesheet:</p>
- <pre><code class="html" data-trim contenteditable>
- &lt;head&gt;
+<pre><code class="html" data-trim contenteditable>
+&lt;head&gt;
   &lt;link rel="stylesheet" type="text/css" href="main.css"&gt;
- &lt;/head&gt;
- </code></pre>
+&lt;/head&gt;
+</code></pre>
 		 
 			  </section>
 			  
 			  <section>
 				<h2>Other ways to write CSS...</h2>
-				<p>CSS in the HTML file</p>
-				<p>CSS can be embedded in the HTML file itself. One way is to include all CSS in a <code style="color: turquoise">style</code> tag, usually inside the <code style="color: turquoise">head</code> tag:</p>
+				<h3>Internal CSS</h3>
+				<p>Internal CSS is CSS that is in the head of the HTML file. We would put the CSS in a <code style="color: turquoise">style</code> tag inside the <code style="color: turquoise">head</code> tag:</p>
 <pre><code class="html" data-trim contenteditable>
 &lt;html&gt;
  &lt;head&gt;
@@ -796,7 +818,7 @@ text-decoration: underline;
 
 			  <section>
 					<h2>Inline CSS</h2>
-					<p>CSS styles can be assigned to individual HTML elements via the <code style="color: turquoise">style</code> attribute:</p>
+					<p>Inline CSS is when CSS styles are assigned to individual HTML elements via the <code style="color: turquoise">style</code> attribute:</p>
 			   
 <pre><code class="html" data-trim contenteditable>
 &lt;tag style="property1: value; property2: value;"&gt; &lt;/tag&gt;
@@ -806,7 +828,8 @@ text-decoration: underline;
 &lt;h1 style="color:red; text-decoration: underline;"&gt;Hello&lt;/h1&gt;
 </code></pre>
 			   
-			   <p class="fragment">Inline styles will have precedence over all other styles. Inline CSS should be avoided as it increases maintenance cost and blurs line between presentation and content.</p>
+			   <p class="fragment">Inline styles will override internal and external CSS.</p>
+			   <p class="fragment">Inline CSS, therefore, should be avoided as it increases maintenance costs and blurs the line between presentation and content.</p>
 				  </section>
 		  
 			
@@ -824,10 +847,12 @@ text-decoration: underline;
 			   <ul>
 				 <li>Add the CSS to make your GDI site look like the following image: Link <a href="https://docs.google.com/document/d/1riKhrT6lwZzjOAVM2768kdEn5rjmL5nWGC1wDkCgfEQ/edit?usp=sharing" target="_blank">here</a>.</li>
 				</ul>
-				<img src="images/gdicss.png" width="500px" height="450px" alt="GDI Website with CSS">
-				<img src="images/exercise.gif" alt="Exercise Gif" width="200px" height="200px">
+				<img data-enlargable style="border: 5px solid blue; cursor: zoom-in;" src="images/gdicss.png" width="500px" height="450px" alt="GDI Website with CSS">
+				<img src="images/exercise.gif" alt="Exercise Gif" width="200px" height="200px" style="position:relative; top: 0;">
 				<br>
-				<a href="https://trello.com/b/4ESfvtdM/template-student-journey-phase-22-css" target="_blank">
+				<a href="https://trello.com/b/4ESfvtdM/template-student-journey-phase-22-css" target="_blank" style="position: relative;
+				top: -450px;
+				left: 255px;">
 					<img src="images/trello-logo-blue.png" alt="Trello Logo" width="200px" ></a>
 				<aside class="notes">Give them 10 minutes and then do with them.  If they get bored, try https://flukeout.github.io.  For homework look at chapter 12</aside>
 			 </section>
@@ -840,7 +865,7 @@ text-decoration: underline;
 			   <section>
 				 <h2>Overview: CSS Layout</h2>
 				 <p>All web layouts are accomplished with block elements. Designers use blocks, most often <code style="color: turquoise">div</code> elements, to create rectangular areas into which all content fits. </p>
-				 <img src="images/layout.png" alt="Website Layout">
+				 <img data-enlargable style="border: 5px solid blue; cursor: zoom-in;" src="images/layout.png" alt="Website Layout">
 			   </section>
 
 			   <section>
@@ -862,12 +887,12 @@ text-decoration: underline;
 			 <section>
 			   <h2>Display: Block &amp; Inline Elements</h2>
 			   <p class="fragment">There are two main types of elements in the CSS world: "inline" and "block".</p>
-			   <p class="fragment">A browser generally renders a new line after any "block" elements in the HTML. "Inline" elements go form left to right.</p>
+			   <p class="fragment">A browser generally renders a new line after any "block" elements in the HTML. "Inline" elements go from left to right.</p>
 			 </section>
 		  
 			 <section>
 			   <h2>Block &amp; Inline Elements</h2>
-			   <img src="images/block.png" alt="">
+			   <img data-enlargable style="border: 5px solid blue; cursor: zoom-in;" src="images/block.png" alt="Block versus inline elements">
 			 </section>
 		   
 			  <section>
@@ -905,29 +930,47 @@ text-decoration: underline;
 				<h2>The Box Model</h2>
 				<p>All elements are treated as boxes by the browser's rendering engine (either "inline" or "block" boxes).</p>
 				<p>A box consists of content, padding, border, and margin:</p>
-				<img src="images/boxmodel.gif"/>
+				<img data-enlargable style="border: 5px solid blue; cursor: zoom-in;" src="images/boxmodel.gif"/>
+				<p>Play <a href="https://jsbin.com/hafixit/6/edit?html,css,output" target="_blank">here!</a></p>
 			  </section>
 		  
 			  <section>
 			   <h2>Things to know:</h2>
-			   <p class="fragment">In a document, each element is represented as a rectangular box. Determining the size, properties — like its color, background, borders aspect — and the position of these boxes is the goal of the rendering engine.</p>
+			   <p class="fragment">In a document, each element is represented as a rectangular box.</p>
+			   <p class="fragment">The goal of the rendering engine for these boxes in the document is to determine:</p>
+			   <ul class="fragment">
+				   <li>its size</li>
+				   <li>its properties (e.g.,color, background, borders)</li>
+				   <li>its position</li>
+			   </ul>
 			 </section>
 
 			 <section>
 				<h2>Things to know:</h2>
-				<p class="fragment">In CSS, each of these rectangular boxes is described using the <span style="color:yellow;">standard box model</span>. This model describes the content of the space taken by an element. Each box has four edges: the margin edge, border edge, padding edge, and content edge.</p>
-				<p class="fragment">CSS to define width on all browsers. See <a href=" https://www.abeautifulsite.net/box-sizing-border-box-explained" target="_blank"></a></p>
-<pre class="fragment"><code>   
-body{
- box-sizing: border-box;
+				<p class="fragment">In CSS, each of these rectangular boxes is described using the <span style="color:yellow;">standard box model</span>. This model describes the content of the space taken by an element.</p> <p class="fragment">Each box has four edges:
+					<ul class="fragment">
+						<li>margin edge</li>
+						<li>border edge</li>
+						<li>padding edge</li>
+						<li>content edge</li>
+					</ul>
+				<p class="fragment">CSS to define width on all browsers. See <a href=" https://www.abeautifulsite.net/box-sizing-border-box-explained" target="_blank">this</a>.</p>
+<pre class="fragment"><code class="css" data-trim contenteditable>   
+body {
+  box-sizing: border-box;
 }   
 </code></pre>
 				  </section>
 		  
 			 <section>
 			   <h2>Width</h2>
-			   <p class="fragment">Total width is how much horizontal space a block occupies. This includes the block’s content, border, and padding. Calculating width, padding and margin is often the biggest headache for designers, but it's easy to see how they work if you use the box model. </p>
-			   <p class= "fragment">The box model consists of the properties margin, border, and padding.</p>
+			   <p class="fragment">Total width is how much horizontal space a block occupies. This includes the block’s content, border, and padding.</p><p class="fragment">Designers have to account for width, padding and margin; using the box model makes these calculations easy.</p>
+			   <p class= "fragment">The box model consists of these properties:</p>
+			   <ul class="fragment">
+				   <li>margin</li>
+				   <li>border</li>
+				   <li>padding</li>
+			   </ul>
 			 </section>
 
 			<section>
@@ -952,28 +995,37 @@ body{
 			  
 			  <section>
 				<h2>Margin</h2>
-				 <p>The margin is a transparent area around the box - the background of the box does not apply to it. It separates the box from other elements.</p>
+				<p>The margin is a transparent area around the box.</p>
+				<p class="fragment">So the background of the box does not apply to this area.</p>
+				<p class="fragment">The margin is a kind of "spacer" in that it separates the box from nearby elements.</p>
 			  </section>
 
 			  <section>
-					<p>15 pixels on all sides:</p>
+					<p>15 pixels on ALL SIDES:</p>
 <pre><code class="css" data-trim contenteditable>
 margin: 15px;
 </code></pre>
-					<p>10px on top, 5px right, 3px bottom, 20px left:<p>
-					<p>Note: when using this method, think of a clock; start at the top, and go clockwise.<p>
-<pre><code class="css" data-trim contenteditable>
-margin: 10px 5px 3px 20px;
-</code></pre>
-					<p>10px on top:</p>
+<div class="fragment">
+	<p>10px on ONE SIDE ONLY:</p>
 <pre><code class="css" data-trim contenteditable>
 margin-top: 10px;
 </code></pre>
+</div>
+<div class="fragment">				
+<p>DIFFERENT MARGIN VALUES</p>
+<p>(e.g., 10px on top, 5px right, 3px bottom, 20px left)<p>
+					<p>Note: when using this method, think of a clock; <br>start at the top, and go clockwise.<p>
+<pre><code class="css" data-trim contenteditable>
+margin: 10px 5px 3px 20px;
+</code></pre>
+</div>	
+<p class="fragment">More on different margin values on <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/margin" target="_blank">MDN</a>.</p>
+
 			  </section>
 			  
 			  <section>
 				<h2>Auto Margin</h2>
-				<p>If the margin is set to "auto" on a box that has a width, it will take up as much space as possible.</p>
+				<p>If the margin is set to "auto" on a box that has a <b>set width</b>, then the margin will take up as much space as possible on the left and right of the box.</p>
 		  <p>A centered box:</p>
 <pre><code class="html" data-trim contenteditable>
 <!-- HTML FILE -->
@@ -982,9 +1034,9 @@ margin-top: 10px;
 <pre><code class="css" data-trim contenteditable>
 /* CSS FILE */
 div {
- margin: auto;
- width: 300px;
- border: 1px solid red;
+  margin: auto;
+  width: 300px;
+  border: 1px solid red;
 }
 </code></pre>
 		  <div style="margin:auto; width:300px; border:1px solid red;">Hi</div>
@@ -1001,8 +1053,8 @@ div {
 /* CSS FILE */
 div {
  margin-left: auto;
- margin-right:5px;
- width:300px;
+ margin-right: 5px;
+ width: 300px;
  border: 1px solid red;
 }
 </code></pre>
@@ -1048,22 +1100,22 @@ border-width: 10px 5px 3px 20px;
 				<h2>Border Style</h2>
 				<p>Border style can also be specified using the <code style="color: turquoise">border-style</code> property.</p>
 <pre style="border-style:dashed; border-radius:0px;"><code class="css" data-trim contenteditable>
-border-style:dashed;
+border-style: dashed;
 </code></pre>
 <pre style="border-style:double; border-radius:0px;"><code class="css" data-trim contenteditable>
-border-style:double;
+border-style: double;
 </code></pre>
 <pre style="border-style:groove; border-radius:0px;"><code class="css" data-trim contenteditable>
-border-style:groove;
+border-style: groove;
 </code></pre>
 <pre style="border-style:outset; border-radius:0px;"><code class="css" data-trim contenteditable>
-border-style:outset;
+border-style: outset;
 </code></pre>
-<pre style="border-style:inset; border-radius:0px;"><code class="css"data-trim contenteditable>
-border-style:inset;
+<pre style="border-style:inset; border-radius:0px;"><code class="css" data-trim contenteditable>
+border-style: inset;
 </code></pre>
 <pre style="border-style:ridge; border-radius:0px;"><code class="css" data-trim contenteditable>
-border-style:ridge;
+border-style: ridge;
 </code></pre>
 			  </section>
 			  
@@ -1093,7 +1145,9 @@ padding: 15px;
 padding: 10px 5px 3px 20px;
 </code></pre>
 <p>10px on top:</p>
-<pre style="padding:0px; padding-top: 10px; border:1px solid black;  border-radius:0px;">padding-top: 10px;</pre>
+<pre style="padding:0px; padding-top: 10px; border:1px solid black;  border-radius:0px;"><code class="css" data-trim contenteditable>
+padding-top: 10px;
+</code></pre>
 			  </section>
 		  
 			  <section>
@@ -1783,7 +1837,8 @@ img {
 		</section>
 	</div>
 </div>
-
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="js/zoomin.js"></script>
 <script src="lib/js/head.min.js"></script>
 <script src="js/reveal.js"></script>
 
