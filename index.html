@@ -51,7 +51,7 @@
 				  <li>Script files</li>
 				  <li>Anything else that will appear on your site</li>
 				</ul>
-				<p class="left-align" style="margin-top: .5em;"><small>Note: File names should not include spaces or special characters. File names ARE case sensitive.</small></p>
+				<p class="left-align" style="margin-top: .5em;"><small>Note: File names should not include spaces or special characters. File names ARE case-sensitive.</small></p>
 				</div>
 			  </section>
 
@@ -351,7 +351,7 @@ li.special {
 			  </section>
 			  
 			  <section>
-				<h2>Types of selectors: ALL!</h2>
+				<h2>Types of selectors: ALL of the above!</h2>
 <pre><code class="css" data-trim contenteditable>
 #header div.content form p em.required {
   color: white;
@@ -392,6 +392,8 @@ a:focus {  /* focused link */
 				<p>A set of "pseudo classes" can style anchor elements depending on their state.</p>
 				<a href="https://www.google.com/" onMouseOver="this.style.color='red'" onMouseOut="this.style.color='turquoise'">a:hover</a>
 				<a href="https://www.google.com/" id="visited-link-example">a:hover</a>
+				<p class="fragment">Pseudo class selectors can also apply to other html elements.</p>
+				<p class="fragment" onMouseOver="this.style.color='purple'" onMouseOut="this.style.color='white'">I'm a paragraph tag. Hover over me.</p>
 			  </section>	
 			 
 			  <section>
@@ -1225,21 +1227,21 @@ div {
 
 <pre style="float: left; width: 50%"><code class="css" data-trim contenteditable>/*CSS FILE*/
 div {
- width: 100px;
- height: 100px;
- margin-bottom: 5px;
+  width: 100px;
+  height: 100px;
+  margin-bottom: 5px;
 }
 .box1 {
-	background-color:green;
+  background-color: green;
 }
 .box2 {
-	background-color:red;
+  background-color: red;
 }
 .box3 {
-	background-color:blue;
+  background-color: blue;
 }
 .box4 {
-	background-color:yellow;
+  background-color: yellow;
 }
 </code></pre>
 			  </section>
@@ -1261,23 +1263,23 @@ div {
 						
 <pre style="float: left; width: 50%"><code class="css" data-trim contenteditable>/*CSS FILE*/
 div {
- width: 100px;
- height: 100px;
- margin-bottom: 5px;
+  width: 100px;
+  height: 100px;
+  margin-bottom: 5px;
 }
 .box1 {
- background-color:green;
+  background-color: green;
 }
 .box2 {
- background-color:red;
+  background-color: red;
 }
 .box3 {
- background-color:blue;
- position: relative;
- left: 30px
+  background-color: blue;
+  position: relative;
+  left: 30px;
 }
 .box4 {
- background-color:yellow;
+  background-color: yellow;
 }
 </code></pre>
 				</section>
@@ -1289,7 +1291,7 @@ div {
 
 			  <section>
 				<h2>Position: Absolute</h2>
-				<p>The "absolute" value will take the element out of the normal flow and position it in relation to the window (or the closest non-static element).</p>
+				<p>The "absolute" value will take the element<br>out of the normal flow<br>and position it in relation to the window<br>(or the closest non-static element).</p>
 			  </section>
 
 			  <section>
@@ -1300,16 +1302,16 @@ div {
 </code></pre>
 <pre><code class="css" data-trim contenteditable>/* CSS FILE */
 .top-button {
- position: absolute; 
- top: 10px; 
- right: 10px;
- background-color: lightblue;
+  position: absolute; 
+  top: 10px; 
+  right: 10px;
+  background-color: lightblue;
 }
 .lower-button {
- position: absolute; 
- bottom: 5px; 
- left:60px;
- background-color: green;
+  position: absolute; 
+  bottom: 5px; 
+  left: 60px;
+  background-color: green;
 }
 </code></pre>
 						<div style="position: absolute; top: 10px; right: 10px; background-color: lightblue">Up here</div>
@@ -1322,10 +1324,10 @@ div {
 			  <section>
 					<h2>Position: Absolute</h2>
 					<div style="float: left; width: 40%">
-						<div style="background-color: green; width: 100px; height:100px; margin-bottom: 5px"></div>
-						<div style="background-color: red; width: 100px; height:100px; margin-bottom: 5px"></div>
-						<div style="background-color: blue; width: 100px; height:100px; margin-bottom: 5px"></div>
-						<div style="background-color: yellow; width: 100px; height:100px; margin-bottom: 5px"></div>
+						<div style="background-color: green; width: 100px; height: 100px; margin-bottom: 5px"></div>
+						<div style="background-color: red; width: 100px; height: 100px; margin-bottom: 5px"></div>
+						<div style="background-color: blue; width: 100px; height: 100px; margin-bottom: 5px"></div>
+						<div style="background-color: yellow; width: 100px; height: 100px; margin-bottom: 5px"></div>
 					</div>
 <pre style="float: left; width: 50%"><code class="html" data-trim contenteditable><!-- HTML File  -->
 <div class="box box1"></div>
@@ -1356,18 +1358,18 @@ div {
   margin-bottom: 5px;
 }
 .box1 {
-  background-color:green;
+  background-color: green;
 }
 .box2 {
-  background-color:red;
+  background-color: red;
 }
 .box3 {
-  background-color:blue;
+  background-color: blue;
   position: absolute;
   right: 30px
 }
 .box4 {
-  background-color:yellow;
+  background-color: yellow;
 }
 </code></pre>
 				  </section>
@@ -1378,7 +1380,7 @@ div {
 		  
 			  <section>
 				<h2>z-index</h2>
-				<p>The <code style="color: turquoise">z-index</code> property specifies the stack order of positioned elements, in the case that they are overlapping. The element with highest z-index goes on top.</p>
+				<p>The <code style="color: turquoise">z-index</code> property specifies the stack order of positioned elements, in case they overlap. The element with highest z-index goes on top.</p>
 		  
 <pre><code class="html" data-trim contenteditable>&lt;div class="higher-index"&gt; Bottom &lt;/div&gt;
 &lt;div class="lower-index"&gt; Top &lt;/div&gt;
@@ -1386,13 +1388,13 @@ div {
 <pre><code class="css" data-trim contenteditable>.higher-index {
   position: absolute; 
   bottom: 0px; 
-  left:60px; 
+  left: 60px; 
   background-color: red
 }
 .lower-index {
   position: absolute; 
   bottom: 10px; 
-  left:60px; 
+  left: 60px; 
   background-color: green; 
   z-index: 2;
 }
@@ -1417,32 +1419,31 @@ div {
 &lt;/div&gt;
 </code></pre>
 <pre style="float:left; width: 400px;"><code class="css" data-trim contenteditable>div {
-  border: 1px solid black
+  border: 1px solid black;
 }
 img {
-  float:right;
+  float: right;
 }
 </code></pre>
-		  <div style="border:1px solid black; clear:both;">
-		  <img style="float:right" src="images/panda.gif">
-		  <p style="font-size:35px">A panda is one of the best animals on the planet. They are extremely clumsy and they love to play. They mostly eat bamboo and have a good time crawling around the forest floor.</p>
+		  <div style="border: 1px solid black; clear: both;">
+		  <img style="float: right" src="images/panda.gif">
+		  <p style="font-size: 35px">A panda is one of the best animals on the planet. They are extremely clumsy and they love to play. They mostly eat bamboo and have a good time crawling around the forest floor.</p>
 		  </div>
 			  </section>
 			  
 			  <section>
 				<h2>Float</h2>
 				<p>The <code style="color: turquoise">float</code> property can also be used to float non-IMG elements, but make sure to specify a width for the floated element.</p>
-<pre style="float:left; width: 600px; margin-right: 30px;"><code class="html" data-trim contenteditable>&lt;div&gt;
+<pre style="float: left; width: 600px; margin-right: 30px;"><code class="html" data-trim contenteditable>&lt;div&gt;
   &lt;p&gt;H&lt;br&gt;O&lt;br&gt;M&lt;br&gt;E&lt;/p&gt;
 &lt;/div&gt;
-  &lt;p&gt;Hi, this is my personal website.....&lt;p&gt;
-&lt;/div&gt;
+  &lt;p&gt;Hi, this is my personal website.....&lt;/p&gt;
 &lt;div&gt;Contact me for more info.&lt;/div&gt;
 </code></pre>
-<pre style="float:left; width: 300px;"><code class="css" data-trim contenteditable>div {
- float:left; 
- width:50px; 
- background-color:red;
+<pre style="float: left; width: 300px;"><code class="css" data-trim contenteditable>div {
+  float: left; 
+  width: 50px; 
+  background-color: red;
 }
 </code></pre>
 
@@ -1452,7 +1453,6 @@ img {
 			  H<br>O<br>M<br>E
 			</div>
 			Hi, this is my personal website, where you'll find out everything about my inner desires, hopes, dreams, and incredibly exciting daily life.
-		  </div>
 		  <div>Contact me for more info.</div>
 			  </section>
 
@@ -1463,22 +1463,21 @@ img {
 		  
 			  <section>
 				<h2>Clear</h2>
-				<p>The <code style="color: turquoise">clear</code> property can be used to specify that an element should *not* wrap around floated elements above it.</p>
+				<p>The <code style="color: turquoise">clear</code> property can be used to specify that an element should <b>*NOT*</b> wrap around floated elements above it.</p>
 		  
 <pre style="float:left; width: 600px; margin-right: 30px;"><code class="html" data-trim contenteditable>&lt;div&gt;
   &lt;p&gt;H&lt;br&gt;O&lt;br&gt;M&lt;br&gt;E&lt;/p&gt;
 &lt;/div&gt;
-  &lt;p&gt;Hi, this is my personal website.....&lt;p&gt;
-&lt;/div&gt;
+  &lt;p&gt;Hi, this is my personal website.....&lt;/p&gt;
 &lt;div class="contact"&gt;Contact me for more info.&lt;/div&gt;
 </code></pre>
 <pre style="float:left; width: 300px;"><code class="css" data-trim contenteditable>div {
-  float:left; 
-  width:50px; 
-  background-color:yellow;
+  float: left; 
+  width: 50px; 
+  background-color: yellow;
 }
 .contact {
-  clear:both;
+  clear: both;
 }
 </code></pre>
 		  
@@ -1519,8 +1518,9 @@ img {
 		  
 			  <section>
 				<h2>Cross-browser Compliance</h2>
-				<p class="fragment">Keep in mind that internet browsers have their own default styles. So, even if you didn't write any CSS, the default style of the browser will still be applied when the content is displayed on the page.</p>
-				<p class="fragment"> One thing to be aware of is that different browsers may apply a small subset of these rules differently. That is why, as a front-end developer, you have to be aware of <span style="color:yellow">'cross-browser compliance'</span> issues. These are issues that we may explore more fully in future lessons. But it is important to know about this from the outset.</p>
+				<p class="fragment">Internet browsers have their own default styles. So, even if you did not write any CSS, the default style of the browser will apply when the content is displayed on the page.</p>
+				<p><span class="fragment">Times New Roman font family</span>   <span class="fragment"> | 16px font size</span><span class="fragment"> | color palette</span></p>
+				<p class="fragment">Different browsers may apply a small subset of these rules differently. So front-end developers need to be aware of <span style="color:yellow">'cross-browser compliance'</span> issues, which we may explore more fully in future lessons.</p>
 			  </section>
 		
 			   <section>
@@ -1530,7 +1530,7 @@ img {
 				   <li class="fragment">What are the different ways you can add CSS to your webpage?</li>
 				   <li class="fragment">What is the difference between a selector, property, and value in CSS?</li>
 				   <li class="fragment">What are the different types of selectors?</li>
-				   <li class="fragment">How do you write an id in your html for a p element? How do you write it in CSS?</li>
+				   <li class="fragment">How do you write an id in your html for a p element? How do you select it in CSS?</li>
 			   </ol>
 				 </section>
 				 
@@ -1548,32 +1548,41 @@ img {
 				 <h2>Responsive Design</h2>
 				 <p style="color:yellow">What is responsive design?</p>
 				 <ul>
-				   <li class="fragment">Responsive web design is a collection of techniques for building websites that work at multiple screen sizes.</li>
-				   <li class="fragment">Previously, most web professionals would often create a mobile version of their site and a desktop version, which means they would have to maintain two separate websites, or worse, the site wouldn't work on mobile at all.</li>
+				   <li class="fragment">Responsive web design is a collection of techniques for building websites that work at multiple screen sizes (e.g., desktop, laptop, tablet, mobile).</li>
+				   <li class="fragment">Previously, most web professionals often created a mobile version of their site and a desktop version.</li>
+				   <ul class="fragment">
+					   <li>They end up with two separate websites.</li>
+					   <li>Thus, website maintenance issues double.</li>
+					   <li>Worse, the site would not work on mobile at all.</li>
+					</ul>	
 				 </ul>
 			   </section>
 		  
 			   <section>
 				 <h2>Responsive Design</h2>
-				 <p class="fragment">Prior to responsive web design, most web designers thought in terms of print design.The layout was precisely controlled in fixed pixel-based units, and the goal was to make websites look exactly the same in every browser.</p>
-				 <p class="fragment">So, instead of thinking about layout in terms of fixed values, we must think in terms of ratios or percentages. <br>Think: <code><span style="color: turquoise">em</span></code>!</p>
+				 <p class="fragment">Prior to responsive web design, most web designers thought in terms of print design with fixed pixel-based units.<br>The goal was to make websites look exactly the same in every size browser, no matter how big or small the screen.</p>
+				 <p class="fragment">Responsive design discards these tenets about fixed-value layout. Instead, responsive design approaches layout in terms of ratios (relative size) or percentages (% size). <br>Think: <code><span style="color: turquoise">em</span></code>!</p>
+				 <p class="fragment">Play <a href="https://jsbin.com/xodotof/1/edit?html,css,output">here</a>!</p>
 			   </section>
 		  
 			   <section>
 				 <h2>Media Queries</h2>
-				 <p class="fragment">Media queries are CSS rules that help us include CSS code only when certain conditions are met. These conditions are called <span style="color:yellow">media features</span>. And in the case of responsive web design, the media feature most commonly used is width, or more specifically, min or minimum width.<p>
+				 <p class="fragment">Media queries are CSS rules that apply CSS code only when certain conditions are met. These conditions are called <span style="color:yellow">media features</span>.</p>
+				 <p class="fragment">In responsive web design, the media feature most commonly used is width (e.g., min/minimum width, max/maximum width) of a media type (e.g., screen).<p>
 			   </section>
 
 			   <section>
 					<h2>Media Queries</h2>
-					<p class="fragment">In responsive web design, you can think of a <span style="color:yellow">breakpoint</span> as a width where the current layout no longer works and the layout breaks. If the layout breaks, then it necessitates a media query that adjusts the layout.</p>
+					<p class="fragment">In responsive web design, a <span style="color:#ffff00">breakpoint</span> is a width where the current layout no longer works and the layout breaks.</p>
+					<p class="fragment">If the layout breaks, another media query must apply to adjust the layout to fit the new width.</p>
 					<a class="fragment" href="./responsive_design.html" target="_blank">Click here to see breakpoints in action</a>
 				  </section>
 		  
 			  <section>
 				 <h2>CSS Media Queries</h2>
-				 <p>A media query consists of a media type and an optional combination of media features. CSS rules inside the query will be applied only if the query is true.</p>
-				 <p>You can always Google 'media query syntax'</p>
+				 <p>A media query consists of a media type (e.g., screen) and an optional combination of media features (e.g., width).</p>
+				 <p>CSS rules inside the query (within the curly braces) will be applied only if the query is true.</p>
+				 <p>You can always Google <a href="https://www.google.com/search?q=media+query+syntax" target="_blank">'media query syntax'</a></p>
 <pre><code class="css" data-trim contenteditable>
 @media &lt;media types&gt; and &lt;media features&gt; {
 	/* media-specific rules */
@@ -1589,9 +1598,9 @@ img {
 @media only screen
  and (min-device-width : 768px)
  and (max-device-width : 1024px) {
-	img {
-	width: 100%;
-	}
+   img {
+     width: 100%;
+   }
 }
 </code></pre>
 		  <p>Read more: <a href="http://css-tricks.com/snippets/css/media-queries-for-standard-devices/" target="_blank">Media Queries for Standard Devices</a>
@@ -1599,26 +1608,26 @@ img {
 			  
 			  <section>
 				 <h2>Resolution Queries</h2>
-				<p>A more general approach is just to query on <code style="color: turquoise">min-width</code> and <code style="color: turquoise">max-width</code>, which are calculated based on window size, not device size.</p>
+				<p>A more general approach is to query on <code style="color: turquoise">min-width</code> and <code style="color: turquoise">max-width</code>, which are calculated based on window size, not device size.</p>
 <pre><code class="css" data-trim contenteditable>
 @media screen and (max-width: 640px) {
- #sidebar {
-  display: none;
-}
+  #sidebar {
+	display: none;
+  }
 }
 </code></pre>
 <pre><code class="css" data-trim contenteditable>
 @media (min-width: 768px) and (max-width: 979px) {
- #sidebar {
+  #sidebar {
 	width: 200px;
-}
+  }
 }
 </code></pre>
 			   </section>
 		  
 			   <section>
 				 <h2>Media Query Attributes</h2>
-				 <img src="images/media.png" alt="Media Query Attributes">
+				 <img data-enlargable style="border: 5px solid blue; cursor: zoom-in;" src="images/media.png" alt="Media Query Attributes">
 			   </section>
 		  
 			   <section>
@@ -1632,7 +1641,7 @@ img {
 		  
 			   <section>
 				 <h2>Responsive Design Review</h2>
-				 <a href="https://www.youtube.com/watch?v=5xzaGSYd7jM" target="_blank">This video</a>
+				 <a href="https://www.youtube.com/watch?v=5xzaGSYd7jM" target="_blank">Watch the video</a>
 				 </section>
 				 
 				<section>
@@ -1643,16 +1652,16 @@ img {
 				</section>
 		  
 			   <section>
-				 <h2>Now that you have intermediate coding knowlege, let's have some fun with a framework!</h2>
+				 <h2>With our intermediate coding knowledge now, it's time to have some fun with a framework!</h2>
 				 <img src="images/easy.jpeg" alt="Easy Button">
 			   </section>
 		  
 			   <section>
 				 <h2>CSS Frameworks</h2>
 				 <p class="fragment" style="color:yellow">What is a framework?</p>
-				 <p class="fragment">CSS Frameworks are pre-prepared software code that are meant to allow for easier, more standards-compliant web design using the CSS language</p>
-				 <p class="fragment">Most languages have frameworks that make your job as the developer easier</p>
-				 <p class="fragment">The style rules are already written, all you have to do is add proper classes to you HTML!</p>
+				 <p class="fragment">CSS Frameworks are pre-prepared software code that allows for easier, more standards-compliant web design using the CSS language.</p>
+				 <p class="fragment">Most languages have frameworks that make our job as a developer easier.</p>
+				 <p class="fragment">The style rules are already written, all you have to do is add proper <span style="color:orange">classes</span> to you HTML!</p>
 			   </section>
 
 			   <section>
@@ -1664,8 +1673,8 @@ img {
 			   <section>
 				 <h2>CSS Frameworks</h2>
 				 <p class="fragment">What does a CSS framework consist of?</p>
-				 <p class="fragment">Usually include a reset, a grids system, styles for typography and forms. Some include support for mobile/print.</p>
-				 <p class="fragment">Bootstrap! This is a type of CSS framework that includes this grid system and makes other CSS styling techniques easy to use. Developers use this all the time!</p>
+				 <p class="fragment">Usually includes a reset, a grids system, styles for typography and forms. Some include support for mobile/print.</p>
+				 <p class="fragment"><span style="color:yellow;">Bootstrap</span>! This is a type of CSS framework that includes this grid system and makes other CSS styling techniques easy to use. Developers use this all the time!</p>
 			   </section>
 		  
 			   <section>
@@ -1678,7 +1687,7 @@ img {
 			   <section>
 				<h2>Bootstrap Grid System</h2>
 				<p>A grid system lets you layout pages according to fractions of a grid (usually 12, 16, or 24 columns).</p>
-				<p>Bootstrap includes a powerful mobile-first grid system for building layouts of all shapes and sizes. It’s based on a 12 column layout.</p>
+				<p>Bootstrap includes a powerful mobile-first grid system for building layouts of all shapes and sizes. It’s based on a 12-column layout.</p>
 				<a href="https://www.youtube.com/watch?v=XFrbkhWP0rM" target="_blank">Watch here!</a>
 			   </section>
 		  
@@ -1686,37 +1695,64 @@ img {
 				  <h2>Bootstrap Grid System</h2>
 				 <ul>
 				   <li class="fragment">There are three major components—<span style="color:yellow">containers, rows, and columns</span>.</li>
-				   <li class="fragment">Containers—<code style="color: turquoise"> class="container" </code> for fixed width or <code style="color: turquoise"> class="container-fluid" </code> for full width—center your site’s contents and help align your grid content.</li>
-				   <li class="fragment">Rows are horizontal groups of columns that ensure your columns are lined up properly.</li>
-				   <li class="fragment">Content should be placed within columns.</li>
+				   <li class="fragment">Containers
+					<ul><li><code style="color: turquoise"> class="container" </code> for fixed width</li>
+					<li><code style="color: turquoise"> class="container-fluid" </code> for full width, which centers your site’s contents and helps align your grid content.</li></ul>   
+				</li>
+				   <li class="fragment">Rows are horizontal groups of columns that ensure your columns are lined up properly.<code style="color: turquoise"> class="row"</code></li>
+				   <li class="fragment">Content should be placed within columns.<code style="color: turquoise"> class="col"</code></li>
 				 </ul>
 			   </section>
 		  
 			   <section>
 				  <h2>Bootstrap Grid System</h2>
 				 <ul>
-				   <li class="fragment"> Column classes indicate the number of columns you’d like to use out of the possible 12 per row. So if you want three equal-width columns, you’d use .col-sm-4.</li>
+				   <li class="fragment"> Column classes indicate the number of columns you’d like to use out of the possible 12 per row. So if you want three equal-width columns, you’d use<code style="color: turquoise"> class="col-sm-4" </code> in HTML and select <code style="color: turquoise">.col-sm-4</code> in CSS.</li>
 				   <li class="fragment">Column widths are set in percentages, so they’re always fluid and sized relative to their parent element.</li>
 				   <li class="fragment">Columns have horizontal padding to create the gutters between individual columns.</li>
-				   <li class="fragment">There are five grid tiers, one for each responsive breakpoint: extra small, small, medium, large, and extra large.</li>
+				   <li class="fragment">There are five grid tiers, one for each responsive breakpoint: extra small (<code style="color: turquoise">.col-xs</code>), small (<code style="color: turquoise">.col-sm</code>), medium (<code style="color: turquoise">.col-md</code>), large (<code style="color: turquoise">.col-lg</code>), and extra large (<code style="color: turquoise">.col-xl</code>).</li>
 				 </ul>
 			   </section>
 		  
 			   <section>
 				  <h2>Bootstrap Grid System</h2>
-				  <img src="images/bootstrap.png" alt="Bootstrap Grid Code">
+				  <img data-enlargable style="border: 5px solid blue; cursor: zoom-in;" src="images/bootstrap.png" alt="Bootstrap Grid Code">
 				  <p><a href="https://www.youtube.com/watch?v=XFrbkhWP0rM" target="_blank">See it live here</a></p>
-
-				  
 			   </section>
 		  
 			   <section>
-				 <h2>Creating a Grid With Bootstrap</h2>
-				 <img src="images/exercise.png" alt="Class Exercise">
+				<h2>Bootstrap Grid System Activity</h2>
+				<p>Let's build this together!</p>
+<pre><code class="html" data-trim contenteditable>
+<!-- Instructions -->
+<!-- 1. Insert the appropriate links and scripts. -->
+<!-- 2. Build the code below. -->
+<!-- 3. Let's give each column a background color. -->
+<!-- * Finally, use Dev Tools to check Responsiveness. -->
+<div class="container"> <!-- Notice three generations of divs -->
+  <div class="row">
+    <div class="col-sm-4"> <!-- 12-column layout divided by 3 columns makes 4 -->
+	One of three columns
+    </div>
+    <div class="col-sm-4">
+	Second of three columns
+    </div>
+    <div class="col-sm-4">
+	Third of three columns
+    </div>
+  </div>
+</div>
+</code></pre>
+			   </section>
+
+			   <section>
+				 <h2>Create a Grid With Bootstrap</h2>
+				 <img data-enlargable style="border: 5px solid blue; cursor: zoom-in;" src="images/exercise.png" alt="Class Exercise">
 				 <img src="images/exercise.gif" alt="Exercise Gif" width="200px" height="200px">
 				 <br>
 				 <a href="https://trello.com/b/4ESfvtdM/template-student-journey-phase-22-css" target="_blank">
 					<img src="images/trello-logo-blue.png" alt="Trello Logo" width="200px" ></a>
+					<p>Copy the instructions <a href="https://jsbin.com/lucixer/edit?html,css,output" target="_blank">here</a> </p>
 			   </section>
 		  
 			   <section>
@@ -1728,7 +1764,7 @@ img {
 			   </section>
 		  
 			   <section>
-				 <h2>Another bootstrap challenge</h2>
+				 <h2>Another Bootstrap Challenge</h2>
 				 <p><a href="https://docs.google.com/a/anniecannons.com/document/d/1acTeTRmLkGxlz-JdITgYqsfRiCOWCLM10iyidULpcZc/edit?usp=sharing" target="_blank">Click here</a></p>
 				 <img src="images/exercise.gif" alt="Exercise Gif"><br>
 				 <a href="https://trello.com/b/4ESfvtdM/template-student-journey-phase-22-css" target="_blank">
@@ -1754,21 +1790,21 @@ img {
 				   <h2>Flexbox Properties</h2>
 				   <p>For the parent:</p>
 				   <ul>
-					   <li>display: flex;</li>
-					   <li>Does the parent need a height?</li>
-					   <li>Flex-direction</li>
-					   <li>justify-content</li>
-					   <li>align-items</li>
+					   <li><code style="color:turquoise;">display: flex;</code></li>
+					   <li>Determine if parent needs a <code style="color:turquoise;">height</code></li>
+					   <li><code style="color:turquoise;">flex-direction</code></li>
+					   <li><code style="color:turquoise;">justify-content</code></li>
+					   <li><code style="color:turquoise;">align-items</code></li>
 				   </ul>
-				   <p> <a href="https://jsbin.com/likedin/edit?html,css,output">Practice Here!</a></p>
+				   <p> <a href="https://jsbin.com/likedin/edit?html,css,output" target="_blank">Practice Here!</a></p>
 			   </section>
 
 			   <section>
 				   <h2>Flex-direction</h2>
-					<ul>
+				   <img data-enlargable style="border: 5px solid blue; cursor: zoom-in; float: left;"  src="images/flexdirection.png" alt="Flex Direction">	
+				   <ul style="width:500px;">
 						<li>The default is set to "row"</li>
-						<li>Changing to  <code style="color: turquoise" > flex-direction: column </code> on the parent will change the orientation of the children.</li>
-						<img src="images/flexdirection.png" alt="Flex Direction">
+						<li>Use  <code style="color: turquoise" > flex-direction: column;</code> on the parent to change the orientation of the children.</li>
 					</ul>
 			   </section>
 
@@ -1817,8 +1853,8 @@ img {
 		  
 			   <section>
 				 <h2>Your Yogurt Shop Assignment</h2>
-				 <p>Make a responsive site based on the designs and assets you are given.</p>
-				 <p>Make sure you use bootstrap and flexbox!</p>
+				 <p>Make a responsive site based on the given designs and assets.</p>
+				 <p>Make sure you use Bootstrap and Flexbox!</p>
 				 <p><a href="https://github.com/AnnieCannons/ac-intro-programming/blob/master/Exercises/frozenyogurtshop-ac-students.zip" target="_blank">click here!</a></p>
 				 <img src="images/exercise.gif" alt="Exercise Gif">
 				 <br><a href="https://trello.com/b/4ESfvtdM/template-student-journey-phase-22-css" target="_blank">
