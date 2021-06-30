@@ -4,7 +4,7 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-	<title>AnnieCannons slides</title>
+	<title>AnnieCannons CSS slides</title>
 
 	<meta name="description" content="AnnieCannons class slides">
 	<meta name="author" content="AnnieCannons">
@@ -15,7 +15,8 @@
 
 	<!-- Theme used for syntax highlighting of code -->
 	<link rel="stylesheet" href="lib/css/zenburn.css">
-
+	<link rel="stylesheet" href="css/breakpoints.css">
+	<link rel="stylesheet" href="css/classcolors.css">
 	<!-- Printing and PDF exports -->
 	<script>
 	var link = document.createElement( 'link' );
@@ -40,14 +41,14 @@
 
 			  <section>
 					<h2>But first! Directory Structure</h2>
-					<p>Page 81 - Textbook</p>
+					<p>Page 81-82 in Textbook</p>
 					<img src="images/HTMLBook.jpg" alt="HTML/CSS Book">
 				</section>
 				
 			  <!-- Folder Structure -->
 			  <section>
 				<h3>Get Started: Folder Structure</h3>
-				<p>All files for a site are stored within the main project folder, a "root" folder.</p>
+				<p>All files for a site are stored within the main project folder, a "<span class="yellow">root</span>" folder.</p>
 				<div class="halfblock">
 				<p class="left-align"><b>This includes:</b></p>
 				<ul>
@@ -57,15 +58,15 @@
 				  <li>Script files</li>
 				  <li>Anything else that will appear on your site</li>
 				</ul>
-				<p class="left-align" style="margin-top: .5em;"><small>Note: File names should not include spaces or special characters. File names ARE case-sensitive.</small></p>
+				<p class="left-align orange" style="margin-top: .5em;"><small>Note: File names should not include spaces or special characters. File names ARE case-sensitive.</small></p>
 				</div>
 			  </section>
 
 			  <section>
 				<h3>Get Started: Folder Structure</h3>
-				<p>In your Dev folder, you will have folders for each project. This Dev folder will therefore have multiple root folders.</p>
+				<p>In your <span class="aqua">Dev</span> folder, you will have folders for each project. This <span class="aqua">Dev</span> folder will therefore have multiple root folders.</p>
 				<div class="halfblock">
-				<p class="left-align"><b>All assets for each project will be in the main folder, their respective root folder.</b></p>
+				<p class="left-align orange"><b>All assets for each project will be in the main folder,<br>their respective root folder.</b></p>
 				</div>
 			  </section>
 		  
@@ -73,7 +74,7 @@
 			   <h2>CSS: What is it?</h2>
 			   <p class="fragment"><span style="color: yellow;">CSS</span> = <span style="color: yellow;">C</span>ascading <span style="color: yellow;">S</span>tyle <span style="color: yellow;">S</span>heets</p>
 			   <p class="fragment">CSS is a "style sheet language" that lets you style the elements on your page. It adds <span style="color: greenyellow;">color</span>, <span style="font-weight: bold;">boldness</span>, and <span style="display: block;">layout</span> to an otherwise plain and boring world of HTML.  </p>
-			   <p class="fragment">CSS is embedded inside HTML, but it is not HTML itself. Your CSS file will be separate from your HTML file.</p>
+			   <p class="fragment">CSS is embedded inside HTML, but it is not HTML itself.<br>Your CSS file is separate from your HTML file.</p>
 			   <a class="fragment" href="http://www.acfjc.org/" target="_blank">Website with and without CSS</a>
 			</section>
 		  
@@ -144,7 +145,7 @@ body {
 					<li class="fragment">background-color: <span style="color: turquoise">blue;</span></li>
 					<li class="fragment">width or height: <span style="color: turquoise">200px;</span></li>
 					<li class="fragment">font-family: <span style="color: turquoise">"Helvetica";</span> or font-size: <span style="color: turquoise">16px;</span></li>
-					<li class="fragment">border: <span style="color: turquoise">2px, solid, black;</span> </li>
+					<li class="fragment">border: <span class="aqua">2px</span>, <span class="aqua">solid</span>, <span class="aqua">black</span>;</span> </li>
 					<li class="fragment">And many, many more!</li>
 			   </section>
 				
@@ -176,7 +177,7 @@ p {
 
 p.class {
   color: turquoise;
-  background-color: biege; 
+  background-color: beige; 
 }
 </code></pre>
 				</section>	
@@ -194,7 +195,7 @@ selector {
   property: value;
 }
 </code></pre>
-			  <p>The selector is used to select which elements in the HTML page will be given the styles inside the curly braces. </p>
+			  <p>The <span class="yellow">selector</span> is used to select which elements in the HTML page will be given the <span class="yellow">styles</span> inside the curly braces <span class="aqua">{ }</span>.</p>
 			  <aside class="notes">Display simple example in jsbin.com</aside>
 			</section>   
 		  
@@ -230,15 +231,15 @@ p {
 }
 </code></pre>
 		  <p>
-		  Selects any element with the id of “header", e.g.
+		  Selects any element with the <span class="aqua">id</span> of “<span class="aqua">header</span>", e.g.
 		  </p>
 <pre><code class="html" data-trim contenteditable>
 <!-- HTML FILE-->
 &lt;p id="header"&gt;&lt;/p&gt;
 </code></pre>
 		  
-			<p class="fragment">An element's id is unique and can only be used once in your HTML.</p>
-			<p class="fragment">Use "#" in CSS to select the HTML element by its "id" attribute value.</p>
+			<p class="fragment">An element's <span class="aqua">id</span> is unique and can only be used once in your HTML.</p>
+			<p class="fragment">Use "<span class="aqua">#</span>" in CSS to select the HTML element by its "<span class="aqua">id</span>" attribute value.</p>
 			  </section>
 			  
 			  <section>
@@ -250,21 +251,21 @@ p {
 }
 </code></pre>
 		  
-		  <p>Selects any element with the class name “warning”, e.g.</p>
+		  <p>Selects any element with the <span class="aqua">class</span> name “<span class="aqua">warning</span>”, e.g.</p>
 <pre><code class="html" data-trim contenteditable>
 <!-- HTML FILE-->
 &lt;p class="warning"&gt;&lt;/p&gt;
 </code></pre>
 		  
 		  <p class="fragment">Multiple elements can have the same class name.</p>
-		  <p class="fragment">Use "." in CSS to select the HTML element by its "class" attribute value. </p>
+		  <p class="fragment">Use "<span class="aqua">.</span>" in CSS to select the HTML element by its "<span class="aqua">class</span>" attribute value. </p>
 		  
 			  </section>
 			 
 			  
 			  <section>
 				<h2>Types of Selectors: class</h2>
-				<p>An element can have only 1 id but multiple classes, so you can take advantage of that for greater flexibility.</p>
+				<p>An element can have only 1 <span class="aqua">id</span> but multiple <span class="aqua">class</span> values, so you can take advantage of that for greater flexibility.</p>
 <pre><code class="css" data-trim contenteditable>
 /* CSS FILE */
 .intro {
@@ -286,7 +287,7 @@ p {
 			  </section>
 			  <section>
 				<h2>Types of Selectors: class</h2>
-				<p>Style rules for elements of the same class apply to the elements no matter where they are on your site (e.g., buttons, branded link colors, list item bullets).</p>
+				<p>Style rules for elements of the same <span class="aqua">class</span> apply to the elements no matter where they are on your site (e.g., buttons, branded link colors, list item bullets).</p>
 				
 			  </section>
 			 
@@ -324,7 +325,7 @@ ul em {
 }
 </code></pre>
 		  <p class="fragment"> 
-		  Selects any <code style="color: turquoise">li</code> element that is a descendant of any element with an id that equals "related-brands."
+		  Selects any <code class="aqua">li</code> element that is a descendant of any element with an <span class="aqua">id</span> that equals "<span class="aqua">related-brands</span>."
 		  </p>
 <pre class="fragment"><code class="html" data-trim contenteditable>
 <!-- HTML FILE-->
@@ -344,7 +345,7 @@ li.special {
 }
 </code></pre>
 		  <p class="fragment">
-		  Selects any <code style="color: turquoise">li</code> element with a class that equals "special".
+		  Selects any <code style="color: turquoise">li</code> element with a <span class="aqua">class</span> that equals "<span class="aqua">special</span>".
 		  </p>
 <pre class="fragment"><code class="html" data-trim contenteditable>
 <!-- HTML FILE-->
@@ -353,7 +354,7 @@ li.special {
   &lt;li class="special"&gt;NutriGrain&lt;/li&gt;
 &lt;/ul&gt;
 </code></pre>
-			<p class="fragment">Warning: If you place a space after the ".", it'll look for <strong>descendants</strong> of <code style="color: turquoise">li</code> with class of "special."</p>
+			<p class="fragment">Warning: If you place a space before the "<span class="aqua">.</span>", it'll look for <strong>descendants</strong> of <code style="color: turquoise">li</code> with <span class="aqua">class</span> of "<span class="aqua">special</span>."</p>
 			  </section>
 			  
 			  <section>
@@ -365,14 +366,14 @@ li.special {
 </code></pre>
 		  <p>Let's take a few moments to explore this selector!</p>
 		  <p class="fragment">
-		  Selects any <code style="color: turquoise">em</code> element with a class attribute value of "required", <span class="fragment">that is a descendant of a <code style="color: turquoise">p</code> element,</span> <span class="fragment">that is a descendant of a <code style="color: turquoise">form</code> element,</span> <span class="fragment">that is a descendant of a <code style="color: turquoise">div</code> element</span> <span class="fragment">with a class attribute value of "content",</span> <span class="fragment">that is a descendant of an element with an id attribute value of "header".</span>
+		  Selects any <code style="color: turquoise">em</code> element with a <span class="aqua">class</span> attribute value of "<span class="aqua">required</span>", <span class="fragment">that is a descendant of a <code style="color: turquoise">p</code> element,</span> <span class="fragment">that is a descendant of a <code style="color: turquoise">form</code> element,</span> <span class="fragment">that is a descendant of a <code style="color: turquoise">div</code> element</span> <span class="fragment">with a <span class="aqua">class</span> attribute value of "<span class="aqua">content</span>",</span> <span class="fragment">that is a descendant of an element with an <span class="aqua">id</span> attribute value of "<span class="aqua">header</span>".</span>
 		  </p>
 		  
 			  </section>
 			  
 			  <section>
-				<h2>Types of selectors: pseudo classes</h2>
-				<p>A set of "pseudo classes" can style anchor elements depending on their state.</p>
+				<h2>Types of selectors: pseudo-classes</h2>
+				<p>A set of "<span class="yellow">pseudo-classes</span>" can style <span class="orange">anchor</span> elements depending on their state.</p>
 <pre><code class="css" data-trim contenteditable>
 a:link { /* unvisited link */
   color: red;
@@ -394,12 +395,12 @@ a:focus {  /* focused link */
 			  </section>
 
 			  <section>
-				<h2>Types of selectors: pseudo classes</h2>
-				<p>A set of "pseudo classes" can style anchor elements depending on their state.</p>
-				<a href="https://www.google.com/" onMouseOver="this.style.color='red'" onMouseOut="this.style.color='turquoise'">a:hover</a>
+				<h2>Types of selectors: pseudo-classes</h2>
+				<p>A set of "<span class="yellow">pseudo-classes</span>" can style <span class="orange">anchor</span> elements depending on their state.</p>
+				<a href="https://www.google.com/" onMouseOver="this.style.color='red'" onMouseOut="this.style.color='greenyellow'">a:hover</a>
 				<a href="https://www.google.com/" id="visited-link-example">a:hover</a>
-				<p class="fragment">Pseudo class selectors can also apply to other html elements.</p>
-				<p class="fragment" onMouseOver="this.style.color='purple'" onMouseOut="this.style.color='white'">I'm a paragraph tag. Hover over me.</p>
+				<p class="fragment">Pseudo-class selectors can also apply to other html elements.</p>
+				<p class="fragment" onMouseOver="this.style.color='magenta'" onMouseOut="this.style.color='white'">I'm a paragraph tag. Hover over me.</p>
 			  </section>	
 			 
 			  <section>
@@ -416,14 +417,13 @@ a:hover, a:active, a:focus {
 				<h2>The selector: Cascade rules</h2>
 				 <p>Generally:</p>
 				<ul>
-					<li class="fragment">id is more specific than class.</li>
-						<li class="fragment">class is more specific than element.</li>
+					<li class="fragment"><span class="aqua">id</span> is more specific than <span class="aqua">class</span>.</li>
+						<li class="fragment"><span class="aqua">class</span> is more specific than element.</li>
 					<li class="fragment">The longer the selector, the more specific it is.</li>
 					<li class="fragment">If style rules are equally specific, the last one wins!</li>
 				</ul>
 				<p class="fragment">Example:</p>
-<pre class="fragment"><code class="css" data-trim contenteditable>
-#a #b h1 { color: red; } 
+<pre class="fragment"><code class="css" data-trim contenteditable>#a #b h1 { color: red; } 
 #a h1 { color: blue; }
 </code></pre>
  <p class="fragment">What is the difference between these two selectors?</p>
@@ -439,8 +439,7 @@ a:hover, a:active, a:focus {
 			  <section>
 				<h2>Coding Conventions</h2>
 				 <p class="fragment">It is possible to write CSS like this:
-<pre class="fragment"><code class="css">
-selector{property:values}selector{property:values}
+<pre class="fragment"><code class="css">selector{property:values}selector{property:values}
 </code></pre>
 		  
 		  <p class="fragment">But this is how we will write CSS at AnnieCannons:</p>
@@ -453,17 +452,17 @@ selector {
   property: values;
 }
 </code></pre>
-		  <p class="fragment">Notice: space between "selector" and "{", <span class="fragment">2 spaces before property-value pair,</span> <span class="fragment">space after "property:",</span> <span class="fragment">semi-colon after "values",</span> <span class="fragment">line between rules.</span>
+		  <p class="fragment">Notice: space between "<span class="aqua">selector</span>" and "<span class="aqua">{</span>", <span class="fragment">2 spaces before <span class="aqua">property</span>-<span class="aqua">value</span> pair,</span> <span class="fragment">space after "<span class="aqua">property:</span>",</span> <span class="fragment">semi-colon (<span class="aqua">;</span>) after "<span class="aqua">values</span>",</span> <span class="fragment">line between rules.</span>
 		  </p>
 			  </section>
 			  
 			  <section>
 				<h2>Naming Conventions</h2>
-				<p>Some rules to follow when making id and class names:</p>
+				<p>Some rules to follow when making <span class="aqua">id</span> and <span class="aqua">class</span> names:</p>
 				<ul>
-				  <li class="fragment">Describe the content, not the presentation ("warning", not "redbox").</li>
-				  <li class="fragment">Use all lowercase, and hyphens when needed for readability ("header-info", not "headerInfo").</li>
-				  <li class="fragment">Use hyphens to show that a class or id is part of something else. (e.g. "footer", "footer-copyright", and "footer-logo").</li>
+				  <li class="fragment">Describe the <span class="orange">content</span>, not the presentation ("<span class="aqua">warning</span>", not "redbox").</li>
+				  <li class="fragment">Use all <span class="orange">lowercase</span>, and <span class="orange">hyphens</span> when needed for readability ("<span class="aqua">header-info</span>", not "headerInfo").</li>
+				  <li class="fragment">Use <span class="orange">hyphens</span> to show that a <span class="aqua">class</span> or <span class="aqua">id</span> is part of something else. (e.g. "<span class="aqua">footer</span>", "<span class="aqua">footer-copyright</span>", and "<span class="aqua">footer-logo</span>").</li>
 				</ul>
 			  </section>
 			 
@@ -509,13 +508,11 @@ p {
 				<h2>Property Value Pairs</h2>
 				<p>Each property can have one or more values.</p>
 <pre class="fragment"><code class="css" data-trim contenteditable>
-font: italic 12px sans-serif;
 color: #333;
 background-color: red;
-font-family: Arial, sans-serif;
+font-family: 'Arial', sans-serif;
 </code></pre>
-				<p class="fragment">What is the difference between font & font-family?</p>
-				<p class="fragment">Note: sans-serif is a category, while 'Arial' is the name of the font</p>
+				<p class="fragment">Note: <code class="aqua">sans-serif</code> is a category,<br>while '<code class="aqua">Arial</code>' is the name of the font</p>
 		  <aside class="notes"> Demonstrate using jsbin.com. Explain the difference between font property 
 			and the more detailed font properties.
 			Also, mention the difference between a specific font like "Arial" and a category like sans-serif
@@ -529,24 +526,26 @@ font-family: Arial, sans-serif;
 					<li class="fragment">by name, for the most common colors (e.g., blue)</li>
 					<li class="fragment">by hexadecimal value (e.g., #ff0000)</li>
 					<li class="fragment">by RGB value (e.g., rgb(255, 0, 0))</li>
+					<li class="fragment">by RGBA value (e.g., rgba(255, 0, 0, 0.5))</li>
 				</ul>
 <pre class="fragment"><code class="css" data-trim contenteditable>
 color: red; /* by name */
 color: #ff0000; /* by hexadecimal color code value */
 color: rgb(255, 0, 0); /* by rgb color code value */
+color: rgba(255, 0, 0, 0.5); /* by rgb color code value with alpha channel */
 </code></pre>
-			  <p class="fragment">This property is inherited, which means it will be applied to all descendant elements but can be overridden.</p>
-<pre class="fragment"><code class="css" data-trim contenteditable>
+			  <p class="fragment">The <code class="aqua">color</code> property is <span class="yellow">inherited</span>, which means it will be applied to all descendant elements but can be <span class="orange">overridden</span>.</p>
+<!-- <pre class="fragment"><code class="css" data-trim contenteditable>
 body {
   color: red;
 }
-</code></pre>
+</code></pre> -->
 				<p class="fragment">Practice <a href="https://jsbin.com/gotowem/edit?html,css,output" target="_blank">here</a>! </p>
 			  </section>
 			 
 			  <section>
 				<h2>Properties: background-color</h2>
-				<p>The "background-color" property changes the background color. Besides the <code style="color: turquoise">body</code> element, all elements default to a transparent background.
+				<p>The "<code class="aqua">background-color</code>" property changes the background color. Besides the <code style="color: turquoise">body</code> element, all elements default to a transparent background.
 <pre><code class="css" data-trim contenteditable>
 background-color: black;
 background-color: #000000;
@@ -571,13 +570,19 @@ table {
 				<ul>
 				  <li>Desktop graphics programs: Adobe Photoshop</li>
 				  <li>Online tools: <a href="http://www.coolors.co/" target="_blank">Coolors</a>, <a href="http://colorschemedesigner.com/" target="_blank">Color Scheme Designer</a></li>
-				  <li>Browser extensions: <a href="https://chrome.google.com/extensions/detail/hmdcmlfkchdmnmnmheododdhjedfccka?hl=en" target="_blank">Eye Dropper for Chrome</a>, <a href="https://addons.mozilla.org/en-US/firefox/addon/271/" target="_blank">ColorZilla for FireFox</a></li>
+				  <li>Browser extensions: <a href="https://chrome.google.com/webstore/detail/colorzilla/bhlhnicpbhignbdhedgjhgdocnmhomnp?hl=en" target="_blank">ColorZilla for Chrome</a> or <a href="https://addons.mozilla.org/en-US/firefox/addon/271/" target="_blank">FireFox</a></li>
 				</ul>
 			  </section>
+
+			<section>
+				<h2>CSS Color</h2>
+				<p>Chapter 11 in the Textbook</p>
+				<img src="images/HTMLBook.jpg" alt="HTML/CSS Book">
+			</section>
 			 
 			  <section>
 				<h2>Property: font-family</h2>
-				<p class="fragment">The "font-family" property specifies the font family (or "font face") of the text. You can specify either a specific font name  or a generic family name (serif, sans-serif, monospace, cursive).</p>
+				<p class="fragment">The "<code class="aqua">font-family</code>" property specifies the font family (or "font face") of the text. You can specify either a specific font name  or a generic family name (<code class="aqua">serif</code>, <code class="aqua">sans-serif</code>, <code class="aqua">monospace</code>, <code class="aqua">cursive</code>).</p>
 <pre class="fragment"><code class="css" data-trim contenteditable>
 font-family: "Times New Roman";
 font-family: sans-serif;
@@ -608,7 +613,7 @@ font-family: Courier, monospace;
 			  
 			  <section>
 				<h2>Property: font-size</h2>
-				 <p>The "font-size" property specifies the size of a font. It can be specified as a fixed size in various units, a percentage, or as a predefined keyword.</p>
+				 <p>The "<code class="aqua">font-size</code>" property specifies the size of a font. It can be specified as a fixed size in various units, a percentage, or as a predefined keyword.</p>
 		  
 <pre><code class="css" data-trim contenteditable>
 font-size: 1.5em;
@@ -621,7 +626,7 @@ font-size: 100vw
 			 
 			  <section>
 				<h2>Property: font-size (em)</h2>
-				<p>The "em" unit lets you set the size of the text relative to the text around it. This makes the page resize nicely in proportion if the user changes their default font-size. The default size is "1em".</p>
+				<p>The "<code class="aqua">em</code>" unit lets you set the size of the text relative to the text around it. This makes the page resize nicely in proportion if the user changes their default font-size. The default size is "<code class="aqua">1em</code>".</p>
 		  
 <pre><code class="css" data-trim contenteditable>
 p {
@@ -639,7 +644,7 @@ strong {
 			  
 			  <section>
 				<h2>Property: font-size (px)</h2>
-			  <p>The "px" stands for pixels, which is also often used to size images and other elements.</p><p>Because pixels are finite or fixed, this unit of measurement does not work as well when printing or resizing.</p>
+			  <p>The "<code class="aqua">px</code>" stands for pixels, which is also often used to size images and other elements.</p><p>Because pixels are finite or fixed, this unit of measurement does not work as well when printing or resizing.</p>
 <pre><code class="css" data-trim contenteditable>
 h2 {
   font-size: 17px; 
@@ -652,13 +657,13 @@ h2 {
 			  
 			  <section>
 				<h2>Property: font-size (keywords)</h2>
-				 <p>These keywords can be used for imprecise sizing:<br>xx-small, x-small, small, medium, large, x-large, xx-large.</p>
+				 <p>These keywords can be used for imprecise sizing:<br><code class="aqua">xx-small</code>, <code class="aqua">x-small</code>, <code class="aqua">small</code>, <code class="aqua">medium</code>, <code class="aqua">large</code>, <code class="aqua">x-large</code>, <code class="aqua">xx-large</code>.</p>
 <pre class="fragment"><code class="css" data-trim contenteditable>
 p.footnote {
   font-size: small;
 }
 </code></pre>
-			  <p class="fragment">Two other keywords act similar to em's in setting relative size: smaller, larger.</p>
+			  <p class="fragment">Two other keywords act similar to <code class="aqua">em</code>'s in setting relative size: <code class="aqua">smaller</code>, <code class="aqua">larger</code>.</p>
 <pre class="fragment"><code class="css" data-trim contenteditable>
 p.intro {
   font-size: larger;
@@ -784,8 +789,8 @@ text-decoration: underline;
 				</section>
 				
 				<section>
-					<h2>CSS Color and Fonts</h2>
-					<p>Chapter 11 and 12 in the Textbook</p>
+					<h2>CSS Fonts</h2>
+					<p>Chapter 12 in the Textbook</p>
 					<img src="images/HTMLBook.jpg" alt="HTML/CSS Book">
 				</section>
 			 
@@ -797,8 +802,9 @@ text-decoration: underline;
 
 			  <section>
 				<h2>CSS files</h2>
-				<p>Our CSS will be defined in a separate file, and imported using the <code style="color: turquoise">link</code> element. This is the best!
-		   <p>Linked stylesheet:</p>
+				<h3>External CSS</h3>
+				<p><span class="yellow">External CSS</span> is when our CSS is defined in a separate file, and imported using the <code style="color: turquoise">link</code> element. This is a best practice!</p>
+		   <p>Linked stylesheet example:</p>
 <pre><code class="html" data-trim contenteditable>
 &lt;head&gt;
   &lt;link rel="stylesheet" type="text/css" href="main.css"&gt;
@@ -810,7 +816,7 @@ text-decoration: underline;
 			  <section>
 				<h2>Other ways to write CSS...</h2>
 				<h3>Internal CSS</h3>
-				<p>Internal CSS is CSS that is in the head of the HTML file. We would put the CSS in a <code style="color: turquoise">style</code> tag inside the <code style="color: turquoise">head</code> tag:</p>
+				<p><span class="yellow">Internal CSS</span> is CSS that is in the head of the HTML file. We would put the CSS in a <code style="color: turquoise">style</code> tag inside the <code style="color: turquoise">head</code> tag:</p>
 <pre><code class="html" data-trim contenteditable>
 &lt;html&gt;
  &lt;head&gt;
@@ -826,7 +832,7 @@ text-decoration: underline;
 
 			  <section>
 					<h2>Inline CSS</h2>
-					<p>Inline CSS is when CSS styles are assigned to individual HTML elements via the <code style="color: turquoise">style</code> attribute:</p>
+					<p><span class="yellow">Inline CSS</span> is when CSS styles are assigned to individual HTML elements via the <code style="color: turquoise">style</code> attribute:</p>
 			   
 <pre><code class="html" data-trim contenteditable>
 &lt;tag style="property1: value; property2: value;"&gt; &lt;/tag&gt;
@@ -836,7 +842,7 @@ text-decoration: underline;
 &lt;h1 style="color:red; text-decoration: underline;"&gt;Hello&lt;/h1&gt;
 </code></pre>
 			   
-			   <p class="fragment">Inline styles will override internal and external CSS.</p>
+			   <p class="fragment orange">Inline styles will override internal and external CSS.</p>
 			   <p class="fragment">Inline CSS, therefore, should be avoided as it increases maintenance costs and blurs the line between presentation and content.</p>
 				  </section>
 		  
@@ -873,7 +879,7 @@ text-decoration: underline;
 			   <section>
 				 <h2>Overview: CSS Layout</h2>
 				 <p>All web layouts are accomplished with block elements. Designers use blocks, most often <code style="color: turquoise">div</code> elements, to create rectangular areas into which all content fits. </p>
-				 <img data-enlargable style="border: 5px solid blue; cursor: zoom-in;" src="images/layout.png" alt="Website Layout">
+				 <img data-enlargable width="450" style="border: 5px solid blue; cursor: zoom-in;" src="images/layout.png" alt="Website Layout">
 			   </section>
 
 			   <section>
@@ -886,7 +892,7 @@ text-decoration: underline;
 			   <section>
 					<h2>Overview: CSS Layout</h2>
 					<ul>
-					  <li>Display</li>
+					  <li><code class="aqua">display</code> property</li>
 					  <li>Total area: The space an element occupies and affects</li>
 					  <li>Positioning</li>
 					</ul>
@@ -894,8 +900,10 @@ text-decoration: underline;
 		  
 			 <section>
 			   <h2>Display: Block &amp; Inline Elements</h2>
-			   <p class="fragment">There are two main types of elements in the CSS world: "inline" and "block".</p>
-			   <p class="fragment">A browser generally renders a new line after any "block" elements in the HTML. "Inline" elements go from left to right.</p>
+			   <p class="fragment">There are two main types of elements in the CSS world: "<code class="aqua">inline</code>" and "<code class="aqua">block</code>".</p>
+			   <p class="fragment">A browser generally renders a separate line for each "<code class="aqua">block</code>" element in HTML.</p>
+			   <p class="fragment">On the contrary, "<code class="aqua">inline</code>" elements go from left to right on the same line.</p>
+			   <p class="fragment">See next slide for a visual.</p>
 			 </section>
 		  
 			 <section>
@@ -905,10 +913,10 @@ text-decoration: underline;
 		   
 			  <section>
 				<h2>Grouping Elements</h2>
-				<p>A grouping element lets you style multiple elements as a whole.</p>
-				<p><code style="color: turquoise">SPAN</code> creates an inline element.</p>
+				<p>A <span class="yellow">grouping element</span> lets you style multiple elements as a whole. Examples are <code class="aqua">span</code> and <code class="aqua">div</code>.</p>
+				<p><code style="color: turquoise">span</code> creates an inline element.</p>
 <pre><code class="html" data-trim contenteditable>&lt;span&gt; Hello &lt;a href="world.com"&gt;World &lt;/a&gt;! &lt;/span&gt;</code></pre>
-		  <p><code style="color: turquoise">DIV</code> creates a block element.</p>
+		  <p><code style="color: turquoise">div</code> creates a block element.</p>
 <pre><code class="html" data-trim contenteditable>&lt;div&gt; &lt;p&gt;Hello&lt;/p&gt; &lt;p&gt;World&lt;/p&gt; &lt;/div&gt; </code></pre>
 <pre><code class="html" data-trim contenteditable>&lt;div&gt; Hello &lt;a href="world.com"&gt;World &lt;/a&gt;! &lt;/div&gt; </code></pre>
 			  </section>
@@ -924,7 +932,13 @@ text-decoration: underline;
 
 			  <section>
 				  <h2>Display Practice in JSBin</h2>
-				  <p>Check it out <a href="https://jsbin.com/quvedog/edit?html,css,output" target="_blank">here</a>!</p>
+				  <p>Instructions:</p>
+				  <ul>
+					  <li>If an HTML element is by default <code class="aqua">inline</code>, change its display to "<code class="aqua">block</code>."</li>
+					  <li>If an HTML element is by default <code class="aqua">block</code>, change its display to "<code class="aqua">inline</code>."</li>
+					  <li>In other words, change its <code class="aqua">display</code> to be opposite of its default.</li>
+				  </ul>
+				  <p>Practice <a href="https://jsbin.com/quvedog/1/edit?html,css,output" target="_blank">here</a>!</p>
 				  
 			  </section>
 			
@@ -936,8 +950,8 @@ text-decoration: underline;
 			  
 			  <section>
 				<h2>The Box Model</h2>
-				<p>All elements are treated as boxes by the browser's rendering engine (either "inline" or "block" boxes).</p>
-				<p>A box consists of content, padding, border, and margin:</p>
+				<p>All elements are treated as <span class="yellow">boxes</span> by the browser's rendering engine (either "<code class="aqua">inline</code>" or "<code class="aqua">block</code>" boxes).</p>
+				<p>A box consists of content, <code class="aqua">padding</code>, <code class="aqua">border</code>, and <code class="aqua">margin</code>:</p>
 				<img data-enlargable style="border: 5px solid blue; cursor: zoom-in;" src="images/boxmodel.gif"/>
 				<p>Play <a href="https://jsbin.com/hafixit/6/edit?html,css,output" target="_blank">here!</a></p>
 			  </section>
@@ -945,23 +959,27 @@ text-decoration: underline;
 			  <section>
 			   <h2>Things to know:</h2>
 			   <p class="fragment">In a document, each element is represented as a rectangular box.</p>
-			   <p class="fragment">The goal of the rendering engine for these boxes in the document is to determine:</p>
+			   <p class="fragment">The goal of the rendering engine for these boxes in the document is to determine its:</p>
 			   <ul class="fragment">
-				   <li>its size</li>
-				   <li>its properties (e.g.,color, background, borders)</li>
-				   <li>its position</li>
+				   <li>size</li>
+				   <li>properties (e.g.,<code class="aqua">color</code>, <code class="aqua">background</code>, <code class="aqua">border</code>)</li>
+				   <li>position</li>
 			   </ul>
 			 </section>
 
 			 <section>
 				<h2>Things to know:</h2>
-				<p class="fragment">In CSS, each of these rectangular boxes is described using the <span style="color:yellow;">standard box model</span>. This model describes the content of the space taken by an element.</p> <p class="fragment">Each box has four edges:
-					<ul class="fragment">
-						<li>margin edge</li>
-						<li>border edge</li>
-						<li>padding edge</li>
-						<li>content edge</li>
+				<p class="fragment">In CSS, each rectangular box is described using the<br><span style="color:yellow;">standard box model</span>. This model describes the amount and kind of space taken up by an HTML element.</p> <p class="fragment">Each box has four edges:
+				<div class="fragment" style="display: flex; justify-content: center;">
+					<img data-enlargable width="200" style="border: 5px solid blue; cursor: zoom-in;" src="images/boxmodel.gif"/>
+				
+					<ul>
+						<li><code class="aqua">margin</code> edge</li>
+						<li><code class="aqua">border</code> edge</li>
+						<li><code class="aqua">padding</code> edge</li>
+						<li><code class="aqua">content</code> edge</li>
 					</ul>
+				</div>
 				<p class="fragment">CSS to define width on all browsers. See <a href=" https://www.abeautifulsite.net/box-sizing-border-box-explained" target="_blank">this</a>.</p>
 <pre class="fragment"><code class="css" data-trim contenteditable>   
 body {
@@ -975,9 +993,9 @@ body {
 			   <p class="fragment">Total width is how much horizontal space a block occupies. This includes the block’s content, border, and padding.</p><p class="fragment">Designers have to account for width, padding and margin; using the box model makes these calculations easy.</p>
 			   <p class= "fragment">The box model consists of these properties:</p>
 			   <ul class="fragment">
-				   <li>margin</li>
-				   <li>border</li>
-				   <li>padding</li>
+				   <li><code class="aqua">margin</code></li>
+				   <li><code class="aqua">border</code></li>
+				   <li><code class="aqua">padding</code></li>
 			   </ul>
 			 </section>
 
@@ -985,9 +1003,9 @@ body {
 				<h2>Measuring Width</h2>
 				<p class="fragment">You can measure width in the following ways:</p>
 				<ul>
-					<li class="fragment">viewport width (vw)</li>
-					<li class="fragment">px</li>
-					<li class="fragment">%</li>	
+					<li class="fragment">viewport width (<code class="aqua">vw</code>)</li>
+					<li class="fragment"><code class="aqua">px</code></li>
+					<li class="fragment"><code class="aqua">%</code></li>	
 				</ul>
 			</section>
 
@@ -995,17 +1013,17 @@ body {
 				<h2>Height</h2>
 				<p class="fragment">Height can be set automatically given the content of the element. However, you can also select the height using:</p>
 				<ul>
-					<li class="fragment">viewport height (vh)</li>
-					<li class="fragment">px</li>
+					<li class="fragment">viewport height (<code class="aqua">vh</code>)</li>
+					<li class="fragment"><code class="aqua">px</code></li>
 				</ul>
-				<p class="fragment" style="color: lightblue;">Note: don't use %!</p>
+				<p class="fragment" style="color: lightblue;">Note: don't use <code class="aqua">%</code>!</p>
 			</section>
 			  
 			  <section>
 				<h2>Margin</h2>
-				<p>The margin is a transparent area around the box.</p>
+				<p>The <code class="aqua">margin</code> is a transparent area around the box.</p>
 				<p class="fragment">So the background of the box does not apply to this area.</p>
-				<p class="fragment">The margin is a kind of "spacer" in that it separates the box from nearby elements.</p>
+				<p class="fragment">The <code class="aqua">margin</code> is a kind of "spacer" in that it separates the box from nearby elements.</p>
 			  </section>
 
 			  <section>
@@ -1014,14 +1032,14 @@ body {
 margin: 15px;
 </code></pre>
 <div class="fragment">
-	<p>10px on ONE SIDE ONLY:</p>
+	<p><code class="aqua">10px</code> on ONE SIDE ONLY:</p>
 <pre><code class="css" data-trim contenteditable>
 margin-top: 10px;
 </code></pre>
 </div>
 <div class="fragment">				
 <p>DIFFERENT MARGIN VALUES</p>
-<p>(e.g., 10px on top, 5px right, 3px bottom, 20px left)<p>
+<p>(e.g., <code class="aqua">10px</code> on top, <code class="aqua">5px</code> right, <code class="aqua">3px</code> bottom, <code class="aqua">20px</code> left)<p>
 					<p>Note: when using this method, think of a clock; <br>start at the top, and go clockwise.<p>
 <pre><code class="css" data-trim contenteditable>
 margin: 10px 5px 3px 20px;
@@ -1033,7 +1051,7 @@ margin: 10px 5px 3px 20px;
 			  
 			  <section>
 				<h2>Auto Margin</h2>
-				<p>If the margin is set to "auto" on a box that has a <b>set width</b>, then the margin will take up as much space as possible on the left and right of the box.</p>
+				<p>If the <code class="aqua">margin</code> is set to "<code class="aqua">auto</code>" on a box that has a <b class="orange">set width</b>, then the margin will take up as much space as possible on the left and right of the box.</p>
 		  <p>A centered box:</p>
 <pre><code class="html" data-trim contenteditable>
 <!-- HTML FILE -->
@@ -1093,11 +1111,11 @@ border-bottom: 1px solid #ff0000;
 			  <section>
 				<h2>Border Thickness</h2>
 				<p>Border thickness can also be specified with <code style="color: turquoise">border-width</code> property and can be different on each side (like margin).
-		  <p>10px on all sides:</p>
+		  <p><code class="aqua">10px</code> on all sides:</p>
 <pre style="border-width:10px; border-radius:0px; border-style:solid;"><code class="css" data-trim contenteditable>
 border-width: 10px;
 </code></pre>
-<p>10px on top, 5px right, 3px bottom, 20px left:<p>
+<p><code class="aqua">10px</code> on top, <code class="aqua">5px</code> right, <code class="aqua">3px</code> bottom, <code class="aqua">20px</code> left:<p>
 
 <pre style="border-width: 10px 5px 3px 20px; border-radius:0px; border-style:solid;"><code class="css" data-trim contenteditable>
 border-width: 10px 5px 3px 20px;
@@ -1107,22 +1125,22 @@ border-width: 10px 5px 3px 20px;
 			  <section>
 				<h2>Border Style</h2>
 				<p>Border style can also be specified using the <code style="color: turquoise">border-style</code> property.</p>
-<pre style="border-style:dashed; border-radius:0px;"><code class="css" data-trim contenteditable>
+<pre style="border-style:dashed; border-radius:0px; border-width: 5px;"><code class="css" data-trim contenteditable>
 border-style: dashed;
 </code></pre>
-<pre style="border-style:double; border-radius:0px;"><code class="css" data-trim contenteditable>
+<pre style="border-style:double; border-radius:0px; border-width: 5px;"><code class="css" data-trim contenteditable>
 border-style: double;
 </code></pre>
-<pre style="border-style:groove; border-radius:0px;"><code class="css" data-trim contenteditable>
+<pre style="border-style:groove; border-radius:0px; border-width: 5px;"><code class="css" data-trim contenteditable>
 border-style: groove;
 </code></pre>
-<pre style="border-style:outset; border-radius:0px;"><code class="css" data-trim contenteditable>
+<pre style="border-style:outset; border-radius:0px; border-width: 5px;"><code class="css" data-trim contenteditable>
 border-style: outset;
 </code></pre>
-<pre style="border-style:inset; border-radius:0px;"><code class="css" data-trim contenteditable>
+<pre style="border-style:inset; border-radius:0px; border-width: 5px;"><code class="css" data-trim contenteditable>
 border-style: inset;
 </code></pre>
-<pre style="border-style:ridge; border-radius:0px;"><code class="css" data-trim contenteditable>
+<pre style="border-style:ridge; border-radius:0px; border-width: 5px;"><code class="css" data-trim contenteditable>
 border-style: ridge;
 </code></pre>
 			  </section>
@@ -1144,20 +1162,28 @@ border-color: #fff black #ff0000 #00ff00;
 			  <section>
 				<h2>Padding</h2>
 				 <p>The <code style="color: turquoise">padding</code> property specifies whitespace between the border and the content. </p>
-		  <p>15px on all sides:</p>
+				 <div style="background: lightseagreen; padding-bottom: 10px;">
+		  <p><code class="aqua">15px</code> on all sides:</p>
 <pre style="padding:15px; border:1px solid black;  border-radius:0px;"><code class="css" data-trim contenteditable>
 padding: 15px;
 </code></pre>
-<p>10px on top, 5px right, 3px bottom, 20px left:<p>
+<p><code class="aqua">10px</code> on top, <code class="aqua">5px</code> right, <code class="aqua">3px</code> bottom, <code class="aqua">20px</code> left:<p>
 <pre style="padding: 10px 5px 3px 20px; border:1px solid black;  border-radius:0px;"><code class="css" data-trim contenteditable>
 padding: 10px 5px 3px 20px;
 </code></pre>
-<p>10px on top:</p>
+<p><code class="aqua">10px</code> on top:</p>
 <pre style="padding:0px; padding-top: 10px; border:1px solid black;  border-radius:0px;"><code class="css" data-trim contenteditable>
 padding-top: 10px;
 </code></pre>
+</div>
 			  </section>
 		  
+			<section>
+				<h2>CSS Boxes</h2>
+				<p>Chapter 13 in the Textbook</p>
+				<img src="images/HTMLBook.jpg" alt="HTML/CSS Book">
+			</section>
+
 			  <section>
 				<h2>Practice</h2>
 				<p><a href="https://www.khanacademy.org/computing/computer-programming/html-css/css-layout-properties/p/challenge-the-boxer-model" target="_blank">Khan Academy Exercise</a></p>
@@ -1178,12 +1204,12 @@ padding-top: 10px;
 			
 			  <section>
 				<h2>Position: Static</h2>
-				 <p>The <code style="color: turquoise">position</code> property is used to specify a positioning scheme for an element. The default is "static" which puts the element in the "normal" flow.</p>
+				 <p>The <code style="color: turquoise">position</code> property is used to specify a positioning scheme for an element. The default is "<code class="aqua">static</code>" which puts the element in the "normal" flow.</p>
 			  </section>
 
 			  <section>
 					<h2>Position: Static</h2>
-					<p>In normal flow, inline boxes flow from left to right, wrapping to next line when needed.</p>
+					<p>In normal flow, <code class="aqua">inline</code> boxes flow from left to right, wrapping to next line when needed.</p>
 <pre><code class="html" data-trim contenteditable>
 &lt;img src="panda.png"&gt;
 &lt;img src="panda.png"&gt;
@@ -1194,7 +1220,7 @@ padding-top: 10px;
 		  
 			  <section>
 				<h2>Position: Static</h2>
-				<p>In normal flow, block boxes flow from top to bottom, making a new line after every box.</p>
+				<p>In normal flow, <code class="aqua">block</code> boxes flow from top to bottom, making a new line after every box.</p>
 <pre><code class="html" data-trim contenteditable>
 &lt;h1&gt;Greetings&lt;/h1&gt;
 &lt;p&gt;Hola, novato&lt;/p&gt;
@@ -1207,7 +1233,7 @@ padding-top: 10px;
 			  
 			  <section>
 				<h2>Position: Relative</h2>
-				 <p>The "relative" value will still put the element in the normal flow, but then offset it according to top/left/right/bottom properties.</p>
+				 <p>The "<code class="aqua">relative</code>" value will still put the element in the normal flow, but then offset it according to <code class="aqua">top</code>/<code class="aqua">left</code>/<code class="aqua">right</code>/<code class="aqua">bottom</code> properties.</p>
 <pre><code class="html" data-trim contenteditable>
 &lt;div&gt;
   &lt;p&gt;Hello, hi!&lt;/p&gt;
@@ -1232,15 +1258,16 @@ div {
 					  <div style="background-color: red; width: 100px; height:100px; margin-bottom: 5px"></div>
 					  <div style="background-color: blue; width: 100px; height:100px; margin-bottom: 5px"></div>
 					  <div style="background-color: yellow; width: 100px; height:100px; margin-bottom: 5px"></div>
+					  <p class="fragment">Note: keep an eye on the blue box.</p>
 				  </div>
-<pre style="float: left; width: 50%"><code class="html" data-trim contenteditable><!-- HTML File  -->
+<pre style="float: left; width: 50%; margin-top: 0px;"><code class="html" data-trim contenteditable><!-- HTML File  -->
 <div class="box box1"></div>
 <div class="box box2"></div>
 <div class="box box3"></div>
 <div class="box box4"></div>
 </code></pre>
 
-<pre style="float: left; width: 50%"><code class="css" data-trim contenteditable>/*CSS FILE*/
+<pre style="float: left; width: 50%; margin-top: 0px;"><code class="css" data-trim contenteditable>/*CSS FILE*/
 div {
   width: 100px;
   height: 100px;
@@ -1268,15 +1295,16 @@ div {
 						<div style="background-color: red; width: 100px; height:100px; margin-bottom: 5px"></div>
 						<div style="background-color: blue; width: 100px; height:100px; margin-bottom: 5px; position: relative; left: 30px;"></div>
 						<div style="background-color: yellow; width: 100px; height:100px; margin-bottom: 5px"></div>
+						<p class="fragment">Note: check the blue box's CSS.</p>
 					</div>
-<pre style="float: left; width: 50%"><code class="html" data-trim contenteditable><!-- HTML File  -->
+<pre style="float: left; width: 50%; margin-top: 0px;"><code class="html" data-trim contenteditable><!-- HTML File  -->
 <div class="box box1"></div>
 <div class="box box2"></div>
 <div class="box box3"></div>
 <div class="box box4"></div>
 </code></pre>
 						
-<pre style="float: left; width: 50%"><code class="css" data-trim contenteditable>/*CSS FILE*/
+<pre style="float: left; width: 50%; margin-top: 0px;"><code class="css" data-trim contenteditable>/*CSS FILE*/
 div {
   width: 100px;
   height: 100px;
@@ -1306,7 +1334,7 @@ div {
 
 			  <section>
 				<h2>Position: Absolute</h2>
-				<p>The "absolute" value will take the element<br>out of the normal flow<br>and position it in relation to the window<br>(or the closest non-static element).</p>
+				<p>The "<code class="aqua">absolute</code>" value will take the element<br>out of the normal flow<br>and position it in relation to the window<br>(or the closest non-static parent).</p>
 			  </section>
 
 			  <section>
@@ -1350,6 +1378,9 @@ div {
 <div class="box box3"></div>
 <div class="box box4"></div>
 </code></pre>
+				<div style="float:left;">
+					<p class="fragment">Note: keep your eye on the blue box.</p>
+				</div>
 				</section>
   
 				<section>
@@ -1359,14 +1390,15 @@ div {
 						  <div style="background-color: red; width: 100px; height:100px; margin-bottom: 5px"></div>
 						  <div style="background-color: blue; width: 100px; height:100px; z-index: 99; margin-bottom: 5px; position: absolute; right: 30px;"></div>
 						  <div style="background-color: yellow; width: 100px; height:100px; margin-bottom: 5px"></div>
+						  <p class="fragment">Note: check the blue box's CSS.</p>
 					  </div>
-<pre style="float: left; width: 50%"><code class="html" data-trim contenteditable><!-- HTML File  -->
+<pre style="float: left; width: 50%;"><code class="html" data-trim contenteditable><!-- HTML File  -->
 <div class="box box1"></div>
 <div class="box box2"></div>
 <div class="box box3"></div>
 <div class="box box4"></div>
 </code></pre>
-<pre style="float: left; width: 50%"><code class="css" data-trim contenteditable>/*CSS FILE*/
+<pre style="float: left; width: 50%; margin-top: 0px;"><code class="css" data-trim contenteditable>/*CSS FILE*/
 div {
   width: 100px;
   height: 100px;
@@ -1397,16 +1429,16 @@ div {
 				<h2>z-index</h2>
 				<p>The <code style="color: turquoise">z-index</code> property specifies the stack order of positioned elements, in case they overlap. The element with highest z-index goes on top.</p>
 		  
-<pre><code class="html" data-trim contenteditable>&lt;div class="higher-index"&gt; Bottom &lt;/div&gt;
-&lt;div class="lower-index"&gt; Top &lt;/div&gt;
+<pre><code class="html" data-trim contenteditable>&lt;div class="lower-index"&gt; Bottom &lt;/div&gt;
+&lt;div class="higher-index"&gt; Top &lt;/div&gt;
 </code></pre>
-<pre><code class="css" data-trim contenteditable>.higher-index {
+<pre><code class="css" data-trim contenteditable>.lower-index {
   position: absolute; 
   bottom: 0px; 
   left: 60px; 
   background-color: red
 }
-.lower-index {
+.higher-index {
   position: absolute; 
   bottom: 10px; 
   left: 60px; 
@@ -1448,14 +1480,14 @@ img {
 			  
 			  <section>
 				<h2>Float</h2>
-				<p>The <code style="color: turquoise">float</code> property can also be used to float non-IMG elements, but make sure to specify a width for the floated element.</p>
-<pre style="float: left; width: 600px; margin-right: 30px;"><code class="html" data-trim contenteditable>&lt;div&gt;
+				<p>The <code style="color: turquoise">float</code> property can also be used to float non-<code class="aqua">img</code> elements, but make sure to specify a <code class="aqua">width</code> for the floated element.</p>
+<pre style="float: left; width: 600px; margin-right: 30px;"><code class="html" data-trim contenteditable>&lt;div class="home"&gt;
   &lt;p&gt;H&lt;br&gt;O&lt;br&gt;M&lt;br&gt;E&lt;/p&gt;
 &lt;/div&gt;
   &lt;p&gt;Hi, this is my personal website.....&lt;/p&gt;
 &lt;div&gt;Contact me for more info.&lt;/div&gt;
 </code></pre>
-<pre style="float: left; width: 300px;"><code class="css" data-trim contenteditable>div {
+<pre style="float: left; width: 300px;"><code class="css" data-trim contenteditable>div.home {
   float: left; 
   width: 50px; 
   background-color: red;
@@ -1473,7 +1505,7 @@ img {
 
 			  <section>
 				<h2>Float</h2>
-				<p>Practice <a href="https://jsbin.com/huqopuh/edit?html,css,output" target="_blank">here!</a></p>
+				<p>Practice <a href="https://jsbin.com/numihemuce/edit?html,css,output" target="_blank">here!</a></p>
 			</section>
 		  
 			  <section>
@@ -1489,14 +1521,14 @@ img {
 <pre style="float:left; width: 300px;"><code class="css" data-trim contenteditable>div {
   float: left; 
   width: 50px; 
-  background-color: yellow;
+  background-color: green;
 }
 .contact {
   clear: both;
 }
 </code></pre>
 		  
-		  <div style="float:left; width:50px; background-color:yellow; ">
+		  <div style="float:left; width:50px; background-color:green; ">
 			H<br>O<br>M<br>E
 		  </div>
 		  <div>
@@ -1512,22 +1544,26 @@ img {
 				<a href="http://learnlayout.com/" target="_blank">Click here for Learn Layout</a>
 			</section>
 		
-				
 			<section>
-					<h2>Exercise Time</h2>
+					<h2>Exercise Time: CSS Boxes!</h2>
 					<a href="https://docs.google.com/a/anniecannons.com/document/d/1DcGTRA_Rnp4H4A5W_M5XX3nChUI9Zd6GaG5d83Qb_a8/edit?usp=sharing" target="_blank">Click here for a Google Doc</a><br/>
 					<img src="images/exercise.gif" alt="Exercise Gif"> <br>
 					<a href="https://trello.com/b/4ESfvtdM/template-student-journey-phase-22-css" target="_blank">
 						<img src="images/trello-logo-blue.png" alt="Trello Logo" width="200px" ></a>
 			</section>
-			  
+
+			<section>
+				<h2>CSS Position and Layout</h2>
+				<p>Chapter 15 in the Textbook</p>
+				<img src="images/HTMLBook.jpg" alt="HTML/CSS Book">
+			</section>	
 
 			<section>
 				<h2>Review: Directory Structure</h2>
 				<ul>
 					<li class="fragment">When you first open your IDE, what is the first file to create in your project folder?</li>
 					<li class="fragment">How do you add styles to this project folder?</li>
-					<li class="fragment">How do you add css to your html file?</li>
+					<li class="fragment">How do you add CSS to your HTML file?</li>
 				</ul>
 			</section>
 
@@ -1585,9 +1621,9 @@ img {
 			<section>
 				<h2>Review: True or False</h2>
 				<ul>
-					<li class="fragment">Pseudo classes are especially NOT useful for styling links.</li>
+					<li class="fragment">Pseudo-classes are especially NOT useful for styling links.</li>
 					<li class="fragment">Property-value pairs make up declarations.</li>
-					<li class="fragment">Border-color is an example of a "shorthand" property.</li>
+					<li class="fragment"><code class="aqua">border-color</code> is an example of a "shorthand" property.</li>
 				</ul>
 			</section>
 
@@ -1677,15 +1713,9 @@ img {
 				   <li class="fragment">What are the different ways you can add CSS to your webpage?</li>
 				   <li class="fragment">What is the difference between a selector, property, and value in CSS?</li>
 				   <li class="fragment">What are the different types of selectors?</li>
-				   <li class="fragment">How do you write an id in your html for a p element? How do you select it in CSS?</li>
+				   <li class="fragment">How do you write an id in your HTML for a p element? How do you select it in CSS?</li>
 			   </ol>
 				 </section>
-				 
-				 <section>
-					<h2>CSS Position and Layout</h2>
-					<p>Chapter 13 and 15 in the Textbook</p>
-					<img src="images/HTMLBook.jpg" alt="HTML/CSS Book">
-				</section>
 		  
 			   <section>
 				 <h2>Responsive Design</h2>
@@ -1695,7 +1725,7 @@ img {
 				 <h2>Responsive Design</h2>
 				 <p style="color:yellow">What is responsive design?</p>
 				 <ul>
-				   <li class="fragment">Responsive web design is a collection of techniques for building websites that work at multiple screen sizes (e.g., desktop, laptop, tablet, mobile).</li>
+				   <li class="fragment"><span class="yellow">Responsive web design</span> is a collection of techniques for building websites that work at multiple screen sizes (e.g., desktop, laptop, tablet, mobile).</li>
 				   <li class="fragment">Previously, most web professionals often created a mobile version of their site and a desktop version.</li>
 				   <ul class="fragment">
 					   <li>They end up with two separate websites.</li>
@@ -1708,14 +1738,14 @@ img {
 			   <section>
 				 <h2>Responsive Design</h2>
 				 <p class="fragment">Prior to responsive web design, most web designers thought in terms of print design with fixed pixel-based units.<br>The goal was to make websites look exactly the same in every size browser, no matter how big or small the screen.</p>
-				 <p class="fragment">Responsive design discards these tenets about fixed-value layout. Instead, responsive design approaches layout in terms of ratios (relative size) or percentages (% size). <br>Think: <code><span style="color: turquoise">em</span></code>!</p>
+				 <p class="fragment"><span class="yellow">Responsive design</span> discards these tenets about fixed-value layout. Instead, responsive design approaches layout in terms of ratios (relative size) or percentages (% size). <br>Think: <code><span style="color: turquoise">em</span></code>!</p>
 				 <p class="fragment">Play <a href="https://jsbin.com/xodotof/1/edit?html,css,output">here</a>!</p>
 			   </section>
 		  
 			   <section>
 				 <h2>Media Queries</h2>
 				 <p class="fragment">Media queries are CSS rules that apply CSS code only when certain conditions are met. These conditions are called <span style="color:yellow">media features</span>.</p>
-				 <p class="fragment">In responsive web design, the media feature most commonly used is width (e.g., min/minimum width, max/maximum width) of a media type (e.g., screen).<p>
+				 <p class="fragment">In responsive web design, the media feature most commonly used is <code class="aqua">width</code> (e.g., min/minimum width, max/maximum width) of a <span class="yellow">media type</span> (e.g., <code class="aqua">screen</code>).<p>
 			   </section>
 
 			   <section>
@@ -1727,7 +1757,7 @@ img {
 		  
 			  <section>
 				 <h2>CSS Media Queries</h2>
-				 <p>A media query consists of a media type (e.g., screen) and an optional combination of media features (e.g., width).</p>
+				 <p>A <span class="yellow">media query</span> consists of a <span class="yellow">media type</span> (e.g., <code class="aqua">screen</code>) and an optional combination of media features (e.g., <code class="aqua">width</code>).</p>
 				 <p>CSS rules inside the query (within the curly braces) will be applied only if the query is true.</p>
 				 <p>You can always Google <a href="https://www.google.com/search?q=media+query+syntax" target="_blank">'media query syntax'</a></p>
 <pre><code class="css" data-trim contenteditable>
@@ -1739,12 +1769,12 @@ img {
 		  
 			   <section>
 				 <h2>Resolution Queries</h2>
-				 <p>Modern mobile browsers support media queries which depend on the <code style="color: turquoise">device-width</code> and/or <code>orientation</code>:</p>
-		  <p>Targeting iPads:</p>
+				 <p>Modern mobile browsers support media queries which depend on the <code style="color: turquoise">width</code> and/or <code class="aqua">orientation</code>:</p>
+		  <p>Targeting iPads using screen width:</p>
 <pre><code class="css" data-trim contenteditable>
 @media only screen
- and (min-device-width : 768px)
- and (max-device-width : 1024px) {
+ and (min-width : 768px)
+ and (max-width : 1024px) {
    img {
      width: 100%;
    }
@@ -1755,7 +1785,7 @@ img {
 			  
 			  <section>
 				 <h2>Resolution Queries</h2>
-				<p>A more general approach is to query on <code style="color: turquoise">min-width</code> and <code style="color: turquoise">max-width</code>, which are calculated based on window size, not device size.</p>
+				<p>Media queries are now usually based on <code style="color: turquoise">min-width</code> and <code style="color: turquoise">max-width</code> based on window size, not device size.</p>
 <pre><code class="css" data-trim contenteditable>
 @media screen and (max-width: 640px) {
   #sidebar {
@@ -1929,7 +1959,7 @@ img {
 		  
 			   <section>
 				 <h2>Another Bootstrap Challenge</h2>
-				 <p><a href="https://docs.google.com/a/anniecannons.com/document/d/1acTeTRmLkGxlz-JdITgYqsfRiCOWCLM10iyidULpcZc/edit?usp=sharing" target="_blank">Click here</a></p>
+				 <p><a href="https://docs.google.com/a/anniecannons.com/document/d/1acTeTRmLkGxlz-JdITgYqsfRiCOWCLM10iyidULpcZc/edit?usp=sharing" target="_blank">Click here for Wacky Veggies!</a></p>
 				 <img src="images/exercise.gif" alt="Exercise Gif"><br>
 				 <a href="https://trello.com/b/4ESfvtdM/template-student-journey-phase-22-css" target="_blank">
 					<img src="images/trello-logo-blue.png" alt="Trello Logo" width="200px" ></a>
@@ -1941,7 +1971,7 @@ img {
 
 			   <section>
 				   <h2>Flexbox</h2>
-				   <p>Flexbox makes aligning elements and centering them vertically and horizontally super easy! Keeps you from feeling like this:</p>
+				   <p>Flexbox makes aligning elements and centering them vertically and horizontally super easy!<br>Keeps you from feeling like this:</p>
 					<img src="images/cssstruggle.gif" alt="CSS Struggle">
 			   </section>
 		  
@@ -1967,37 +1997,42 @@ img {
 				   <h2>Flex-direction</h2>
 				   <img data-enlargable style="border: 5px solid blue; cursor: zoom-in; float: left;"  src="images/flexdirection.png" alt="Flex Direction">	
 				   <ul style="width:500px;">
-						<li>The default is set to "row"</li>
-						<li>Use  <code style="color: turquoise" > flex-direction: column;</code> on the parent to change the orientation of the children.</li>
+						<li><code class="aqua">flex-direction</code> has a default setting of "<code class="aqua">row</code>"</li>
+						<li><code class="aqua">flex-direction</code> sets the <span class="yellow">main axis</span> along which its children align; the default main axis is <span class="orange">horizontal</span>.</li>
+						<li>Use  <code style="color: aqua" >flex-direction: column;</code> on the parent to change the orientation of the children and set the <span class="yellow">main axis</span> to be <span class="orange">vertical</span>.</li>
 					</ul>
 			   </section>
 
 			   <section>
 					<h2>justify-content</h2>
 					 <ul>
-						 <li>The default is set to "flex-start"</li>
-						 <li>This changes the position of the children along the main axis.</li>
+						 <li><code class="aqua">justify-content</code> has a default setting of "<code class="aqua">flex-start</code>"</li>
+						 <li>This property changes the positioning of the children along the <span class="yellow">main axis</span>.</li>
+						 <li>Possible values:
 						 <ul>
-							 <li>flex-start</li>
-							 <li>flex-end</li>
-							 <li>center</li>
-							 <li>space-between</li>
-							 <li>space-around</li>
+							 <li><code class="aqua">flex-start</code></li>
+							 <li><code class="aqua">flex-end</code></li>
+							 <li><code class="aqua">center</code></li>
+							 <li><code class="aqua">space-between</code></li>
+							 <li><code class="aqua">space-around</code></li>
 						 </ul>
+						 </li>
 					 </ul>
 				</section>
 
 				<section>
 						<h2>align-items</h2>
 						 <ul>
-							 <li>The default is set to "flex-start"</li>
-							 <li>This changes the position of the children along the cross axis.</li>
+							 <li><code class="aqua">align-items</code> has a default setting of "<code class="aqua">flex-start</code>"</li>
+							 <li>This property changes the position of the children along the <span class="yellow">cross axis</span>.</li>
+							 <li>Possible values:
 							 <ul>
-									<li>flex-start</li>
-									<li>flex-end</li>
-									<li>center</li>
+									<li><code class="aqua">flex-start</code></li>
+									<li><code class="aqua">flex-end</code></li>
+									<li><code class="aqua">center</code></li>
 								</ul>
 							</ul>
+							</li>
 					</section>
 
 			   <section>
