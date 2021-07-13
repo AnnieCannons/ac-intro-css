@@ -1905,7 +1905,7 @@ img {
 			<h2>Mobile First</h2>
 			<p><span class="yellow">Mobile first</span> prioritizes a user's mobile online experience first, before considering wider screen sizes.</p>
 			<p class="fragment">A developer is <span class="yellow">building mobile first</span> when they develop the mobile version of a site first<br>before adding media queries for wider screens.</p>
-			<p class="fragment"><span class="orange">Why build mobile first?</span><br><span class="fragment">Check out <a href="https://techjury.net/blog/mobile-vs-desktop-usage/#gref" target="_blank">these stats</a>.</span></p>
+			<p class="fragment"><span class="orange">Why build mobile first?</span><br><span class="fragment">Check out <a href="https://techjury.net/blog/mobile-vs-desktop-usage/#gref" target="_blank">these stats</a>.</span><br><span class="fragment">It's also easier to build from small to big (mobile first)<br>than big to small (desktop first).</span></p>
 			<div class="fragment" style="display: flex; justify-content: center; align-items: center;">
 			<img src="images/magnifying-glass.jpg" width="100px" alt="magnifying glass"><p>More on <a href="https://css-tricks.com/how-to-develop-and-test-a-mobile-first-design-in-2021/" target="_blank">Mobile First Design</a></p>
 			</div>
@@ -1933,7 +1933,7 @@ img {
 <pre><code class="css" data-trim contenteditable>
 @media screen and (min-width: 768px) {
   #sidebar {
-    width: 200px;
+    width: 25%;
   }
 }
 </code></pre>
@@ -1945,7 +1945,7 @@ img {
 <pre><code class="css" data-trim contenteditable>
 @media screen and (min-width: 1024px) {
   #sidebar {
-    width: 300px;
+    width: 30%;
   }
 } 
 </code></pre>
@@ -1959,7 +1959,7 @@ img {
 <pre><code class="css" data-trim contenteditable>
 @media screen and (min-width: 1200px) {
   #sidebar {
-    width: 350px;
+    width: 50%;
   }
 }
 </code></pre>			
@@ -1971,7 +1971,7 @@ img {
 <pre><code class="css" data-trim contenteditable>
 @media screen and (min-width: 1440px) {
   #sidebar {
-    width: 400px;
+    width: 40%;
   }
 }
 </code></pre>
@@ -1983,17 +1983,17 @@ img {
 
 		<section>
 			<h2>Notes on Media Queries</h2>
-			<p>The <code class="aqua">min-width</code> breakpoints in <code class="aqua">px</code> for media queries will most likely be similar to the previous slide's specifications.<br>
-			<span class="fragment">Inside a media query, an HTML element's <code class="aqua">width</code> will vary per project design.</span></p>
-			<div class="fragment" style="display: flex; justify-content: space-evenly; align-items: center; margin-bottom: 0px; padding-bottom: 0px;">
-				<p style="width:30%;">For <code class="aqua">width</code> per HTML element, determine whether to use:</p>
+			<ul>
+				<li>The <code class="aqua">min-width</code> breakpoints in <code class="aqua">px</code> for media queries will most likely be similar to the previous slide's specifications.</li>
+				<li class="fragment">Inside a media query, any CSS property can be applied to an HTML element.</li>
+				<li class="fragment">For <code class="aqua">width</code> per HTML element, determine whether to use:
 				<ul>
 					<li><code class="aqua">px</code></li>
 					<li><code class="aqua">%</code> (fit to parent)</li>
 					<li><code class="aqua">vw</code></li>
 					<li><code class="aqua">em</code></li>
-				</ul>
-			</div>
+				</ul></li>
+			</ul>
 <pre class="fragment"><code class="css" data-trim contenteditable>
 /* Example */
 @media screen and (min-width: 1440px) {
@@ -2010,7 +2010,7 @@ img {
 			<ul>Instructions:
 				<li>Try commenting out different media queries.</li>
 				<li>Use Chrome Dev Tools to view what results.</li>
-				<li>Select a different HTML element to apply media queries.</li>
+				<li>Select an HTML element to apply CSS using media queries.</li>
 				<li>Then use Chrome Dev Tools to view the results.</li>
 				<li>Be prepared to discuss your observations in class.</li>
 			</ul>
@@ -2023,10 +2023,11 @@ img {
 			<p>Watch the <a href="https://www.youtube.com/watch?v=5xzaGSYd7jM" target="_blank">Responsive Design video review</a></p>
 			<!-- has deprecated device width styles <a href="https://css-tricks.com/snippets/css/media-queries-for-standard-devices/" target="_blank">CSS Tricks</a> -->
 			<p>Check the <a href="images/responsive-design-checklist.jpg" target="_blank">Responsive Design Checklist</a></p>
+			<p>Feel free to watch this <a href="https://www.youtube.com/watch?v=ZUwmTLBCRTM" target="_blank">Mobile First CSS video</a> and follow/code along!</p>
 		</section>
 			
 		<section>
-			<h2>Responsive Design Exercises</h2>
+			<h2>Mobile First Exercise</h2>
 			<table>
 				<tr>
 					<th>Mobile
